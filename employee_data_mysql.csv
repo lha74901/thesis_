@@ -1,0 +1,312 @@
+name,emp_id,department,position,date_of_hire,gender,marital_status,age,race,hispanic_latino,recruitment_source,salary,engagement_survey,emp_satisfaction,special_projects_count,days_late_last_30,absences,performance_score,predicted_score,employment_status,prediction_date
+"Adinolfi, Wilson  K",10026,Production       ,Production Technician I,2011-07-05,M,Single,35,White,No,LinkedIn,62506.0,4.6,5,0,0,1,Exceeds,4,Active,2025-04-02 23:31:11
+"Ait Sidi, Karthikeyan   ",10084,IT/IS,Sr. DBA,2015-03-30,M,Married,35,White,No,Indeed,104437.0,4.96,3,6,0,17,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Akinkuolie, Sarah",10196,Production       ,Production Technician II,2011-07-05,F,Married,35,White,No,LinkedIn,64955.0,3.02,3,0,0,3,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Alagbe,Trina",10088,Production       ,Production Technician I,2008-01-07,F,Married,35,White,No,Indeed,64991.0,4.84,5,0,0,15,Fully Meets,3,Active,2025-04-02 23:31:11
+"Anderson, Carol ",10069,Production       ,Production Technician I,2011-07-11,F,Divorced,35,White,No,Google Search,50825.0,5.0,4,0,0,2,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Anderson, Linda  ",10002,Production       ,Production Technician I,2012-01-09,F,Single,35,White,No,LinkedIn,57568.0,5.0,5,0,0,15,Exceeds,4,Active,2025-04-02 23:31:11
+"Andreola, Colby",10194,Software Engineering,Software Engineer,2014-11-10,F,Single,35,White,No,LinkedIn,95660.0,3.04,3,4,0,19,Fully Meets,3,Active,2025-04-02 23:31:11
+"Athwal, Sam",10062,Production       ,Production Technician I,2013-09-30,M,Widowed,35,White,No,Employee Referral,59365.0,5.0,4,0,0,19,Fully Meets,3,Active,2025-04-02 23:31:11
+"Bachiochi, Linda",10114,Production       ,Production Technician I,2009-07-06,F,Single,35,Black or African American,No,Diversity Job Fair,47837.0,4.46,3,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Bacong, Alejandro ",10250,IT/IS,IT Support,2015-01-05,M,Divorced,35,White,No,Indeed,50178.0,5.0,5,6,0,16,Fully Meets,3,Active,2025-04-02 23:31:11
+"Baczenski, Rachael  ",10252,Production       ,Production Technician I,2011-01-10,F,Married,35,Black or African American,Yes,Diversity Job Fair,54670.0,4.2,4,0,0,12,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Barbara, Thomas",10242,Production       ,Production Technician I,2012-04-02,M,Married,35,Black or African American,Yes,Diversity Job Fair,47211.0,4.2,3,0,0,15,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Barbossa, Hector",10012,IT/IS,Data Analyst,2014-11-10,M,Divorced,35,Black or African American,No,Diversity Job Fair,92328.0,4.28,4,5,0,9,Exceeds,4,Active,2025-04-02 23:31:11
+"Barone, Francesco  A",10265,Production       ,Production Technician I,2012-02-20,M,Single,35,Two or more races,No,Google Search,58709.0,4.6,4,0,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Barton, Nader",10066,Production       ,Production Technician I,2012-09-24,M,Divorced,35,White,No,On-line Web application,52505.0,5.0,5,0,0,1,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Bates, Norman",10061,Production       ,Production Technician I,2011-02-21,M,Single,35,White,No,Google Search,57834.0,5.0,4,0,0,20,Fully Meets,3,Terminated for Cause,2025-04-02 23:31:11
+"Beak, Kimberly  ",10023,Production       ,Production Technician II,2016-07-21,F,Married,35,White,No,Employee Referral,70131.0,4.4,3,0,0,16,Exceeds,4,Active,2025-04-02 23:31:11
+"Beatrice, Courtney ",10055,Production       ,Production Technician I,2011-04-04,F,Single,35,White,No,Google Search,59026.0,5.0,5,0,0,12,Fully Meets,3,Active,2025-04-02 23:31:11
+"Becker, Renee",10245,IT/IS,Database Administrator,2014-07-07,F,Single,35,White,Yes,Google Search,110000.0,4.5,4,5,0,8,Fully Meets,3,Terminated for Cause,2025-04-02 23:31:11
+"Becker, Scott",10277,Production       ,Production Technician I,2013-07-08,M,Single,35,Asian,No,LinkedIn,53250.0,4.2,4,0,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"Bernstein, Sean",10046,Production       ,Production Technician I,2012-04-02,M,Single,35,White,Yes,Google Search,51044.0,5.0,3,0,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"Biden, Lowan  M",10226,Production       ,Production Technician I,2013-08-19,F,Divorced,35,Asian,No,Indeed,64919.0,4.2,3,0,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Billis, Helen",10003,Production       ,Production Technician I,2014-07-07,F,Married,35,White,No,Indeed,62910.0,5.0,3,0,0,19,Exceeds,4,Active,2025-04-02 23:31:11
+"Blount, Dianna",10294,Production       ,Production Technician II,2011-04-04,F,Single,35,White,No,CareerBuilder,66441.0,2.0,3,0,2,3,Needs Improvement,2,Active,2025-04-02 23:31:11
+"Bondwell, Betsy",10267,Production       ,Production Technician II,2011-01-10,F,Single,35,White,No,Google Search,57815.0,4.8,5,0,0,5,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Booth, Frank",10199,IT/IS,Enterprise Architect,2014-02-17,M,Single,35,Black or African American,No,LinkedIn,103613.0,3.5,5,7,0,2,Fully Meets,3,Terminated for Cause,2025-04-02 23:31:11
+"Boutwell, Bonalyn",10081,Admin Offices,Sr. Accountant,2015-02-16,F,Married,35,Black or African American,No,Diversity Job Fair,106367.0,5.0,4,3,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Bozzi, Charles",10175,Production       ,Production Manager,2013-09-30,M,Single,35,Asian,No,Indeed,74312.0,3.39,3,0,0,14,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Brill, Donna",10177,Production       ,Production Technician I,2012-04-02,F,Married,35,White,No,Google Search,53492.0,3.35,4,0,0,6,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Brown, Mia",10238,Admin Offices,Accountant I,2008-10-27,F,Married,35,Black or African American,No,Diversity Job Fair,63000.0,4.5,2,6,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Buccheri, Joseph  ",10184,Production       ,Production Technician II,2014-09-29,M,Single,35,White,No,Google Search,65288.0,3.19,3,0,0,9,Fully Meets,3,Active,2025-04-02 23:31:11
+"Bugali, Josephine ",10203,Production       ,Production Technician I,2013-11-11,F,Separated,35,Black or African American,No,Diversity Job Fair,64375.0,3.5,5,0,0,17,Fully Meets,3,Active,2025-04-02 23:31:11
+"Bunbury, Jessica",10188,Sales,Area Sales Manager,2011-08-15,F,Married,35,Black or African American,No,Google Search,74326.0,3.14,5,0,1,19,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Burke, Joelle",10107,Production       ,Production Technician II,2012-03-05,F,Single,35,Black or African American,No,Employee Referral,63763.0,4.51,4,0,0,3,Fully Meets,3,Active,2025-04-02 23:31:11
+"Burkett, Benjamin ",10181,Production       ,Production Technician II,2011-04-04,M,Married,35,White,No,Indeed,62162.0,3.25,5,0,0,15,Fully Meets,3,Active,2025-04-02 23:31:11
+"Cady, Max ",10150,Software Engineering,Software Engineering Manager,2011-08-15,M,Single,35,White,No,Google Search,77692.0,3.84,3,5,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Candie, Calvin",10001,Production       ,Production Manager,2016-01-28,M,Single,35,White,No,Indeed,72640.0,5.0,3,0,0,14,Exceeds,4,Active,2025-04-02 23:31:11
+"Carabbio, Judith",10085,Software Engineering,Software Engineer,2013-11-11,F,Single,35,White,No,Indeed,93396.0,4.96,4,6,0,3,Fully Meets,3,Active,2025-04-02 23:31:11
+"Carey, Michael  ",10115,Production       ,Production Technician I,2014-03-31,M,Single,35,Black or African American,No,LinkedIn,52846.0,4.43,3,0,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Carr, Claudia  N",10082,IT/IS,Sr. DBA,2016-06-30,F,Single,35,Black or African American,No,LinkedIn,100031.0,5.0,5,6,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Carter, Michelle ",10040,Sales,Area Sales Manager,2014-08-18,F,Single,35,White,No,Indeed,71860.0,5.0,5,0,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Chace, Beatrice ",10067,Production       ,Production Technician I,2014-09-29,F,Single,35,White,No,Google Search,61656.0,5.0,4,0,0,11,Fully Meets,3,Active,2025-04-02 23:31:11
+"Champaigne, Brian",10108,IT/IS,BI Director,2016-09-06,M,Married,35,White,No,Indeed,110929.0,4.5,5,7,0,8,Fully Meets,3,Active,2025-04-02 23:31:11
+"Chan, Lin",10210,Production       ,Production Technician I,2014-05-12,F,Single,35,White,No,Indeed,54237.0,3.3,4,0,0,11,Fully Meets,3,Active,2025-04-02 23:31:11
+"Chang, Donovan  E",10154,Production       ,Production Technician I,2013-07-08,M,Single,35,White,No,LinkedIn,60380.0,3.8,5,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Chigurh, Anton",10200,Sales,Area Sales Manager,2012-05-14,M,Single,35,Black or African American,No,Employee Referral,66808.0,3.0,5,0,0,17,Fully Meets,3,Active,2025-04-02 23:31:11
+"Chivukula, Enola",10240,Production       ,Production Technician I,2011-06-27,F,Single,35,White,No,Indeed,64786.0,4.3,4,0,0,3,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Cierpiszewski, Caroline  ",10168,Production       ,Production Technician I,2011-10-03,F,Single,35,Black or African American,No,Indeed,64816.0,3.58,5,0,0,3,Fully Meets,3,Active,2025-04-02 23:31:11
+"Clayton, Rick",10220,IT/IS,IT Support,2012-09-05,M,Single,35,White,No,Indeed,68678.0,4.7,3,6,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Cloninger, Jennifer",10275,Production       ,Production Technician II,2011-05-16,F,Married,35,White,No,Google Search,64066.0,4.2,5,0,0,9,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Close, Phil",10269,Production       ,Production Technician II,2010-08-30,M,Married,35,White,No,Indeed,59369.0,4.2,4,0,0,6,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Clukey, Elijian",10029,Production       ,Production Technician I,2016-07-06,M,Married,35,White,No,Employee Referral,50373.0,4.1,4,0,0,5,Exceeds,4,Active,2025-04-02 23:31:11
+"Cockel, James",10261,Production       ,Production Technician I,2013-07-08,M,Single,35,White,No,Employee Referral,63108.0,4.4,5,0,0,3,Fully Meets,3,Active,2025-04-02 23:31:11
+"Cole, Spencer",10292,Production       ,Production Technician I,2011-07-11,M,Single,35,Black or African American,No,LinkedIn,59144.0,2.0,3,0,5,16,Needs Improvement,2,Terminated for Cause,2025-04-02 23:31:11
+"Corleone, Michael",10282,Production       ,Production Manager,2010-07-20,M,Divorced,35,White,No,CareerBuilder,68051.0,4.13,2,0,3,3,Needs Improvement,2,Active,2025-04-02 23:31:11
+"Corleone, Vito",10019,Production       ,Director of Operations,2009-01-05,M,Single,35,Black or African American,No,Indeed,170500.0,3.7,5,0,0,15,Exceeds,4,Active,2025-04-02 23:31:11
+"Cornett, Lisa ",10094,Production       ,Production Technician I,2015-01-05,F,Married,35,White,Yes,Indeed,63381.0,4.73,5,0,0,6,Fully Meets,3,Active,2025-04-02 23:31:11
+"Costello, Frank",10193,IT/IS,Data Analyst,2015-03-30,M,Married,35,White,No,Indeed,83552.0,3.04,3,6,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Crimmings,   Jean",10132,Production       ,Production Technician I,2016-07-06,F,Single,35,White,No,LinkedIn,56149.0,4.12,5,0,0,15,Fully Meets,3,Active,2025-04-02 23:31:11
+"Cross, Noah",10083,IT/IS,Sr. Network Engineer,2014-11-10,M,Single,35,White,No,Employee Referral,92329.0,5.0,3,4,0,5,Fully Meets,3,Active,2025-04-02 23:31:11
+"Daneault, Lynn",10099,Sales,Sales Manager,2014-05-05,F,Single,35,White,No,Indeed,65729.0,4.62,4,0,0,8,Fully Meets,3,Active,2025-04-02 23:31:11
+"Daniele, Ann  ",10212,IT/IS,Sr. Network Engineer,2014-11-10,F,Married,35,White,No,LinkedIn,85028.0,3.1,5,8,0,19,Fully Meets,3,Active,2025-04-02 23:31:11
+"Darson, Jene'ya ",10056,Production       ,Production Technician I,2012-07-02,F,Married,35,White,No,Indeed,57583.0,5.0,3,0,0,1,Fully Meets,3,Active,2025-04-02 23:31:11
+"Davis, Daniel",10143,Production       ,Production Technician II,2011-11-07,M,Single,35,Two or more races,No,LinkedIn,56294.0,3.96,4,0,0,6,Fully Meets,3,Active,2025-04-02 23:31:11
+"Dee, Randy",10311,Production       ,Production Technician I,2018-07-09,M,Married,35,White,No,Indeed,56991.0,4.3,4,3,2,2,Fully Meets,1,Active,2025-04-02 23:31:11
+"DeGweck,  James",10070,Production       ,Production Technician I,2011-05-16,M,Married,35,White,No,Indeed,55722.0,5.0,4,0,0,14,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Del Bosque, Keyla",10155,Software Engineering,Software Engineer,2012-01-09,F,Single,35,Black or African American,No,CareerBuilder,101199.0,3.79,5,5,0,8,Fully Meets,3,Active,2025-04-02 23:31:11
+"Delarge, Alex",10306,Sales,Area Sales Manager,2014-09-29,M,Single,35,Two or more races,No,Indeed,61568.0,1.93,3,0,6,5,PIP,1,Active,2025-04-02 23:31:11
+"Demita, Carla",10100,Production       ,Production Technician II,2011-04-04,F,Separated,35,Black or African American,No,Google Search,58275.0,4.62,5,0,0,1,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Desimone, Carl ",10310,Production       ,Production Technician I,2014-07-07,M,Married,35,White,No,Indeed,53189.0,1.12,2,0,4,9,PIP,1,Active,2025-04-02 23:31:11
+"DeVito, Tommy",10197,IT/IS,BI Developer,2017-02-15,M,Single,35,White,No,Indeed,96820.0,3.01,5,7,0,15,Fully Meets,3,Active,2025-04-02 23:31:11
+"Dickinson, Geoff ",10276,Production       ,Production Technician I,2014-05-12,M,Single,35,White,No,Indeed,51259.0,4.3,4,0,0,1,Fully Meets,3,Active,2025-04-02 23:31:11
+"Dietrich, Jenna  ",10304,Sales,Area Sales Manager,2012-02-20,F,Single,35,White,Yes,Website,59231.0,2.3,1,0,2,17,PIP,1,Active,2025-04-02 23:31:11
+"DiNocco, Lily ",10284,Production       ,Production Technician I,2013-01-07,F,Married,35,Black or African American,No,Indeed,61584.0,3.88,4,0,0,6,Needs Improvement,2,Active,2025-04-02 23:31:11
+"Dobrin, Denisa  S",10207,Production       ,Production Technician I,2012-04-02,F,Single,35,White,Yes,CareerBuilder,46335.0,3.4,5,0,0,15,Fully Meets,3,Active,2025-04-02 23:31:11
+"Dolan, Linda",10133,IT/IS,IT Support,2015-01-05,F,Married,35,White,No,Employee Referral,70621.0,4.11,4,6,0,16,Fully Meets,3,Active,2025-04-02 23:31:11
+"Dougall, Eric",10028,IT/IS,IT Manager - Support,2014-01-05,M,Single,35,Black or African American,No,Indeed,138888.0,4.3,5,5,0,4,Exceeds,4,Active,2025-04-02 23:31:11
+"Driver, Elle",10006,Sales,Area Sales Manager,2011-01-10,F,Single,35,White,No,Indeed,74241.0,4.77,5,0,0,14,Exceeds,4,Active,2025-04-02 23:31:11
+"Dunn, Amy  ",10105,Production       ,Production Manager,2014-09-18,F,Single,35,White,No,Google Search,75188.0,4.52,4,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Dunne, Amy",10211,Production       ,Production Technician I,2010-04-26,F,Married,35,White,No,Google Search,62514.0,2.9,3,0,0,6,Fully Meets,3,Active,2025-04-02 23:31:11
+"Eaton, Marianne",10064,Production       ,Production Technician I,2011-04-04,F,Married,35,White,No,Google Search,60070.0,5.0,3,0,0,7,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Engdahl, Jean",10247,Production       ,Production Technician I,2014-11-10,M,Single,35,White,No,LinkedIn,48888.0,4.7,5,0,0,8,Fully Meets,3,Active,2025-04-02 23:31:11
+"England, Rex",10235,Production       ,Production Technician I,2014-03-31,M,Married,35,White,No,Employee Referral,54285.0,4.2,3,0,0,3,Fully Meets,3,Active,2025-04-02 23:31:11
+"Erilus, Angela",10299,Production       ,Production Technician II,2014-07-07,F,Separated,35,White,No,Indeed,56847.0,3.0,1,0,2,5,PIP,1,Active,2025-04-02 23:31:11
+"Estremera, Miguel",10280,Production       ,Production Technician I,2012-04-02,M,Single,35,White,No,Google Search,60340.0,5.0,4,0,5,16,Needs Improvement,2,Terminated for Cause,2025-04-02 23:31:11
+"Evensen, April",10296,Production       ,Production Technician I,2014-02-17,F,Single,35,White,No,Google Search,59124.0,2.3,3,0,5,19,Needs Improvement,2,Terminated for Cause,2025-04-02 23:31:11
+"Exantus, Susan",10290,Software Engineering,Software Engineer,2011-05-02,F,Married,35,Black or African American,No,Indeed,99280.0,2.1,5,4,4,19,Needs Improvement,2,Terminated for Cause,2025-04-02 23:31:11
+"Faller, Megan ",10263,Production       ,Production Technician II,2014-07-07,F,Married,35,Black or African American,No,LinkedIn,71776.0,4.4,5,0,0,17,Fully Meets,3,Active,2025-04-02 23:31:11
+"Fancett, Nicole",10136,Production       ,Production Technician II,2014-02-17,F,Single,35,Black or African American,No,LinkedIn,65902.0,4.0,4,0,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Ferguson, Susan",10189,Production       ,Production Technician I,2011-11-07,F,Married,35,White,No,Google Search,57748.0,3.13,3,0,0,16,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Fernandes, Nilson  ",10308,Production       ,Production Technician I,2015-05-11,M,Married,35,White,No,Indeed,64057.0,1.56,5,0,6,15,PIP,1,Active,2025-04-02 23:31:11
+"Fett, Boba",10309,IT/IS,Network Engineer,2015-03-30,M,Single,35,White,No,LinkedIn,53366.0,1.2,3,6,3,2,PIP,1,Active,2025-04-02 23:31:11
+"Fidelia,  Libby",10049,Production       ,Production Technician I,2012-01-09,F,Married,35,White,No,Google Search,58530.0,5.0,5,0,0,19,Fully Meets,3,Active,2025-04-02 23:31:11
+"Fitzpatrick, Michael  J",10093,Production       ,Production Technician II,2011-05-16,M,Single,35,White,Yes,Google Search,72609.0,4.76,5,0,0,20,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Foreman, Tanya",10163,Production       ,Production Technician II,2011-04-04,F,Married,35,White,No,Google Search,55965.0,3.66,3,0,0,6,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Forrest, Alex",10305,Sales,Area Sales Manager,2014-09-29,M,Married,35,White,No,Employee Referral,70187.0,2.0,5,0,4,7,PIP,3,Terminated for Cause,2025-04-02 23:31:11
+"Foss, Jason",10015,IT/IS,IT Director,2011-04-15,M,Single,35,Black or African American,No,Indeed,178000.0,5.0,5,5,0,15,Exceeds,4,Active,2025-04-02 23:31:11
+"Foster-Baker, Amy",10080,Admin Offices,Sr. Accountant,2009-01-05,F,Married,35,White,no,Other,99351.0,5.0,3,2,0,3,Fully Meets,3,Active,2025-04-02 23:31:11
+"Fraval, Maruk ",10258,Sales,Area Sales Manager,2011-09-06,M,Single,35,Black or African American,No,CareerBuilder,67251.0,4.3,3,0,2,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Galia, Lisa",10273,IT/IS,IT Support,2010-05-01,F,Single,35,White,No,LinkedIn,65707.0,4.7,4,5,0,1,Fully Meets,3,Active,2025-04-02 23:31:11
+"Garcia, Raul",10111,Production       ,Production Technician I,2015-03-30,M,Single,35,White,Yes,Employee Referral,52249.0,4.5,3,0,0,5,Fully Meets,3,Active,2025-04-02 23:31:11
+"Gaul, Barbara",10257,Production       ,Production Technician I,2011-05-16,F,Single,35,Black or African American,Yes,LinkedIn,53171.0,4.2,4,0,0,12,Fully Meets,3,Active,2025-04-02 23:31:11
+"Gentry, Mildred",10159,Production       ,Production Technician I,2015-03-30,F,Married,35,Black or African American,No,LinkedIn,51337.0,3.73,3,0,0,19,Fully Meets,3,Active,2025-04-02 23:31:11
+"Gerke, Melisa",10122,Production       ,Production Technician I,2011-11-07,F,Divorced,35,Black or African American,No,Diversity Job Fair,51505.0,4.24,4,0,0,2,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Gill, Whitney  ",10142,Sales,Area Sales Manager,2014-07-07,F,Widowed,35,Black or African American,No,CareerBuilder,59370.0,3.97,4,0,0,7,Fully Meets,3,Terminated for Cause,2025-04-02 23:31:11
+"Gilles, Alex",10283,Production       ,Production Technician I,2012-04-02,M,Married,35,Black or African American,No,Diversity Job Fair,54933.0,3.97,4,0,3,15,Needs Improvement,2,Voluntarily Terminated,2025-04-02 23:31:11
+"Girifalco, Evelyn",10018,Production       ,Production Technician I,2014-09-29,F,Single,35,Two or more races,Yes,Indeed,57815.0,3.9,4,0,0,3,Exceeds,4,Active,2025-04-02 23:31:11
+"Givens, Myriam",10255,Sales,Area Sales Manager,2015-02-16,F,Single,35,White,No,Indeed,61555.0,4.5,5,0,0,20,Fully Meets,3,Active,2025-04-02 23:31:11
+"Goble, Taisha",10246,IT/IS,Database Administrator,2015-02-16,F,Single,35,White,No,Indeed,114800.0,4.6,4,4,0,10,Fully Meets,3,Terminated for Cause,2025-04-02 23:31:11
+"Goeth, Amon",10228,IT/IS,IT Support,2015-03-30,M,Married,35,White,Yes,LinkedIn,74679.0,4.3,5,7,0,20,Fully Meets,3,Active,2025-04-02 23:31:11
+"Gold, Shenice  ",10243,Production       ,Production Technician I,2013-11-11,F,Single,35,White,Yes,Indeed,53018.0,4.3,5,0,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Gonzalez, Cayo",10031,Production       ,Production Technician I,2011-07-11,M,Divorced,35,Black or African American,No,Diversity Job Fair,59892.0,4.5,4,0,0,1,Exceeds,4,Active,2025-04-02 23:31:11
+"Gonzalez, Juan",10300,Production       ,Production Technician II,2010-04-26,M,Married,35,Black or African American,No,Diversity Job Fair,68898.0,3.0,3,0,3,10,PIP,1,Voluntarily Terminated,2025-04-02 23:31:11
+"Gonzalez, Maria",10101,IT/IS,IT Support,2015-01-05,F,Separated,35,White,Yes,Employee Referral,61242.0,4.61,4,5,0,11,Fully Meets,3,Active,2025-04-02 23:31:11
+"Good, Susan",10237,Production       ,Production Technician II,2014-05-12,F,Married,35,White,No,LinkedIn,66825.0,4.6,3,0,0,20,Fully Meets,3,Active,2025-04-02 23:31:11
+"Gordon, David",10051,Production       ,Production Technician I,2012-07-02,M,Married,35,White,No,LinkedIn,48285.0,5.0,3,0,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Gosciminski, Phylicia  ",10218,Production       ,Production Technician II,2013-09-30,F,Separated,35,American Indian or Alaska Native,No,Google Search,66149.0,4.4,5,0,0,1,Fully Meets,3,Active,2025-04-02 23:31:11
+"Goyal, Roxana",10256,Production       ,Production Technician I,2013-08-19,F,Married,35,Asian,No,LinkedIn,49256.0,4.1,5,0,0,3,Fully Meets,3,Active,2025-04-02 23:31:11
+"Gray, Elijiah  ",10098,Production       ,Production Manager,2015-06-02,M,Divorced,35,White,No,Employee Referral,62957.0,4.63,3,0,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Gross, Paula",10059,Production       ,Production Technician I,2011-02-21,F,Divorced,35,White,No,CareerBuilder,63813.0,5.0,5,0,0,17,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Gruber, Hans",10234,IT/IS,BI Developer,2017-04-20,M,Married,35,Black or African American,No,Indeed,99020.0,4.2,5,5,0,8,Fully Meets,3,Active,2025-04-02 23:31:11
+"Guilianno, Mike",10109,Sales,Area Sales Manager,2012-03-07,M,Single,35,Two or more races,No,LinkedIn,71707.0,4.5,5,0,0,20,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Handschiegl, Joanne",10125,Production       ,Production Technician I,2011-11-28,F,Married,35,White,No,Google Search,54828.0,4.2,4,0,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"Hankard, Earnest",10074,Production       ,Production Technician II,2013-11-11,M,Single,35,White,Yes,LinkedIn,64246.0,5.0,3,0,0,20,Fully Meets,3,Active,2025-04-02 23:31:11
+"Harrington, Christie ",10097,Production       ,Production Technician I,2012-01-09,F,Single,35,White,No,CareerBuilder,52177.0,4.64,4,0,0,8,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Harrison, Kara",10007,Production       ,Production Technician I,2014-05-12,F,Married,35,White,No,CareerBuilder,62065.0,4.76,4,0,0,5,Exceeds,4,Active,2025-04-02 23:31:11
+"Heitzman, Anthony",10129,Production       ,Production Technician I,2012-08-13,M,Single,35,White,No,Google Search,46998.0,4.17,4,0,0,1,Fully Meets,3,Active,2025-04-02 23:31:11
+"Hendrickson, Trina",10075,Production       ,Production Technician II,2011-01-10,F,Single,35,White,No,CareerBuilder,68099.0,5.0,3,0,0,15,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Hitchcock, Alfred",10167,Sales,Area Sales Manager,2014-08-18,M,Married,35,American Indian or Alaska Native,No,Indeed,70545.0,3.6,5,0,0,9,Fully Meets,3,Active,2025-04-02 23:31:11
+"Homberger, Adrienne  J",10195,Production       ,Production Technician II,2011-08-15,F,Married,35,White,No,Indeed,63478.0,3.03,5,0,0,16,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Horton, Jayne",10112,IT/IS,Database Administrator,2015-03-30,F,Single,35,White,No,Indeed,97999.0,4.48,5,6,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Houlihan, Debra",10272,Sales,Director of Sales,2014-05-05,F,Married,35,White,No,LinkedIn,180000.0,4.5,4,0,0,19,Fully Meets,3,Active,2025-04-02 23:31:11
+"Howard, Estelle",10182,Admin Offices,Administrative Assistant,2015-02-16,F,Married,35,Black or African American,No,Indeed,49920.0,3.24,3,4,0,6,Fully Meets,3,Terminated for Cause,2025-04-02 23:31:11
+"Hudson, Jane",10248,Production       ,Production Technician I,2012-02-20,F,Single,35,White,No,LinkedIn,55425.0,4.8,4,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Hunts, Julissa",10201,Production       ,Production Technician II,2016-06-06,F,Single,35,White,No,LinkedIn,69340.0,3.0,5,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Hutter, Rosalie",10214,Production       ,Production Technician II,2015-06-05,F,Separated,35,White,No,Indeed,64995.0,4.5,3,0,0,6,Fully Meets,3,Active,2025-04-02 23:31:11
+"Huynh, Ming",10160,Production       ,Production Technician II,2011-02-21,F,Divorced,35,White,No,Google Search,68182.0,3.72,3,0,0,18,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Immediato, Walter",10289,Production       ,Production Manager,2011-02-21,M,Married,35,Asian,No,Indeed,83082.0,2.34,2,0,3,4,Needs Improvement,2,Voluntarily Terminated,2025-04-02 23:31:11
+"Ivey, Rose ",10139,Production       ,Production Technician I,2013-08-19,F,Single,35,White,No,Indeed,51908.0,3.99,3,0,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Jackson, Maryellen",10227,Production       ,Production Technician I,2012-11-05,F,Single,35,Black or African American,No,LinkedIn,61242.0,4.1,3,0,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Jacobi, Hannah  ",10236,Production       ,Production Technician I,2013-09-30,F,Divorced,35,White,No,Employee Referral,45069.0,4.3,5,0,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Jeannite, Tayana",10009,Production       ,Production Technician II,2011-07-05,F,Divorced,35,American Indian or Alaska Native,No,LinkedIn,60724.0,4.6,4,0,0,11,Exceeds,4,Active,2025-04-02 23:31:11
+"Jhaveri, Sneha  ",10060,Production       ,Production Technician I,2014-01-06,F,Separated,35,White,No,LinkedIn,60436.0,5.0,5,0,0,9,Fully Meets,3,Active,2025-04-02 23:31:11
+"Johnson, George",10034,Production       ,Production Technician I,2011-11-07,M,Married,35,White,No,CareerBuilder,46837.0,4.7,4,0,0,9,Exceeds,4,Voluntarily Terminated,2025-04-02 23:31:11
+"Johnson, Noelle ",10156,IT/IS,Database Administrator,2015-01-05,F,Married,35,Asian,No,Indeed,105700.0,3.75,3,5,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Johnston, Yen",10036,Production       ,Production Technician II,2014-07-07,F,Single,35,White,No,LinkedIn,63322.0,4.3,3,0,0,1,Exceeds,4,Active,2025-04-02 23:31:11
+"Jung, Judy  ",10138,Production       ,Production Technician I,2011-01-10,F,Married,35,Black or African American,No,CareerBuilder,61154.0,4.0,4,0,0,4,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Kampew, Donysha",10244,Sales,Sales Manager,2011-11-07,F,Single,35,White,No,Google Search,68999.0,4.5,5,0,0,2,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Keatts, Kramer ",10192,Production       ,Production Technician I,2013-09-30,M,Single,35,White,No,Indeed,50482.0,3.07,4,0,0,10,Fully Meets,3,Active,2025-04-02 23:31:11
+"Khemmich, Bartholemew",10231,Sales,Area Sales Manager,2013-08-19,M,Single,35,White,No,Indeed,65310.0,4.3,5,0,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"King, Janet",10089,Executive Office,President & CEO,2012-07-02,F,Married,35,White,Yes,Indeed,250000.0,4.83,3,0,0,10,Fully Meets,3,Active,2025-04-02 23:31:11
+"Kinsella, Kathleen  ",10166,Production       ,Production Technician I,2011-09-26,F,Married,35,White,No,Google Search,54005.0,3.6,5,0,0,16,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Kirill, Alexandra  ",10170,Production       ,Production Technician I,2011-09-26,F,Married,35,White,No,Google Search,45433.0,3.49,4,0,0,6,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Knapp, Bradley  J",10208,Production       ,Production Technician I,2014-02-17,M,Single,35,Black or African American,No,LinkedIn,46654.0,3.1,3,0,0,3,Fully Meets,3,Active,2025-04-02 23:31:11
+"Kretschmer, John",10176,Production       ,Production Technician I,2011-01-10,M,Married,35,Asian,No,Indeed,63973.0,3.38,3,0,0,17,Fully Meets,3,Active,2025-04-02 23:31:11
+"Kreuger, Freddy",10165,Sales,Area Sales Manager,2011-03-07,M,Single,35,Black or African American,Yes,Diversity Job Fair,71339.0,3.65,5,0,0,20,Fully Meets,3,Active,2025-04-02 23:31:11
+"Lajiri,  Jyoti",10113,IT/IS,Sr. Network Engineer,2014-11-10,M,Married,35,White,No,Employee Referral,93206.0,4.46,5,6,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Landa, Hans",10092,Production       ,Production Manager,2011-01-10,M,Married,35,White,No,Employee Referral,82758.0,4.78,4,0,0,9,Fully Meets,3,Terminated for Cause,2025-04-02 23:31:11
+"Langford, Lindsey",10106,Production       ,Production Technician II,2013-01-07,F,Divorced,35,Asian,No,Indeed,66074.0,4.52,3,0,0,20,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Langton, Enrico",10052,Production       ,Production Technician I,2012-07-09,M,Married,35,White,No,LinkedIn,46120.0,5.0,5,0,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"LaRotonda, William  ",10038,Admin Offices,Accountant I,2014-01-06,M,Divorced,35,Black or African American,No,Website,64520.0,5.0,4,4,0,3,Fully Meets,3,Active,2025-04-02 23:31:11
+"Latif, Mohammed",10249,Production       ,Production Technician II,2012-04-02,M,Married,35,White,No,Google Search,61962.0,4.9,3,0,0,20,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Le, Binh",10232,IT/IS,Senior BI Developer,2016-10-02,F,Single,35,Asian,No,Indeed,81584.0,4.1,5,7,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Leach, Dallas",10087,Production       ,Production Technician I,2011-09-26,F,Single,35,Asian,No,CareerBuilder,63676.0,4.88,3,0,0,17,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"LeBlanc, Brandon  R",10134,Admin Offices,Shared Services Manager,2016-01-05,M,Married,35,White,No,CareerBuilder,93046.0,4.1,4,0,0,20,Fully Meets,3,Active,2025-04-02 23:31:11
+"Lecter, Hannibal",10251,Production       ,Production Technician I,2012-05-14,M,Married,35,Asian,No,Google Search,64738.0,4.1,3,0,0,10,Fully Meets,3,Active,2025-04-02 23:31:11
+"Leruth, Giovanni",10103,Sales,Area Sales Manager,2012-04-30,M,Separated,35,Black or African American,No,Website,70468.0,4.53,3,0,0,16,Fully Meets,3,Active,2025-04-02 23:31:11
+"Liebig, Ketsia",10017,Production       ,Production Manager,2013-09-30,F,Married,35,White,No,Website,77915.0,4.1,3,0,0,11,Exceeds,4,Active,2025-04-02 23:31:11
+"Linares, Marilyn ",10186,Production       ,Production Technician I,2011-07-05,F,Married,35,White,No,Indeed,52624.0,3.18,4,0,0,16,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Linden, Mathew",10137,Production       ,Production Technician II,2013-07-08,M,Married,35,White,No,LinkedIn,63450.0,4.0,3,0,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Lindsay, Leonara ",10008,IT/IS,IT Support,2011-01-21,F,Single,35,Black or African American,Yes,Diversity Job Fair,51777.0,4.64,4,5,0,14,Exceeds,4,Active,2025-04-02 23:31:11
+"Lundy, Susan",10096,Production       ,Production Technician II,2013-07-08,F,Widowed,35,White,No,LinkedIn,67237.0,4.65,4,0,0,15,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Lunquist, Lisa",10035,Production       ,Production Technician II,2013-08-19,F,Single,35,Black or African American,No,Indeed,73330.0,4.2,4,0,0,19,Exceeds,4,Active,2025-04-02 23:31:11
+"Lydon, Allison",10057,Production       ,Production Technician I,2015-02-16,F,Married,35,Black or African American,No,Website,52057.0,5.0,3,0,0,6,Fully Meets,3,Active,2025-04-02 23:31:11
+"Lynch, Lindsay",10004,Production       ,Production Technician I,2011-11-07,F,Single,35,Black or African American,Yes,Diversity Job Fair,47434.0,5.0,4,0,0,17,Exceeds,4,Voluntarily Terminated,2025-04-02 23:31:11
+"MacLennan, Samuel",10191,Production       ,Production Technician I,2012-09-24,M,Widowed,35,White,No,Indeed,52788.0,3.08,4,0,0,18,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Mahoney, Lauren  ",10219,Production       ,Production Technician I,2014-01-06,F,Single,35,White,No,LinkedIn,45395.0,4.6,4,0,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Manchester, Robyn",10077,Production       ,Production Technician II,2016-05-11,F,Married,35,White,No,LinkedIn,62385.0,5.0,3,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Mancuso, Karen",10073,Production       ,Production Technician II,2011-07-05,F,Married,35,Two or more races,No,LinkedIn,68407.0,5.0,4,0,0,16,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Mangal, Debbie",10279,Production       ,Production Technician I,2013-11-11,F,Married,35,White,No,LinkedIn,61349.0,4.1,3,0,0,11,Fully Meets,3,Active,2025-04-02 23:31:11
+"Martin, Sandra",10110,Software Engineering,Software Engineer,2013-11-11,F,Single,35,Asian,No,Google Search,105688.0,4.5,5,4,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Maurice, Shana",10053,Production       ,Production Technician I,2011-05-31,F,Married,35,White,No,Indeed,54132.0,5.0,4,0,0,8,Fully Meets,3,Active,2025-04-02 23:31:11
+"Carthy, B'rigit",10076,Production       ,Production Technician II,2015-03-30,F,Single,35,Black or African American,No,LinkedIn,55315.0,5.0,5,0,0,16,Fully Meets,3,Active,2025-04-02 23:31:11
+"Mckenna, Sandy",10145,Production       ,Production Technician I,2013-01-07,F,Married,35,Black or African American,No,CareerBuilder,62810.0,3.93,3,0,0,20,Fully Meets,3,Active,2025-04-02 23:31:11
+"McKinzie, Jac",10202,Sales,Area Sales Manager,2016-07-06,M,Married,35,Two or more races,No,Website,63291.0,3.4,4,0,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Meads, Elizabeth",10128,Production       ,Production Technician I,2012-04-02,F,Single,35,Black or African American,No,Diversity Job Fair,62659.0,4.18,4,0,0,17,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Medeiros, Jennifer",10068,Production       ,Production Technician I,2015-03-30,F,Single,35,White,No,CareerBuilder,55688.0,5.0,4,0,0,10,Fully Meets,3,Active,2025-04-02 23:31:11
+"Miller, Brannon",10116,Production       ,Production Manager,2012-08-16,M,Single,35,Hispanic,yes,Indeed,83667.0,4.37,3,0,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Miller, Ned",10298,Production       ,Production Technician II,2011-08-15,M,Single,35,White,No,LinkedIn,55800.0,3.0,2,0,6,6,PIP,1,Voluntarily Terminated,2025-04-02 23:31:11
+"Monkfish, Erasumus",10213,Production       ,Production Technician II,2011-11-07,M,Married,35,White,No,LinkedIn,58207.0,3.7,3,0,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Monroe, Peter",10288,IT/IS,IT Manager - Infra,2012-02-15,M,Married,35,Black or African American,Yes,Diversity Job Fair,157000.0,2.39,3,6,4,13,Needs Improvement,2,Active,2025-04-02 23:31:11
+"Monterro, Luisa",10025,Production       ,Production Technician II,2013-05-13,F,Single,35,Black or African American,No,Indeed,72460.0,4.7,3,0,0,1,Exceeds,4,Active,2025-04-02 23:31:11
+"Moran, Patrick",10223,Production       ,Production Technician II,2012-01-09,M,Single,35,Black or African American,No,Diversity Job Fair,72106.0,4.1,4,0,0,12,Fully Meets,3,Active,2025-04-02 23:31:11
+"Morway, Tanya",10151,IT/IS,Network Engineer,2015-02-16,F,Married,35,White,No,CareerBuilder,52599.0,3.81,3,6,0,6,Fully Meets,3,Active,2025-04-02 23:31:11
+"Motlagh,  Dawn",10254,Production       ,Production Technician I,2013-04-01,F,Divorced,35,White,No,LinkedIn,63430.0,4.4,4,0,0,18,Fully Meets,3,Active,2025-04-02 23:31:11
+"Moumanil, Maliki ",10120,Production       ,Production Technician II,2013-05-13,M,Separated,35,Black or African American,No,LinkedIn,74417.0,4.29,5,0,0,11,Fully Meets,3,Active,2025-04-02 23:31:11
+"Myers, Michael",10216,Production       ,Production Technician I,2013-07-08,M,Single,35,Asian,No,LinkedIn,57575.0,4.1,4,0,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"Navathe, Kurt",10079,IT/IS,Senior BI Developer,2017-02-10,M,Single,35,Asian,No,Indeed,87921.0,5.0,3,6,0,17,Fully Meets,3,Active,2025-04-02 23:31:11
+"Ndzi, Colombui",10215,Production       ,Production Technician I,2011-09-26,M,Single,35,Black or African American,No,Diversity Job Fair,50470.0,4.3,3,0,0,19,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Ndzi, Horia",10185,Production       ,Production Technician I,2013-04-01,M,Married,35,White,No,Employee Referral,46664.0,3.18,3,0,0,10,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Newman, Richard ",10063,Production       ,Production Technician I,2014-05-12,M,Married,35,White,No,LinkedIn,48495.0,5.0,5,0,0,11,Fully Meets,3,Active,2025-04-02 23:31:11
+"Ngodup, Shari ",10037,Production       ,Production Technician I,2013-04-01,F,Separated,35,Black or African American,No,Diversity Job Fair,52984.0,4.0,3,0,0,12,Exceeds,4,Active,2025-04-02 23:31:11
+"Nguyen, Dheepa",10042,Sales,Area Sales Manager,2013-07-08,F,Single,35,Two or more races,No,Indeed,63695.0,5.0,5,0,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Nguyen, Lei-Ming",10206,Production       ,Production Technician I,2013-07-08,F,Single,35,White,No,LinkedIn,62061.0,3.6,5,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Nowlan, Kristie",10104,Production       ,Production Technician II,2014-11-10,F,Single,35,White,No,Indeed,66738.0,4.53,5,0,0,5,Fully Meets,3,Active,2025-04-02 23:31:11
+"O'hare, Lynn",10303,Production       ,Production Technician I,2014-03-31,F,Single,35,Two or more races,No,LinkedIn,52674.0,2.33,2,0,6,3,PIP,1,Terminated for Cause,2025-04-02 23:31:11
+"Oliver, Brooke ",10078,Production       ,Production Technician II,2012-05-14,F,Married,35,Asian,No,LinkedIn,71966.0,5.0,3,0,0,17,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Onque, Jasmine",10121,Sales,Area Sales Manager,2013-09-30,F,Single,35,White,Yes,Indeed,63051.0,4.28,3,0,0,1,Fully Meets,3,Active,2025-04-02 23:31:11
+"Osturnka, Adeel",10021,Production       ,Production Technician I,2013-09-30,M,Married,35,White,No,LinkedIn,47414.0,5.0,3,0,0,13,Exceeds,4,Active,2025-04-02 23:31:11
+"Owad, Clinton",10281,Production       ,Production Technician I,2014-02-17,M,Single,35,Black or African American,No,LinkedIn,53060.0,4.25,3,0,4,6,Needs Improvement,2,Active,2025-04-02 23:31:11
+"Ozark, Travis",10041,Sales,Area Sales Manager,2015-01-05,M,Single,35,White,No,Website,68829.0,5.0,5,0,0,18,Fully Meets,3,Active,2025-04-02 23:31:11
+"Panjwani, Nina",10148,Production       ,Production Technician I,2011-02-07,F,Married,35,White,No,Google Search,63515.0,3.89,4,0,0,7,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Patronick, Lucas",10005,Software Engineering,Software Engineer,2011-11-07,M,Single,35,Black or African American,No,Diversity Job Fair,108987.0,5.0,5,3,0,13,Exceeds,4,Voluntarily Terminated,2025-04-02 23:31:11
+"Pearson, Randall",10259,IT/IS,Data Analyst,2014-12-01,M,Married,35,White,No,Employee Referral,93093.0,4.7,4,5,0,19,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Smith, Martin",10286,Production       ,Production Technician I,2011-01-10,M,Single,35,Black or African American,No,Google Search,53564.0,3.54,5,0,4,15,Needs Improvement,2,Voluntarily Terminated,2025-04-02 23:31:11
+"Pelletier, Ermine",10297,Production       ,Production Technician II,2011-07-05,F,Married,35,Asian,No,CareerBuilder,60270.0,2.4,5,0,5,2,Needs Improvement,2,Voluntarily Terminated,2025-04-02 23:31:11
+"Perry, Shakira",10171,Production       ,Production Technician I,2011-05-16,F,Single,35,White,No,LinkedIn,45998.0,3.45,4,0,0,5,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Peters, Lauren",10032,Production       ,Production Technician II,2011-05-16,F,Married,35,White,No,Indeed,57954.0,4.2,5,0,0,12,Exceeds,4,Voluntarily Terminated,2025-04-02 23:31:11
+"Peterson, Ebonee  ",10130,Production       ,Production Manager,2010-10-25,F,Married,35,White,No,Indeed,74669.0,4.16,5,0,0,6,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Petingill, Shana  ",10217,Production       ,Production Technician II,2012-04-02,F,Married,35,Asian,No,LinkedIn,74226.0,4.3,3,0,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Petrowsky, Thelma",10016,IT/IS,Data Analyst,2014-11-10,F,Married,35,Black or African American,No,Employee Referral,93554.0,4.6,5,7,0,16,Exceeds,4,Active,2025-04-02 23:31:11
+"Pham, Hong",10050,Production       ,Production Technician I,2011-07-05,M,Married,35,Asian,No,Google Search,64724.0,5.0,3,0,0,13,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Pitt, Brad ",10164,Production       ,Production Technician I,2007-11-05,M,Single,35,White,No,Google Search,47001.0,3.66,3,0,0,15,Fully Meets,3,Active,2025-04-02 23:31:11
+"Potts, Xana",10124,Sales,Area Sales Manager,2012-01-09,F,Married,35,Black or African American,No,Website,61844.0,4.2,5,0,0,9,Fully Meets,3,Active,2025-04-02 23:31:11
+"Power, Morissa",10187,Production       ,Production Technician I,2011-05-16,F,Divorced,35,Asian,No,Google Search,46799.0,3.17,4,0,0,14,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Punjabhi, Louis  ",10225,Production       ,Production Technician I,2014-01-06,M,Single,35,White,No,Employee Referral,59472.0,4.8,3,0,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Purinton, Janine",10262,Production       ,Production Technician I,2012-09-24,F,Divorced,35,White,No,Indeed,46430.0,4.5,5,0,0,16,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Quinn, Sean",10131,Software Engineering,Software Engineer,2011-02-21,M,Married,35,Black or African American,No,Diversity Job Fair,83363.0,4.15,4,0,0,4,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Rachael, Maggie",10239,IT/IS,BI Developer,2016-10-02,F,Married,35,Black or African American,No,Indeed,95920.0,4.4,4,6,0,10,Fully Meets,3,Active,2025-04-02 23:31:11
+"Rarrick, Quinn",10152,Production       ,Production Technician I,2011-09-26,M,Divorced,35,White,No,Indeed,61729.0,3.8,5,0,0,19,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Ren, Kylo",10140,Sales,Area Sales Manager,2014-05-12,M,Married,35,White,No,CareerBuilder,61809.0,3.98,3,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Rhoads, Thomas",10058,Production       ,Production Technician I,2011-05-16,M,Divorced,35,White,Yes,LinkedIn,45115.0,5.0,4,0,0,11,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Rivera, Haley  ",10011,Production       ,Production Technician I,2011-11-28,F,Married,35,Asian,No,Google Search,46738.0,4.36,5,0,0,16,Exceeds,4,Active,2025-04-02 23:31:11
+"Roberson, May",10230,Production       ,Production Technician II,2011-09-26,F,Divorced,35,Black or African American,No,Google Search,64971.0,4.5,4,0,0,10,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Robertson, Peter",10224,Production       ,Production Technician II,2011-07-05,M,Married,35,White,No,Indeed,55578.0,4.2,5,0,0,13,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Robinson, Alain  ",10047,Production       ,Production Technician I,2011-01-10,M,Married,35,Black or African American,No,Indeed,50428.0,5.0,3,0,0,11,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Robinson, Cherly",10285,Production       ,Production Technician I,2011-01-10,F,Married,35,White,No,Indeed,61422.0,3.6,3,0,4,16,Needs Improvement,2,Terminated for Cause,2025-04-02 23:31:11
+"Robinson, Elias",10020,Production       ,Production Technician I,2013-07-08,M,Widowed,35,White,No,Employee Referral,63353.0,3.6,5,0,0,4,Exceeds,4,Active,2025-04-02 23:31:11
+"Roby, Lori ",10162,IT/IS,Data Analyst,2015-02-16,F,Married,35,White,No,Employee Referral,89883.0,3.69,5,6,0,15,Fully Meets,3,Active,2025-04-02 23:31:11
+"Roehrich, Bianca",10149,IT/IS,Principal Data Architect,2015-01-05,F,Single,35,White,Yes,LinkedIn,120000.0,3.88,3,7,0,12,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Roper, Katie",10086,IT/IS,Data Architect,2017-01-07,F,Single,35,Black or African American,No,Indeed,150290.0,4.94,3,5,0,17,Fully Meets,3,Active,2025-04-02 23:31:11
+"Rose, Ashley  ",10054,Production       ,Production Technician I,2014-01-06,F,Separated,35,White,No,Website,60627.0,5.0,4,0,0,8,Fully Meets,3,Active,2025-04-02 23:31:11
+"Rossetti, Bruno",10065,Production       ,Production Technician I,2011-04-04,M,Single,35,White,No,Google Search,53180.0,5.0,5,0,0,4,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Roup,Simon",10198,IT/IS,IT Manager - DB,2013-01-20,M,Single,35,White,No,Indeed,140920.0,3.6,5,7,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"Ruiz, Ricardo",10222,IT/IS,IT Manager - DB,2012-01-09,M,Divorced,35,Black or African American,No,Diversity Job Fair,148999.0,4.3,4,6,0,8,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Saada, Adell",10126,Software Engineering,Software Engineer,2012-11-05,F,Married,35,White,No,Indeed,86214.0,4.2,3,6,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Saar-Beckles, Melinda",10295,Production       ,Production Technician I,2016-07-04,F,Single,35,Black or African American,No,Diversity Job Fair,47750.0,2.6,4,0,5,4,Needs Improvement,2,Active,2025-04-02 23:31:11
+"Sadki, Nore  ",10260,Production       ,Production Technician I,2009-01-05,M,Single,35,White,No,Google Search,46428.0,4.6,5,0,0,7,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Sahoo, Adil",10233,Production       ,Production Technician II,2010-08-30,M,Married,35,White,No,CareerBuilder,57975.0,4.1,3,0,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"Salter, Jason",10229,IT/IS,Data Analyst ,2015-01-05,M,Divorced,35,Black or African American,No,LinkedIn,88527.0,4.2,3,5,0,2,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Sander, Kamrin",10169,Production       ,Production Technician I,2014-09-29,F,Married,35,Black or African American,No,LinkedIn,56147.0,3.51,3,0,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Sewkumar, Nori",10071,Production       ,Production Technician I,2013-09-30,F,Single,35,Asian,No,Google Search,50923.0,5.0,5,0,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Shepard, Anita ",10179,IT/IS,Network Engineer,2014-09-30,F,Married,35,White,No,LinkedIn,50750.0,3.31,3,6,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Shields, Seffi",10091,Production       ,Production Technician I,2013-08-19,F,Married,35,White,No,LinkedIn,52087.0,4.81,4,0,0,15,Fully Meets,3,Active,2025-04-02 23:31:11
+"Simard, Kramer",10178,IT/IS,Data Analyst,2015-01-05,M,Married,35,White,Yes,Employee Referral,87826.0,3.32,3,7,0,16,Fully Meets,3,Active,2025-04-02 23:31:11
+"Singh, Nan ",10039,Admin Offices,Administrative Assistant,2015-05-01,F,Single,35,White,No,Website,51920.0,5.0,3,5,0,2,Fully Meets,3,Active,2025-04-02 23:31:11
+"Sloan, Constance",10095,Production       ,Production Technician II,2009-10-26,F,Single,35,White,No,CareerBuilder,63878.0,4.68,4,0,0,20,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Smith, Joe",10027,Production       ,Production Technician II,2014-09-29,M,Single,35,White,No,Indeed,60656.0,4.3,3,0,0,4,Exceeds,4,Active,2025-04-02 23:31:11
+"Smith, John",10291,Sales,Sales Manager,2014-05-18,M,Divorced,35,Black or African American,No,Diversity Job Fair,72992.0,2.4,4,0,2,16,Needs Improvement,2,Active,2025-04-02 23:31:11
+"Smith, Leigh Ann",10153,Admin Offices,Administrative Assistant,2011-09-26,F,Married,35,Black or African American,No,Diversity Job Fair,55000.0,3.8,4,4,0,17,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Smith, Sade",10157,Production       ,Production Technician I,2013-11-11,F,Single,35,White,No,Employee Referral,58939.0,3.73,3,0,0,16,Fully Meets,3,Active,2025-04-02 23:31:11
+"Soto, Julia ",10119,IT/IS,IT Support,2011-06-10,F,Married,35,Black or African American,No,LinkedIn,66593.0,4.3,3,5,0,19,Fully Meets,3,Active,2025-04-02 23:31:11
+"Soze, Keyser",10180,IT/IS,Sr. Network Engineer,2016-06-30,M,Married,35,Asian,No,LinkedIn,87565.0,3.27,4,5,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"Sparks, Taylor  ",10302,Production       ,Production Technician I,2012-02-20,F,Married,35,White,No,Indeed,64021.0,2.4,2,1,6,20,PIP,1,Active,2025-04-02 23:31:11
+"Spirea, Kelley",10090,Production       ,Production Manager,2012-10-02,F,Married,35,White,No,LinkedIn,65714.0,4.83,5,0,0,15,Fully Meets,3,Active,2025-04-02 23:31:11
+"Squatrito, Kristen",10030,Production       ,Production Technician I,2013-05-13,F,Divorced,35,White,No,LinkedIn,62425.0,4.1,4,0,0,16,Exceeds,4,Voluntarily Terminated,2025-04-02 23:31:11
+"Stanford,Barbara  M",10278,Production       ,Production Technician I,2011-01-10,F,Divorced,35,Two or more races,No,Google Search,47961.0,4.1,4,0,0,9,Fully Meets,3,Active,2025-04-02 23:31:11
+"Stansfield, Norman",10307,Sales,Area Sales Manager,2014-05-12,M,Married,35,White,No,Website,58273.0,1.81,2,0,3,5,PIP,1,Active,2025-04-02 23:31:11
+"Steans, Tyrone  ",10147,Admin Offices,Accountant I,2014-09-29,M,Single,35,White,No,Indeed,63003.0,3.9,5,5,0,9,Fully Meets,3,Active,2025-04-02 23:31:11
+"Stoica, Rick",10266,Production       ,Production Technician I,2014-02-17,M,Married,35,Asian,No,LinkedIn,61355.0,4.7,3,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Strong, Caitrin",10241,Sales,Area Sales Manager,2010-09-27,F,Married,35,Black or African American,No,Indeed,60120.0,4.1,4,0,0,18,Fully Meets,3,Active,2025-04-02 23:31:11
+"Sullivan, Kissy ",10158,Production       ,Production Manager,2009-01-08,F,Married,35,Black or African American,No,Indeed,63682.0,3.73,4,0,0,12,Fully Meets,3,Active,2025-04-02 23:31:11
+"Sullivan, Timothy",10117,Production       ,Production Technician I,2015-01-05,M,Married,35,White,Yes,Google Search,63025.0,4.36,5,0,0,10,Fully Meets,3,Active,2025-04-02 23:31:11
+"Sutwell, Barbara",10209,Production       ,Production Technician I,2012-05-14,F,Single,35,Asian,No,Indeed,59238.0,3.4,5,0,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"Szabo, Andrew",10024,Software Engineering,Software Engineer,2014-07-07,M,Single,35,White,No,LinkedIn,92989.0,4.5,5,5,0,1,Exceeds,4,Active,2025-04-02 23:31:11
+"Tannen, Biff",10173,IT/IS,BI Developer,2017-04-20,M,Married,35,White,No,Indeed,90100.0,3.4,3,6,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Tavares, Desiree  ",10221,Production       ,Production Technician I,2009-04-27,F,Married,35,Black or African American,No,Diversity Job Fair,60754.0,4.5,5,0,0,11,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Tejeda, Lenora ",10146,Production       ,Production Technician II,2011-05-16,F,Married,35,White,No,Google Search,72202.0,3.93,3,0,0,3,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Terry, Sharlene ",10161,Sales,Area Sales Manager,2014-09-29,F,Single,35,Black or African American,No,Indeed,58370.0,3.69,3,0,0,18,Fully Meets,3,Active,2025-04-02 23:31:11
+"Theamstern, Sophia",10141,Production       ,Production Technician I,2011-07-05,F,Single,35,White,No,Indeed,48413.0,3.98,4,0,0,1,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Thibaud, Kenneth",10268,Production       ,Production Technician II,2007-06-25,M,Widowed,35,White,No,Other,67176.0,4.1,4,0,0,15,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Tippett, Jeanette",10123,Production       ,Production Technician I,2013-02-18,F,Divorced,35,Black or African American,No,Indeed,56339.0,4.21,5,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Torrence, Jack",10013,Sales,Area Sales Manager,2006-01-09,M,Separated,35,White,No,Indeed,64397.0,4.1,3,0,0,6,Exceeds,4,Active,2025-04-02 23:31:11
+"Trang, Mei",10287,Production       ,Production Technician I,2014-02-17,F,Single,35,White,No,LinkedIn,63025.0,2.44,5,0,4,18,Needs Improvement,2,Active,2025-04-02 23:31:11
+"Tredinnick, Neville ",10044,IT/IS,Network Engineer,2015-01-05,M,Married,35,White,No,CareerBuilder,75281.0,5.0,3,5,0,11,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"True, Edward",10102,Software Engineering,Software Engineer,2013-02-18,M,Single,35,Black or African American,No,Diversity Job Fair,100416.0,4.6,3,4,0,9,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Trzeciak, Cybil",10270,Production       ,Production Technician II,2011-01-10,F,Single,35,White,No,LinkedIn,74813.0,4.4,3,0,0,5,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Turpin, Jumil",10045,IT/IS,Network Engineer,2015-03-30,M,Married,35,White,No,Employee Referral,76029.0,5.0,4,7,0,8,Fully Meets,3,Active,2025-04-02 23:31:11
+"Valentin,Jackie",10205,Sales,Area Sales Manager,2011-07-05,F,Married,35,Two or more races,No,Indeed,57859.0,2.81,3,0,0,16,Fully Meets,3,Active,2025-04-02 23:31:11
+"Veera, Abdellah ",10014,Production       ,Production Technician I,2012-08-13,M,Divorced,35,White,No,LinkedIn,58523.0,4.5,5,0,0,15,Exceeds,4,Voluntarily Terminated,2025-04-02 23:31:11
+"Vega, Vincent",10144,Production       ,Production Manager,2011-08-01,M,Divorced,35,White,No,Employee Referral,88976.0,3.93,3,0,0,19,Fully Meets,3,Active,2025-04-02 23:31:11
+"Villanueva, Noah",10253,Sales,Area Sales Manager,2012-03-05,M,Single,35,Asian,No,Website,55875.0,4.5,4,0,0,11,Fully Meets,3,Active,2025-04-02 23:31:11
+"Voldemort, Lord",10118,IT/IS,Database Administrator,2015-02-16,M,Married,35,Black or African American,No,Employee Referral,113999.0,4.33,3,7,0,9,Fully Meets,3,Terminated for Cause,2025-04-02 23:31:11
+"Volk, Colleen",10022,Production       ,Production Technician I,2011-09-26,F,Married,35,White,No,Google Search,49773.0,4.3,5,0,0,18,Exceeds,4,Terminated for Cause,2025-04-02 23:31:11
+"Von Massenbach, Anna",10183,Production       ,Production Technician I,2015-07-05,F,Single,35,White,No,LinkedIn,62068.0,3.21,3,0,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Walker, Roger",10190,Production       ,Production Technician II,2014-08-18,M,Single,35,Black or African American,No,Employee Referral,66541.0,3.11,5,0,0,4,Fully Meets,3,Active,2025-04-02 23:31:11
+"Wallace, Courtney  E",10274,Production       ,Production Manager,2011-09-26,F,Married,35,Black or African American,No,Diversity Job Fair,80512.0,4.5,3,0,0,5,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Wallace, Theresa",10293,Production       ,Production Technician I,2012-08-13,F,Single,35,White,No,CareerBuilder,50274.0,2.5,3,0,6,13,Needs Improvement,2,Voluntarily Terminated,2025-04-02 23:31:11
+"Wang, Charlie",10172,IT/IS,Senior BI Developer,2017-02-15,M,Single,35,Asian,No,Indeed,84903.0,3.42,4,7,0,17,Fully Meets,3,Active,2025-04-02 23:31:11
+"Warfield, Sarah",10127,IT/IS,Sr. Network Engineer,2015-03-30,F,Widowed,35,Asian,No,Employee Referral,107226.0,4.2,4,8,0,7,Fully Meets,3,Active,2025-04-02 23:31:11
+"Whittier, Scott",10072,Production       ,Production Technician I,2011-01-10,M,Single,35,White,Yes,LinkedIn,58371.0,5.0,5,0,0,11,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Wilber, Barry",10048,Production       ,Production Technician I,2011-05-16,M,Married,35,White,No,Website,55140.0,5.0,3,0,0,7,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Wilkes, Annie",10204,Production       ,Production Technician I,2011-01-10,F,Divorced,35,White,No,Google Search,58062.0,3.6,5,0,0,9,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Williams, Jacquelyn  ",10264,Production       ,Production Technician I,2012-01-09,F,Single,35,Black or African American,Yes,Diversity Job Fair,59728.0,4.3,4,0,0,16,Fully Meets,3,Voluntarily Terminated,2025-04-02 23:31:11
+"Winthrop, Jordan  ",10033,Production       ,Production Technician II,2013-01-07,M,Single,35,White,No,LinkedIn,70507.0,5.0,3,0,0,7,Exceeds,4,Voluntarily Terminated,2025-04-02 23:31:11
+"Wolk, Hang  T",10174,Production       ,Production Technician II,2014-09-29,F,Single,35,White,No,LinkedIn,60446.0,3.4,4,0,0,14,Fully Meets,3,Active,2025-04-02 23:31:11
+"Woodson, Jason",10135,Production       ,Production Technician II,2014-07-07,M,Single,35,White,No,LinkedIn,65893.0,4.07,4,0,0,13,Fully Meets,3,Active,2025-04-02 23:31:11
+"Ybarra, Catherine ",10301,Production       ,Production Technician I,2008-09-02,F,Single,35,Asian,No,Google Search,48513.0,3.2,2,0,5,4,PIP,1,Voluntarily Terminated,2025-04-02 23:31:11
+"Zamora, Jennifer",10010,IT/IS,CIO,2010-04-10,F,Single,35,White,No,Employee Referral,220450.0,4.6,5,6,0,16,Exceeds,4,Active,2025-04-02 23:31:11
+"Zhou, Julia",10043,IT/IS,Data Analyst,2015-03-30,F,Single,35,White,No,Employee Referral,89292.0,5.0,3,5,0,11,Fully Meets,3,Active,2025-04-02 23:31:11
+"Zima, Colleen",10271,Production       ,Production Technician I,2014-09-29,F,Widowed,35,Asian,No,LinkedIn,45046.0,4.5,5,0,0,2,Fully Meets,3,Active,2025-04-02 23:31:11

@@ -1,0 +1,312 @@
+DaysLateLast30,EngagementSurvey,EmpSatisfaction,EmploymentStatus,Position,RaceDesc,RecruitmentSource,Salary,DateofHire,Absences,DOB,Sex,MaritalDesc,SpecialProjectsCount,Department,PerformanceScore,Tenure_Years,Age,PerformanceScore_Encoded
+0,4.6,5,Active,Production Technician I,White,LinkedIn,62506,2011-07-05,1,1983-07-10,M ,Single,0,Production       ,Exceeds,13.744010951403148,41.73032169746749,4
+0,4.96,3,Voluntarily Terminated,Sr. DBA,White,Indeed,104437,2015-03-30,17,1975-05-05,M ,Married,6,IT/IS,Fully Meets,10.009582477754963,49.91101984941821,3
+0,3.02,3,Voluntarily Terminated,Production Technician II,White,LinkedIn,64955,2011-07-05,3,1988-09-19,F,Married,0,Production       ,Fully Meets,13.744010951403148,36.53388090349076,3
+0,4.84,5,Active,Production Technician I,White,Indeed,64991,2008-01-07,15,1988-09-27,F,Married,0,Production       ,Fully Meets,17.234770704996578,36.511978097193705,3
+0,5.0,4,Voluntarily Terminated,Production Technician I,White,Google Search,50825,2011-07-11,2,1989-09-08,F,Divorced,0,Production       ,Fully Meets,13.727583846680355,35.564681724846,3
+0,5.0,5,Active,Production Technician I,White,LinkedIn,57568,2012-01-09,15,1977-05-22,F,Single,0,Production       ,Exceeds,13.229295003422314,47.8631074606434,4
+0,3.04,3,Active,Software Engineer,White,LinkedIn,95660,2014-11-10,19,1979-05-24,F,Single,4,Software Engineering,Fully Meets,10.392881587953456,45.8590006844627,3
+0,5.0,4,Active,Production Technician I,White,Employee Referral,59365,2013-09-30,19,1983-02-18,M ,Widowed,0,Production       ,Fully Meets,11.50444900752909,42.119096509240244,3
+0,4.46,3,Active,Production Technician I,Black or African American,Diversity Job Fair,47837,2009-07-06,4,1970-02-11,F,Single,0,Production       ,Fully Meets,15.739904175222451,55.13757700205339,3
+0,5.0,5,Active,IT Support,White,Indeed,50178,2015-01-05,16,1988-01-07,M ,Divorced,6,IT/IS,Fully Meets,10.239561943874058,37.23477070499658,3
+0,4.2,4,Voluntarily Terminated,Production Technician I,Black or African American,Diversity Job Fair,54670,2011-01-10,12,1974-01-12,F,Married,0,Production       ,Fully Meets,14.225872689938399,51.219712525667354,3
+0,4.2,3,Voluntarily Terminated,Production Technician I,Black or African American,Diversity Job Fair,47211,2012-04-02,15,1974-02-21,M ,Married,0,Production       ,Fully Meets,12.999315537303216,51.110198494182065,3
+0,4.28,4,Active,Data Analyst,Black or African American,Diversity Job Fair,92328,2014-11-10,9,1988-07-04,M ,Divorced,5,IT/IS,Exceeds,10.392881587953456,36.74469541409993,4
+0,4.6,4,Active,Production Technician I,Two or more races,Google Search,58709,2012-02-20,7,1983-07-20,M ,Single,0,Production       ,Fully Meets,13.114305270362765,41.70294318959617,3
+0,5.0,5,Voluntarily Terminated,Production Technician I,White,On-line Web application,52505,2012-09-24,1,1977-07-15,M ,Divorced,0,Production       ,Fully Meets,12.5201916495551,47.715263518138265,3
+0,5.0,4,Terminated for Cause,Production Technician I,White,Google Search,57834,2011-02-21,20,1981-10-18,M ,Single,0,Production       ,Fully Meets,14.11088295687885,43.455167693360714,3
+0,4.4,3,Active,Production Technician II,White,Employee Referral,70131,2016-07-21,16,1966-04-17,F,Married,0,Production       ,Exceeds,8.698151950718685,58.959616700889804,4
+0,5.0,5,Active,Production Technician I,White,Google Search,59026,2011-04-04,12,1970-10-27,F,Single,0,Production       ,Fully Meets,13.995893223819301,54.431211498973305,3
+0,4.5,4,Terminated for Cause,Database Administrator,White,Google Search,110000,2014-07-07,8,1986-04-04,F,Single,5,IT/IS,Fully Meets,10.737850787132102,38.99520876112252,3
+0,4.2,4,Active,Production Technician I,Asian,LinkedIn,53250,2013-07-08,13,1979-04-06,M ,Single,0,Production       ,Fully Meets,11.734428473648187,45.99041752224504,3
+0,5.0,3,Active,Production Technician I,White,Google Search,51044,2012-04-02,13,1970-12-22,M ,Single,0,Production       ,Fully Meets,12.999315537303216,54.27789185489391,3
+0,4.2,3,Active,Production Technician I,Asian,Indeed,64919,2013-08-19,2,1958-12-27,F,Divorced,0,Production       ,Fully Meets,11.619438740588638,66.26420260095824,3
+0,5.0,3,Active,Production Technician I,White,Indeed,62910,2014-07-07,19,1989-09-01,F,Married,0,Production       ,Exceeds,10.737850787132102,35.58384668035592,4
+2,2.0,3,Active,Production Technician II,White,CareerBuilder,66441,2011-04-04,3,1990-09-21,F,Single,0,Production       ,Needs Improvement,13.995893223819301,34.52977412731006,2
+0,4.8,5,Voluntarily Terminated,Production Technician II,White,Google Search,57815,2011-01-10,5,1967-01-16,F,Single,0,Production       ,Fully Meets,14.225872689938399,58.209445585215605,3
+0,3.5,5,Terminated for Cause,Enterprise Architect,Black or African American,LinkedIn,103613,2014-02-17,2,1964-07-30,M ,Single,7,IT/IS,Fully Meets,11.121149897330595,60.6735112936345,3
+0,5.0,4,Active,Sr. Accountant,Black or African American,Diversity Job Fair,106367,2015-02-16,4,1987-04-04,F,Married,3,Admin Offices,Fully Meets,10.124572210814511,37.9958932238193,3
+0,3.39,3,Voluntarily Terminated,Production Manager,Asian,Indeed,74312,2013-09-30,14,1970-03-10,M ,Single,0,Production       ,Fully Meets,11.50444900752909,55.063655030800824,3
+0,3.35,4,Voluntarily Terminated,Production Technician I,White,Google Search,53492,2012-04-02,6,1990-08-24,F,Married,0,Production       ,Fully Meets,12.999315537303216,34.60643394934976,3
+0,4.5,2,Active,Accountant I,Black or African American,Diversity Job Fair,63000,2008-10-27,14,1987-11-24,F,Married,6,Admin Offices,Fully Meets,16.42984257357974,37.35523613963039,3
+0,3.19,3,Active,Production Technician II,White,Google Search,65288,2014-09-29,9,1983-07-28,M ,Single,0,Production       ,Fully Meets,10.507871321013004,41.68104038329911,3
+0,3.5,5,Active,Production Technician I,Black or African American,Diversity Job Fair,64375,2013-11-11,17,1969-10-30,F,Separated,0,Production       ,Fully Meets,11.38945927446954,55.422313483915126,3
+1,3.14,5,Voluntarily Terminated,Area Sales Manager,Black or African American,Google Search,74326,2011-08-15,19,1964-06-01,F,Married,0,Sales,Fully Meets,13.631759069130732,60.83504449007529,3
+0,4.51,4,Active,Production Technician II,Black or African American,Employee Referral,63763,2012-03-05,3,1980-03-02,F,Single,0,Production       ,Fully Meets,13.075975359342916,45.08418891170431,3
+0,3.25,5,Active,Production Technician II,White,Indeed,62162,2011-04-04,15,1977-08-19,M ,Married,0,Production       ,Fully Meets,13.995893223819301,47.619438740588635,3
+0,3.84,3,Active,Software Engineering Manager,White,Google Search,77692,2011-08-15,4,1966-11-22,M ,Single,5,Software Engineering,Fully Meets,13.631759069130732,58.36002737850787,3
+0,5.0,3,Active,Production Manager,White,Indeed,72640,2016-01-28,14,1983-08-09,M ,Single,0,Production       ,Exceeds,9.177275838466803,41.648186173853524,4
+0,4.96,4,Active,Software Engineer,White,Indeed,93396,2013-11-11,3,1987-04-05,F,Single,6,Software Engineering,Fully Meets,11.38945927446954,37.99315537303217,3
+0,4.43,3,Active,Production Technician I,Black or African American,LinkedIn,52846,2014-03-31,14,1983-02-02,M ,Single,0,Production       ,Fully Meets,11.006160164271048,42.16290212183436,3
+0,5.0,5,Active,Sr. DBA,Black or African American,LinkedIn,100031,2016-06-30,7,1986-06-06,F,Single,6,IT/IS,Fully Meets,8.75564681724846,38.822724161533195,3
+0,5.0,5,Active,Area Sales Manager,White,Indeed,71860,2014-08-18,7,1963-05-15,F,Single,0,Sales,Fully Meets,10.622861054072553,61.883641341546884,3
+0,5.0,4,Active,Production Technician I,White,Google Search,61656,2014-09-29,11,1951-01-02,F,Single,0,Production       ,Fully Meets,10.507871321013004,74.24777549623545,3
+0,4.5,5,Active,BI Director,White,Indeed,110929,2016-09-06,8,1972-02-09,M ,Married,7,IT/IS,Fully Meets,8.569472963723477,53.14442162902122,3
+0,3.3,4,Active,Production Technician I,White,Indeed,54237,2014-05-12,11,1979-02-12,F,Single,0,Production       ,Fully Meets,10.8911704312115,46.13552361396304,3
+0,3.8,5,Active,Production Technician I,White,LinkedIn,60380,2013-07-08,4,1983-08-24,M ,Single,0,Production       ,Fully Meets,11.734428473648187,41.607118412046546,3
+0,3.0,5,Active,Area Sales Manager,Black or African American,Employee Referral,66808,2012-05-14,17,1970-06-11,M ,Single,0,Sales,Fully Meets,12.88432580424367,54.809034907597535,3
+0,4.3,4,Voluntarily Terminated,Production Technician I,White,Indeed,64786,2011-06-27,3,1983-08-27,F,Single,0,Production       ,Fully Meets,13.765913757700206,41.59890485968515,3
+0,3.58,5,Active,Production Technician I,Black or African American,Indeed,64816,2011-10-03,3,1988-05-31,F,Single,0,Production       ,Fully Meets,13.49760438056126,36.837782340862425,3
+0,4.7,3,Active,IT Support,White,Indeed,68678,2012-09-05,2,1985-09-05,M ,Single,6,IT/IS,Fully Meets,12.572210814510608,39.572895277207394,3
+0,4.2,5,Voluntarily Terminated,Production Technician II,White,Google Search,64066,2011-05-16,9,1981-08-31,F,Married,0,Production       ,Fully Meets,13.880903490759753,43.58658453114305,3
+0,4.2,4,Voluntarily Terminated,Production Technician II,White,Indeed,59369,2010-08-30,6,1978-11-25,M ,Married,0,Production       ,Fully Meets,14.590006844626968,46.351813826146476,3
+0,4.1,4,Active,Production Technician I,White,Employee Referral,50373,2016-07-06,5,1980-08-26,M ,Married,0,Production       ,Exceeds,8.739219712525667,44.59958932238193,4
+0,4.4,5,Active,Production Technician I,White,Employee Referral,63108,2013-07-08,3,1977-09-08,M ,Single,0,Production       ,Fully Meets,11.734428473648187,47.564681724846,3
+5,2.0,3,Terminated for Cause,Production Technician I,Black or African American,LinkedIn,59144,2011-07-11,16,1979-08-12,M ,Single,0,Production       ,Needs Improvement,13.727583846680355,45.63997262149213,2
+3,4.13,2,Active,Production Manager,White,CareerBuilder,68051,2010-07-20,3,1975-12-17,M ,Divorced,0,Production       ,Needs Improvement,14.702258726899384,49.29226557152635,2
+0,3.7,5,Active,Director of Operations,Black or African American,Indeed,170500,2009-01-05,15,1983-03-19,M ,Single,0,Production       ,Exceeds,16.238193018480494,42.039698836413415,4
+0,4.73,5,Active,Production Technician I,White,Indeed,63381,2015-01-05,6,1977-03-31,F,Married,0,Production       ,Fully Meets,10.239561943874058,48.00547570157426,3
+0,3.04,3,Active,Data Analyst,White,Indeed,83552,2015-03-30,2,1986-08-26,M ,Married,6,IT/IS,Fully Meets,10.009582477754963,38.600958247775495,3
+0,4.12,5,Active,Production Technician I,White,LinkedIn,56149,2016-07-06,15,1987-04-10,F,Single,0,Production       ,Fully Meets,8.739219712525667,37.97946611909651,3
+0,5.0,3,Active,Sr. Network Engineer,White,Employee Referral,92329,2014-11-10,5,1965-09-09,M ,Single,4,IT/IS,Fully Meets,10.392881587953456,59.56194387405886,3
+0,4.62,4,Active,Sales Manager,White,Indeed,65729,2014-05-05,8,1990-04-19,F,Single,0,Sales,Fully Meets,10.910335386721425,34.954140999315534,3
+0,3.1,5,Active,Sr. Network Engineer,White,LinkedIn,85028,2014-11-10,19,1952-01-18,F,Married,8,IT/IS,Fully Meets,10.392881587953456,73.20465434633813,3
+0,5.0,3,Active,Production Technician I,White,Indeed,57583,2012-07-02,1,1978-11-05,F,Married,0,Production       ,Fully Meets,12.750171115674195,46.40657084188912,3
+0,3.96,4,Active,Production Technician II,Two or more races,LinkedIn,56294,2011-11-07,6,1979-09-14,M ,Single,0,Production       ,Fully Meets,13.401779603011637,45.549623545516766,3
+2,4.3,4,Active,Production Technician I,White,Indeed,56991,2018-07-09,2,1988-04-15,M ,Married,3,Production       ,Fully Meets,6.7323750855578375,36.9637234770705,3
+0,5.0,4,Voluntarily Terminated,Production Technician I,White,Indeed,55722,2011-05-16,14,1977-10-31,M ,Married,0,Production       ,Fully Meets,13.880903490759753,47.419575633128,3
+0,3.79,5,Active,Software Engineer,Black or African American,CareerBuilder,101199,2012-01-09,8,1979-07-05,F,Single,5,Software Engineering,Fully Meets,13.229295003422314,45.74401095140315,3
+6,1.93,3,Active,Area Sales Manager,Two or more races,Indeed,61568,2014-09-29,5,1975-11-02,M ,Single,0,Sales,PIP,10.507871321013004,49.4154688569473,1
+0,4.62,5,Voluntarily Terminated,Production Technician II,Black or African American,Google Search,58275,2011-04-04,1,1951-02-25,F,Separated,0,Production       ,Fully Meets,13.995893223819301,74.09993155373031,3
+4,1.12,2,Active,Production Technician I,White,Indeed,53189,2014-07-07,9,1967-04-19,M ,Married,0,Production       ,PIP,10.737850787132102,57.95482546201232,1
+0,3.01,5,Active,BI Developer,White,Indeed,96820,2017-02-15,15,1983-09-04,M ,Single,7,IT/IS,Fully Meets,8.125941136208077,41.57700205338809,3
+0,4.3,4,Active,Production Technician I,White,Indeed,51259,2014-05-12,1,1982-11-15,M ,Single,0,Production       ,Fully Meets,10.8911704312115,42.379192334017795,3
+2,2.3,1,Active,Area Sales Manager,White,Website,59231,2012-02-20,17,1987-05-14,F,Single,0,Sales,PIP,13.114305270362765,37.88637919233402,1
+0,3.88,4,Active,Production Technician I,Black or African American,Indeed,61584,2013-01-07,6,1978-12-02,F,Married,0,Production       ,Needs Improvement,12.232717316906228,46.332648870636554,2
+0,3.4,5,Active,Production Technician I,White,CareerBuilder,46335,2012-04-02,15,1986-10-07,F,Single,0,Production       ,Fully Meets,12.999315537303216,38.48596851471595,3
+0,4.11,4,Active,IT Support,White,Employee Referral,70621,2015-01-05,16,1988-07-18,F,Married,6,IT/IS,Fully Meets,10.239561943874058,36.70636550308008,3
+0,4.3,5,Active,IT Manager - Support,Black or African American,Indeed,138888,2014-01-05,4,1970-07-09,M ,Single,5,IT/IS,Exceeds,11.238877481177276,54.732375085557834,4
+0,4.77,5,Active,Area Sales Manager,White,Indeed,74241,2011-01-10,14,1988-11-08,F,Single,0,Sales,Exceeds,14.225872689938399,36.39698836413415,4
+0,4.52,4,Active,Production Manager,White,Google Search,75188,2014-09-18,4,1973-11-28,F,Single,0,Production       ,Fully Meets,10.537987679671458,51.3429158110883,3
+0,2.9,3,Active,Production Technician I,White,Google Search,62514,2010-04-26,6,1973-09-23,F,Married,0,Production       ,Fully Meets,14.934976043805612,51.52361396303901,3
+0,5.0,3,Voluntarily Terminated,Production Technician I,White,Google Search,60070,2011-04-04,7,1991-09-05,F,Married,0,Production       ,Fully Meets,13.995893223819301,33.57426420260096,3
+0,4.7,5,Active,Production Technician I,White,LinkedIn,48888,2014-11-10,8,1974-05-31,M ,Single,0,Production       ,Fully Meets,10.392881587953456,50.83915126625599,3
+0,4.2,3,Active,Production Technician I,White,Employee Referral,54285,2014-03-31,3,1978-08-25,M ,Married,0,Production       ,Fully Meets,11.006160164271048,46.60369609856263,3
+2,3.0,1,Active,Production Technician II,White,Indeed,56847,2014-07-07,5,1989-08-25,F,Separated,0,Production       ,PIP,10.737850787132102,35.60301163586585,1
+5,5.0,4,Terminated for Cause,Production Technician I,White,Google Search,60340,2012-04-02,16,1983-09-02,M ,Single,0,Production       ,Needs Improvement,12.999315537303216,41.582477754962355,2
+5,2.3,3,Terminated for Cause,Production Technician I,White,Google Search,59124,2014-02-17,19,1989-05-06,F,Single,0,Production       ,Needs Improvement,11.121149897330595,35.90691307323751,2
+4,2.1,5,Terminated for Cause,Software Engineer,Black or African American,Indeed,99280,2011-05-02,19,1987-05-15,F,Married,4,Software Engineering,Needs Improvement,13.919233401779604,37.883641341546884,2
+0,4.4,5,Active,Production Technician II,Black or African American,LinkedIn,71776,2014-07-07,17,1978-09-22,F,Married,0,Production       ,Fully Meets,10.737850787132102,46.52703627652293,3
+0,4.0,4,Active,Production Technician II,Black or African American,LinkedIn,65902,2014-02-17,7,1987-09-27,F,Single,0,Production       ,Fully Meets,11.121149897330595,37.51403148528405,3
+0,3.13,3,Voluntarily Terminated,Production Technician I,White,Google Search,57748,2011-11-07,16,1955-04-14,F,Married,0,Production       ,Fully Meets,13.401779603011637,69.96851471594798,3
+6,1.56,5,Active,Production Technician I,White,Indeed,64057,2015-05-11,15,1989-10-18,M ,Married,0,Production       ,PIP,9.894592744695414,35.455167693360714,1
+3,1.2,3,Active,Network Engineer,White,LinkedIn,53366,2015-03-30,2,1987-06-18,M ,Single,6,IT/IS,PIP,10.009582477754963,37.790554414784395,1
+0,5.0,5,Active,Production Technician I,White,Google Search,58530,2012-01-09,19,1981-03-16,F,Married,0,Production       ,Fully Meets,13.229295003422314,44.04654346338125,3
+0,4.76,5,Voluntarily Terminated,Production Technician II,White,Google Search,72609,2011-05-16,20,1981-10-01,M ,Single,0,Production       ,Fully Meets,13.880903490759753,43.501711156741955,3
+0,3.66,3,Voluntarily Terminated,Production Technician II,White,Google Search,55965,2011-04-04,6,1983-11-08,F,Married,0,Production       ,Fully Meets,13.995893223819301,41.399041752224505,3
+4,2.0,5,Terminated for Cause,Area Sales Manager,White,Employee Referral,70187,2014-09-29,7,1975-07-07,M ,Married,0,Sales,PIP,10.507871321013004,49.738535249828885,1
+0,5.0,5,Active,IT Director,Black or African American,Indeed,178000,2011-04-15,15,1980-07-05,M ,Single,5,IT/IS,Exceeds,13.96577686516085,44.7419575633128,4
+0,5.0,3,Active,Sr. Accountant,White,Other,99351,2009-01-05,3,1979-04-16,F,Married,2,Admin Offices,Fully Meets,16.238193018480494,45.96303901437371,3
+2,4.3,3,Active,Area Sales Manager,Black or African American,CareerBuilder,67251,2011-09-06,7,1963-08-28,M ,Single,0,Sales,Fully Meets,13.571526351813826,61.596167008898014,3
+0,4.7,4,Active,IT Support,White,LinkedIn,65707,2010-05-01,1,1968-07-06,F,Single,5,IT/IS,Fully Meets,14.921286789869953,56.73921971252567,3
+0,4.5,3,Active,Production Technician I,White,Employee Referral,52249,2015-03-30,5,1985-09-15,M ,Single,0,Production       ,Fully Meets,10.009582477754963,39.54551676933607,3
+0,4.2,4,Active,Production Technician I,Black or African American,LinkedIn,53171,2011-05-16,12,1983-12-02,F,Single,0,Production       ,Fully Meets,13.880903490759753,41.333333333333336,3
+0,3.73,3,Active,Production Technician I,Black or African American,LinkedIn,51337,2015-03-30,19,1990-10-01,F,Married,0,Production       ,Fully Meets,10.009582477754963,34.502395619438744,3
+0,4.24,4,Voluntarily Terminated,Production Technician I,Black or African American,Diversity Job Fair,51505,2011-11-07,2,1970-05-15,F,Divorced,0,Production       ,Fully Meets,13.401779603011637,54.8829568788501,3
+0,3.97,4,Terminated for Cause,Area Sales Manager,Black or African American,CareerBuilder,59370,2014-07-07,7,1971-07-10,F,Widowed,0,Sales,Fully Meets,10.737850787132102,53.73032169746749,3
+3,3.97,4,Voluntarily Terminated,Production Technician I,Black or African American,Diversity Job Fair,54933,2012-04-02,15,1974-08-09,M ,Married,0,Production       ,Needs Improvement,12.999315537303216,50.64750171115674,2
+0,3.9,4,Active,Production Technician I,Two or more races,Indeed,57815,2014-09-29,3,1980-05-08,F,Single,0,Production       ,Exceeds,10.507871321013004,44.90075290896646,4
+0,4.5,5,Active,Area Sales Manager,White,Indeed,61555,2015-02-16,20,1989-09-22,F,Single,0,Sales,Fully Meets,10.124572210814511,35.526351813826146,3
+0,4.6,4,Terminated for Cause,Database Administrator,White,Indeed,114800,2015-02-16,10,1971-10-23,F,Single,4,IT/IS,Fully Meets,10.124572210814511,53.44284736481862,3
+0,4.3,5,Active,IT Support,White,LinkedIn,74679,2015-03-30,20,1989-11-24,M ,Married,7,IT/IS,Fully Meets,10.009582477754963,35.35386721423682,3
+0,4.3,5,Active,Production Technician I,White,Indeed,53018,2013-11-11,7,1992-06-18,F,Single,0,Production       ,Fully Meets,11.38945927446954,32.78850102669404,3
+0,4.5,4,Active,Production Technician I,Black or African American,Diversity Job Fair,59892,2011-07-11,1,1969-09-29,M ,Divorced,0,Production       ,Exceeds,13.727583846680355,55.507186858316224,4
+3,3.0,3,Voluntarily Terminated,Production Technician II,Black or African American,Diversity Job Fair,68898,2010-04-26,10,1964-10-12,M ,Married,0,Production       ,PIP,14.934976043805612,60.47091033538672,1
+0,4.61,4,Active,IT Support,White,Employee Referral,61242,2015-01-05,11,1981-04-16,F,Separated,5,IT/IS,Fully Meets,10.239561943874058,43.96167008898015,3
+0,4.6,3,Active,Production Technician II,White,LinkedIn,66825,2014-05-12,20,1986-05-25,F,Married,0,Production       ,Fully Meets,10.8911704312115,38.85557837097878,3
+0,5.0,3,Active,Production Technician I,White,LinkedIn,48285,2012-07-02,2,1979-05-21,M ,Married,0,Production       ,Fully Meets,12.750171115674195,45.86721423682409,3
+0,4.4,5,Active,Production Technician II,American Indian or Alaska Native,Google Search,66149,2013-09-30,1,1983-12-08,F,Separated,0,Production       ,Fully Meets,11.50444900752909,41.31690622861054,3
+0,4.1,5,Active,Production Technician I,Asian,LinkedIn,49256,2013-08-19,3,1974-10-09,F,Married,0,Production       ,Fully Meets,11.619438740588638,50.48049281314169,3
+0,4.63,3,Active,Production Manager,White,Employee Referral,62957,2015-06-02,2,1981-07-11,M ,Divorced,0,Production       ,Fully Meets,9.834360027378509,43.72621492128679,3
+0,5.0,5,Voluntarily Terminated,Production Technician I,White,CareerBuilder,63813,2011-02-21,17,1983-05-21,F,Divorced,0,Production       ,Fully Meets,14.11088295687885,41.86721423682409,3
+0,4.2,5,Active,BI Developer,Black or African American,Indeed,99020,2017-04-20,8,1989-06-30,M ,Married,5,IT/IS,Fully Meets,7.950718685831622,35.75633127994524,3
+0,4.5,5,Voluntarily Terminated,Area Sales Manager,Two or more races,LinkedIn,71707,2012-03-07,20,1969-02-09,M ,Single,0,Sales,Fully Meets,13.070499657768652,56.14236824093087,3
+0,4.2,4,Active,Production Technician I,White,Google Search,54828,2011-11-28,13,1977-03-23,F,Married,0,Production       ,Fully Meets,13.344284736481862,48.02737850787132,3
+0,5.0,3,Active,Production Technician II,White,LinkedIn,64246,2013-11-11,20,1988-08-10,M ,Single,0,Production       ,Fully Meets,11.38945927446954,36.643394934976044,3
+0,4.64,4,Voluntarily Terminated,Production Technician I,White,CareerBuilder,52177,2012-01-09,8,1952-08-18,F,Single,0,Production       ,Fully Meets,13.229295003422314,72.62149212867898,3
+0,4.76,4,Active,Production Technician I,White,CareerBuilder,62065,2014-05-12,5,1974-05-02,F,Married,0,Production       ,Exceeds,10.8911704312115,50.91854893908282,4
+0,4.17,4,Active,Production Technician I,White,Google Search,46998,2012-08-13,1,1984-01-04,M ,Single,0,Production       ,Fully Meets,12.635181382614647,41.242984257357975,3
+0,5.0,3,Voluntarily Terminated,Production Technician II,White,CareerBuilder,68099,2011-01-10,15,1972-08-27,F,Single,0,Production       ,Fully Meets,14.225872689938399,52.596851471594796,3
+0,3.6,5,Active,Area Sales Manager,American Indian or Alaska Native,Indeed,70545,2014-08-18,9,1988-09-14,M ,Married,0,Sales,Fully Meets,10.622861054072553,36.54757015742642,3
+0,3.03,5,Voluntarily Terminated,Production Technician II,White,Indeed,63478,2011-08-15,16,1984-02-16,F,Married,0,Production       ,Fully Meets,13.631759069130732,41.125256673511295,3
+0,4.48,5,Active,Database Administrator,White,Indeed,97999,2015-03-30,4,1984-02-21,F,Single,6,IT/IS,Fully Meets,10.009582477754963,41.111567419575636,3
+0,4.5,4,Active,Director of Sales,White,LinkedIn,180000,2014-05-05,19,1966-03-17,F,Married,0,Sales,Fully Meets,10.910335386721425,59.044490075290895,3
+0,3.24,3,Terminated for Cause,Administrative Assistant,Black or African American,Indeed,49920,2015-02-16,6,1985-09-16,F,Married,4,Admin Offices,Fully Meets,10.124572210814511,39.54277891854894,3
+0,4.8,4,Active,Production Technician I,White,LinkedIn,55425,2012-02-20,4,1986-06-10,F,Single,0,Production       ,Fully Meets,13.114305270362765,38.81177275838467,3
+0,3.0,5,Active,Production Technician II,White,LinkedIn,69340,2016-06-06,4,1984-03-11,F,Single,0,Production       ,Fully Meets,8.821355236139631,41.059548254620125,3
+0,4.5,3,Active,Production Technician II,White,Indeed,64995,2015-06-05,6,1992-05-07,F,Separated,0,Production       ,Fully Meets,9.826146475017111,32.903490759753595,3
+0,3.72,3,Voluntarily Terminated,Production Technician II,White,Google Search,68182,2011-02-21,18,1976-09-22,F,Divorced,0,Production       ,Fully Meets,14.11088295687885,48.525667351129364,3
+3,2.34,2,Voluntarily Terminated,Production Manager,Asian,Indeed,83082,2011-02-21,4,1976-11-15,M ,Married,0,Production       ,Needs Improvement,14.11088295687885,48.37782340862423,2
+0,3.99,3,Active,Production Technician I,White,Indeed,51908,2013-08-19,14,1991-01-28,F,Single,0,Production       ,Fully Meets,11.619438740588638,34.17659137577002,3
+0,4.1,3,Active,Production Technician I,Black or African American,LinkedIn,61242,2012-11-05,7,1972-09-11,F,Single,0,Production       ,Fully Meets,12.405201916495551,52.55578370978782,3
+0,4.3,5,Active,Production Technician I,White,Employee Referral,45069,2013-09-30,7,1966-03-22,F,Divorced,0,Production       ,Fully Meets,11.50444900752909,59.030800821355236,3
+0,4.6,4,Active,Production Technician II,American Indian or Alaska Native,LinkedIn,60724,2011-07-05,11,1986-11-06,F,Divorced,0,Production       ,Exceeds,13.744010951403148,38.403832991101986,4
+0,5.0,5,Active,Production Technician I,White,LinkedIn,60436,2014-01-06,9,1964-04-13,F,Separated,0,Production       ,Fully Meets,11.236139630390143,60.969199178644764,3
+0,4.7,4,Voluntarily Terminated,Production Technician I,White,CareerBuilder,46837,2011-11-07,9,1959-08-19,M ,Married,0,Production       ,Exceeds,13.401779603011637,65.6208076659822,4
+0,3.75,3,Active,Database Administrator,Asian,Indeed,105700,2015-01-05,2,1986-11-07,F,Married,5,IT/IS,Fully Meets,10.239561943874058,38.40109514031485,3
+0,4.3,3,Active,Production Technician II,White,LinkedIn,63322,2014-07-07,1,1969-09-08,F,Single,0,Production       ,Exceeds,10.737850787132102,55.564681724846,4
+0,4.0,4,Voluntarily Terminated,Production Technician I,Black or African American,CareerBuilder,61154,2011-01-10,4,1986-04-17,F,Married,0,Production       ,Fully Meets,14.225872689938399,38.959616700889804,3
+0,4.5,5,Voluntarily Terminated,Sales Manager,White,Google Search,68999,2011-11-07,2,1989-11-11,F,Single,0,Sales,Fully Meets,13.401779603011637,35.389459274469544,3
+0,3.07,4,Active,Production Technician I,White,Indeed,50482,2013-09-30,10,1976-01-19,M ,Single,0,Production       ,Fully Meets,11.50444900752909,49.20191649555099,3
+0,4.3,5,Active,Area Sales Manager,White,Indeed,65310,2013-08-19,13,1979-11-27,M ,Single,0,Sales,Fully Meets,11.619438740588638,45.347022587268995,3
+0,4.83,3,Active,President & CEO,White,Indeed,250000,2012-07-02,10,1954-09-21,F,Married,0,Executive Office,Fully Meets,12.750171115674195,70.52977412731006,3
+0,3.6,5,Voluntarily Terminated,Production Technician I,White,Google Search,54005,2011-09-26,16,1973-12-08,F,Married,0,Production       ,Fully Meets,13.516769336071183,51.31553730321698,3
+0,3.49,4,Voluntarily Terminated,Production Technician I,White,Google Search,45433,2011-09-26,6,1970-10-08,F,Married,0,Production       ,Fully Meets,13.516769336071183,54.483230663928815,3
+0,3.1,3,Active,Production Technician I,Black or African American,LinkedIn,46654,2014-02-17,3,1977-11-10,M ,Single,0,Production       ,Fully Meets,11.121149897330595,47.39219712525667,3
+0,3.38,3,Active,Production Technician I,Asian,Indeed,63973,2011-01-10,17,1980-02-02,M ,Married,0,Production       ,Fully Meets,14.225872689938399,45.163586584531146,3
+0,3.65,5,Active,Area Sales Manager,Black or African American,Diversity Job Fair,71339,2011-03-07,20,1969-02-24,M ,Single,0,Sales,Fully Meets,14.072553045859001,56.101300479123886,3
+0,4.46,5,Active,Sr. Network Engineer,White,Employee Referral,93206,2014-11-10,7,1986-04-23,M ,Married,6,IT/IS,Fully Meets,10.392881587953456,38.94318959616701,3
+0,4.78,4,Terminated for Cause,Production Manager,White,Employee Referral,82758,2011-01-10,9,1972-07-01,M ,Married,0,Production       ,Fully Meets,14.225872689938399,52.75290896646133,3
+0,4.52,3,Voluntarily Terminated,Production Technician II,Asian,Indeed,66074,2013-01-07,20,1979-07-25,F,Divorced,0,Production       ,Fully Meets,12.232717316906228,45.68925393566051,3
+0,5.0,5,Active,Production Technician I,White,LinkedIn,46120,2012-07-09,13,1986-12-09,M ,Married,0,Production       ,Fully Meets,12.731006160164272,38.313483915126625,3
+0,5.0,4,Active,Accountant I,Black or African American,Website,64520,2014-01-06,3,1984-04-26,M ,Divorced,4,Admin Offices,Fully Meets,11.236139630390143,40.93360711841205,3
+0,4.9,3,Voluntarily Terminated,Production Technician II,White,Google Search,61962,2012-04-02,20,1984-05-09,M ,Married,0,Production       ,Fully Meets,12.999315537303216,40.89801505817933,3
+0,4.1,5,Active,Senior BI Developer,Asian,Indeed,81584,2016-10-02,2,1987-06-14,F,Single,7,IT/IS,Fully Meets,8.498288843258042,37.80150581793292,3
+0,4.88,3,Voluntarily Terminated,Production Technician I,Asian,CareerBuilder,63676,2011-09-26,17,1979-01-17,F,Single,0,Production       ,Fully Meets,13.516769336071183,46.20670773442848,3
+0,4.1,4,Active,Shared Services Manager,White,CareerBuilder,93046,2016-01-05,20,1984-06-10,M ,Married,0,Admin Offices,Fully Meets,9.240246406570842,40.8104038329911,3
+0,4.1,3,Active,Production Technician I,Asian,Google Search,64738,2012-05-14,10,1982-09-02,M ,Married,0,Production       ,Fully Meets,12.88432580424367,42.58179329226557,3
+0,4.53,3,Active,Area Sales Manager,Black or African American,Website,70468,2012-04-30,16,1988-12-27,M ,Separated,0,Sales,Fully Meets,12.922655715263518,36.26283367556468,3
+0,4.1,3,Active,Production Manager,White,Website,77915,2013-09-30,11,1981-10-26,F,Married,0,Production       ,Exceeds,11.50444900752909,43.43326488706366,4
+0,3.18,4,Voluntarily Terminated,Production Technician I,White,Indeed,52624,2011-07-05,16,1981-03-26,F,Married,0,Production       ,Fully Meets,13.744010951403148,44.01916495550992,3
+0,4.0,3,Active,Production Technician II,White,LinkedIn,63450,2013-07-08,7,1979-03-19,M ,Married,0,Production       ,Fully Meets,11.734428473648187,46.039698836413415,3
+0,4.64,4,Active,IT Support,Black or African American,Diversity Job Fair,51777,2011-01-21,14,1988-10-05,F,Single,5,IT/IS,Exceeds,14.195756331279945,36.49007529089665,4
+0,4.65,4,Voluntarily Terminated,Production Technician II,White,LinkedIn,67237,2013-07-08,15,1976-12-26,F,Widowed,0,Production       ,Fully Meets,11.734428473648187,48.26557152635181,3
+0,4.2,4,Active,Production Technician II,Black or African American,Indeed,73330,2013-08-19,19,1982-03-28,F,Single,0,Production       ,Exceeds,11.619438740588638,43.01437371663244,4
+0,5.0,3,Active,Production Technician I,Black or African American,Website,52057,2015-02-16,6,1975-10-22,F,Married,0,Production       ,Fully Meets,10.124572210814511,49.445585215605746,3
+0,5.0,4,Voluntarily Terminated,Production Technician I,Black or African American,Diversity Job Fair,47434,2011-11-07,17,1973-02-14,F,Single,0,Production       ,Exceeds,13.401779603011637,52.12867898699521,4
+0,3.08,4,Voluntarily Terminated,Production Technician I,White,Indeed,52788,2012-09-24,18,1972-11-09,M ,Widowed,0,Production       ,Fully Meets,12.5201916495551,52.394250513347025,3
+0,4.6,4,Active,Production Technician I,White,LinkedIn,45395,2014-01-06,14,1986-07-07,F,Single,0,Production       ,Fully Meets,11.236139630390143,38.7378507871321,3
+0,5.0,3,Active,Production Technician II,White,LinkedIn,62385,2016-05-11,4,1976-08-25,F,Married,0,Production       ,Fully Meets,8.892539356605065,48.602327173169066,3
+0,5.0,4,Voluntarily Terminated,Production Technician II,Two or more races,LinkedIn,68407,2011-07-05,16,1986-12-10,F,Married,0,Production       ,Fully Meets,13.744010951403148,38.31074606433949,3
+0,4.1,3,Active,Production Technician I,White,LinkedIn,61349,2013-11-11,11,1974-11-07,F,Married,0,Production       ,Fully Meets,11.38945927446954,50.40109514031485,3
+0,4.5,5,Active,Software Engineer,Asian,Google Search,105688,2013-11-11,14,1987-11-07,F,Single,4,Software Engineering,Fully Meets,11.38945927446954,37.40177960301163,3
+0,5.0,4,Active,Production Technician I,White,Indeed,54132,2011-05-31,8,1977-11-22,F,Married,0,Production       ,Fully Meets,13.839835728952773,47.35934291581109,3
+0,5.0,5,Active,Production Technician II,Black or African American,LinkedIn,55315,2015-03-30,16,1987-05-21,F,Single,0,Production       ,Fully Meets,10.009582477754963,37.86721423682409,3
+0,3.93,3,Active,Production Technician I,Black or African American,CareerBuilder,62810,2013-01-07,20,1987-01-07,F,Married,0,Production       ,Fully Meets,12.232717316906228,38.234086242299796,3
+0,3.4,4,Active,Area Sales Manager,Two or more races,Website,63291,2016-07-06,7,1984-07-01,M ,Married,0,Sales,Fully Meets,8.739219712525667,40.75290896646133,3
+0,4.18,4,Voluntarily Terminated,Production Technician I,Black or African American,Diversity Job Fair,62659,2012-04-02,17,1968-05-30,F,Single,0,Production       ,Fully Meets,12.999315537303216,56.84052019164955,3
+0,5.0,4,Active,Production Technician I,White,CareerBuilder,55688,2015-03-30,10,1976-09-22,F,Single,0,Production       ,Fully Meets,10.009582477754963,48.525667351129364,3
+0,4.37,3,Active,Production Manager,Hispanic,Indeed,83667,2012-08-16,2,1981-08-10,M ,Single,0,Production       ,Fully Meets,12.626967830253252,43.644079397672826,3
+6,3.0,2,Voluntarily Terminated,Production Technician II,White,LinkedIn,55800,2011-08-15,6,1985-06-29,M ,Single,0,Production       ,PIP,13.631759069130732,39.75906913073238,1
+0,3.7,3,Active,Production Technician II,White,LinkedIn,58207,2011-11-07,14,1992-08-17,M ,Married,0,Production       ,Fully Meets,13.401779603011637,32.62422997946612,3
+4,2.39,3,Active,IT Manager - Infra,Black or African American,Diversity Job Fair,157000,2012-02-15,13,1986-10-05,M ,Married,6,IT/IS,Needs Improvement,13.127994524298426,38.49144421629021,2
+0,4.7,3,Active,Production Technician II,Black or African American,Indeed,72460,2013-05-13,1,1970-04-24,F,Single,0,Production       ,Exceeds,11.887748117727584,54.940451745379875,4
+0,4.1,4,Active,Production Technician II,Black or African American,Diversity Job Fair,72106,2012-01-09,12,1976-12-03,M ,Single,0,Production       ,Fully Meets,13.229295003422314,48.328542094455855,3
+0,3.81,3,Active,Network Engineer,White,CareerBuilder,52599,2015-02-16,6,1979-04-04,F,Married,6,IT/IS,Fully Meets,10.124572210814511,45.9958932238193,3
+0,4.4,4,Active,Production Technician I,White,LinkedIn,63430,2013-04-01,18,1984-07-07,F,Divorced,0,Production       ,Fully Meets,12.002737850787133,40.73648186173853,3
+0,4.29,5,Active,Production Technician II,Black or African American,LinkedIn,74417,2013-05-13,11,1974-12-01,M ,Separated,0,Production       ,Fully Meets,11.887748117727584,50.33538672142368,3
+0,4.1,4,Active,Production Technician I,Asian,LinkedIn,57575,2013-07-08,13,1980-04-18,M ,Single,0,Production       ,Fully Meets,11.734428473648187,44.955509924709105,3
+0,5.0,3,Active,Senior BI Developer,Asian,Indeed,87921,2017-02-10,17,1970-04-25,M ,Single,6,IT/IS,Fully Meets,8.139630390143736,54.93771389459275,3
+0,4.3,3,Voluntarily Terminated,Production Technician I,Black or African American,Diversity Job Fair,50470,2011-09-26,19,1989-05-02,M ,Single,0,Production       ,Fully Meets,13.516769336071183,35.917864476386036,3
+0,3.18,3,Voluntarily Terminated,Production Technician I,White,Employee Referral,46664,2013-04-01,10,1983-03-28,M ,Married,0,Production       ,Fully Meets,12.002737850787133,42.01505817932922,3
+0,5.0,5,Active,Production Technician I,White,LinkedIn,48495,2014-05-12,11,1977-04-08,M ,Married,0,Production       ,Fully Meets,10.8911704312115,47.983572895277206,3
+0,4.0,3,Active,Production Technician I,Black or African American,Diversity Job Fair,52984,2013-04-01,12,1967-06-03,F,Separated,0,Production       ,Exceeds,12.002737850787133,57.831622176591374,4
+0,5.0,5,Active,Area Sales Manager,Two or more races,Indeed,63695,2013-07-08,2,1989-03-31,F,Single,0,Sales,Fully Meets,11.734428473648187,36.00547570157426,3
+0,3.6,5,Active,Production Technician I,White,LinkedIn,62061,2013-07-08,4,1984-07-07,F,Single,0,Production       ,Fully Meets,11.734428473648187,40.73648186173853,3
+0,4.53,5,Active,Production Technician II,White,Indeed,66738,2014-11-10,5,1985-11-23,F,Single,0,Production       ,Fully Meets,10.392881587953456,39.356605065023956,3
+6,2.33,2,Terminated for Cause,Production Technician I,Two or more races,LinkedIn,52674,2014-03-31,3,1980-09-30,F,Single,0,Production       ,PIP,11.006160164271048,44.50376454483231,1
+0,5.0,3,Voluntarily Terminated,Production Technician II,Asian,LinkedIn,71966,2012-05-14,17,1952-02-11,F,Married,0,Production       ,Fully Meets,12.88432580424367,73.13894592744695,3
+0,4.28,3,Active,Area Sales Manager,White,Indeed,63051,2013-09-30,1,1990-05-11,F,Single,0,Sales,Fully Meets,11.50444900752909,34.893908281998634,3
+0,5.0,3,Active,Production Technician I,White,LinkedIn,47414,2013-09-30,13,1976-12-11,M ,Married,0,Production       ,Exceeds,11.50444900752909,48.3066392881588,4
+4,4.25,3,Active,Production Technician I,Black or African American,LinkedIn,53060,2014-02-17,6,1979-11-24,M ,Single,0,Production       ,Needs Improvement,11.121149897330595,45.35523613963039,2
+0,5.0,5,Active,Area Sales Manager,White,Website,68829,2015-01-05,18,1982-05-19,M ,Single,0,Sales,Fully Meets,10.239561943874058,42.87200547570158,3
+0,3.89,4,Voluntarily Terminated,Production Technician I,White,Google Search,63515,2011-02-07,7,1979-05-01,F,Married,0,Production       ,Fully Meets,14.149212867898699,45.921971252566735,3
+0,5.0,5,Voluntarily Terminated,Software Engineer,Black or African American,Diversity Job Fair,108987,2011-11-07,13,1979-02-20,M ,Single,3,Software Engineering,Exceeds,13.401779603011637,46.11362080766598,4
+0,4.7,4,Voluntarily Terminated,Data Analyst,White,Employee Referral,93093,2014-12-01,19,1984-09-05,M ,Married,5,IT/IS,Fully Meets,10.335386721423683,40.57221081451061,3
+4,3.54,5,Voluntarily Terminated,Production Technician I,Black or African American,Google Search,53564,2011-01-10,15,1988-03-17,M ,Single,0,Production       ,Needs Improvement,14.225872689938399,37.04312114989733,2
+5,2.4,5,Voluntarily Terminated,Production Technician II,Asian,CareerBuilder,60270,2011-07-05,2,1989-07-18,F,Married,0,Production       ,Needs Improvement,13.744010951403148,35.70704996577687,2
+0,3.45,4,Voluntarily Terminated,Production Technician I,White,LinkedIn,45998,2011-05-16,5,1986-07-20,F,Single,0,Production       ,Fully Meets,13.880903490759753,38.70225872689939,3
+0,4.2,5,Voluntarily Terminated,Production Technician II,White,Indeed,57954,2011-05-16,12,1986-08-17,F,Married,0,Production       ,Exceeds,13.880903490759753,38.625598904859686,4
+0,4.16,5,Voluntarily Terminated,Production Manager,White,Indeed,74669,2010-10-25,6,1977-05-09,F,Married,0,Production       ,Fully Meets,14.43668720054757,47.898699520876114,3
+0,4.3,3,Active,Production Technician II,Asian,LinkedIn,74226,2012-04-02,14,1979-03-10,F,Married,0,Production       ,Fully Meets,12.999315537303216,46.064339493497606,3
+0,4.6,5,Active,Data Analyst,Black or African American,Employee Referral,93554,2014-11-10,16,1984-09-16,F,Married,7,IT/IS,Exceeds,10.392881587953456,40.54209445585216,4
+0,5.0,3,Voluntarily Terminated,Production Technician I,Asian,Google Search,64724,2011-07-05,13,1988-03-06,M ,Married,0,Production       ,Fully Meets,13.744010951403148,37.073237508555785,3
+0,3.66,3,Active,Production Technician I,White,Google Search,47001,2007-11-05,15,1981-11-23,M ,Single,0,Production       ,Fully Meets,17.4072553045859,43.356605065023956,3
+0,4.2,5,Active,Area Sales Manager,Black or African American,Website,61844,2012-01-09,9,1988-08-29,F,Married,0,Sales,Fully Meets,13.229295003422314,36.591375770020534,3
+0,3.17,4,Voluntarily Terminated,Production Technician I,Asian,Google Search,46799,2011-05-16,14,1984-10-15,F,Divorced,0,Production       ,Fully Meets,13.880903490759753,40.46269678302532,3
+0,4.8,3,Active,Production Technician I,White,Employee Referral,59472,2014-01-06,14,1961-06-19,M ,Single,0,Production       ,Fully Meets,11.236139630390143,63.7864476386037,3
+0,4.5,5,Voluntarily Terminated,Production Technician I,White,Indeed,46430,2012-09-24,16,1970-09-22,F,Divorced,0,Production       ,Fully Meets,12.5201916495551,54.52703627652293,3
+0,4.15,4,Voluntarily Terminated,Software Engineer,Black or African American,Diversity Job Fair,83363,2011-02-21,4,1984-11-06,M ,Married,0,Software Engineering,Fully Meets,14.11088295687885,40.40246406570842,3
+0,4.4,4,Active,BI Developer,Black or African American,Indeed,95920,2016-10-02,10,1980-05-12,F,Married,6,IT/IS,Fully Meets,8.498288843258042,44.889801505817935,3
+0,3.8,5,Voluntarily Terminated,Production Technician I,White,Indeed,61729,2011-09-26,19,1984-12-31,M ,Divorced,0,Production       ,Fully Meets,13.516769336071183,40.251882272416154,3
+0,3.98,3,Active,Area Sales Manager,White,CareerBuilder,61809,2014-05-12,4,1954-10-12,M ,Married,0,Sales,Fully Meets,10.8911704312115,70.47227926078028,3
+0,5.0,4,Voluntarily Terminated,Production Technician I,White,LinkedIn,45115,2011-05-16,11,1982-07-22,M ,Divorced,0,Production       ,Fully Meets,13.880903490759753,42.69678302532512,3
+0,4.36,5,Active,Production Technician I,Asian,Google Search,46738,2011-11-28,16,1973-01-12,F,Married,0,Production       ,Exceeds,13.344284736481862,52.219028062970565,4
+0,4.5,4,Voluntarily Terminated,Production Technician II,Black or African American,Google Search,64971,2011-09-26,10,1981-09-05,F,Divorced,0,Production       ,Fully Meets,13.516769336071183,43.572895277207394,3
+0,4.2,5,Voluntarily Terminated,Production Technician II,White,Indeed,55578,2011-07-05,13,1972-07-03,M ,Married,0,Production       ,Fully Meets,13.744010951403148,52.747433264887064,3
+0,5.0,3,Voluntarily Terminated,Production Technician I,Black or African American,Indeed,50428,2011-01-10,11,1974-01-07,M ,Married,0,Production       ,Fully Meets,14.225872689938399,51.233401779603014,3
+4,3.6,3,Terminated for Cause,Production Technician I,White,Indeed,61422,2011-01-10,16,1985-01-07,F,Married,0,Production       ,Needs Improvement,14.225872689938399,40.23271731690623,2
+0,3.6,5,Active,Production Technician I,White,Employee Referral,63353,2013-07-08,4,1985-01-28,M ,Widowed,0,Production       ,Exceeds,11.734428473648187,40.17522245037645,4
+0,3.69,5,Active,Data Analyst,White,Employee Referral,89883,2015-02-16,15,1981-10-11,F,Married,6,IT/IS,Fully Meets,10.124572210814511,43.474332648870636,3
+0,3.88,3,Voluntarily Terminated,Principal Data Architect,White,LinkedIn,120000,2015-01-05,12,1973-05-27,F,Single,7,IT/IS,Fully Meets,10.239561943874058,51.84941820670773,3
+0,4.94,3,Active,Data Architect,Black or African American,Indeed,150290,2017-01-07,17,1972-11-21,F,Single,5,IT/IS,Fully Meets,8.232717316906228,52.36139630390144,3
+0,5.0,4,Active,Production Technician I,White,Website,60627,2014-01-06,8,1974-12-05,F,Separated,0,Production       ,Fully Meets,11.236139630390143,50.32443531827516,3
+0,5.0,5,Voluntarily Terminated,Production Technician I,White,Google Search,53180,2011-04-04,4,1987-03-18,M ,Single,0,Production       ,Fully Meets,13.995893223819301,38.04243668720055,3
+0,3.6,5,Active,IT Manager - DB,White,Indeed,140920,2013-01-20,13,1973-04-05,M ,Single,7,IT/IS,Fully Meets,12.19712525667351,51.9917864476386,3
+0,4.3,4,Voluntarily Terminated,IT Manager - DB,Black or African American,Diversity Job Fair,148999,2012-01-09,8,1964-01-04,M ,Divorced,6,IT/IS,Fully Meets,13.229295003422314,61.242984257357975,3
+0,4.2,3,Active,Software Engineer,White,Indeed,86214,2012-11-05,2,1986-07-24,F,Married,6,Software Engineering,Fully Meets,12.405201916495551,38.691307323750856,3
+5,2.6,4,Active,Production Technician I,Black or African American,Diversity Job Fair,47750,2016-07-04,4,1968-06-06,F,Single,0,Production       ,Needs Improvement,8.744695414099931,56.82135523613963,2
+0,4.6,5,Voluntarily Terminated,Production Technician I,White,Google Search,46428,2009-01-05,7,1974-12-21,M ,Single,0,Production       ,Fully Meets,16.238193018480494,50.280629705681044,3
+0,4.1,3,Active,Production Technician II,White,CareerBuilder,57975,2010-08-30,13,1986-04-26,M ,Married,0,Production       ,Fully Meets,14.590006844626968,38.93497604380561,3
+0,4.2,3,Voluntarily Terminated,Data Analyst ,Black or African American,LinkedIn,88527,2015-01-05,2,1987-12-17,M ,Divorced,5,IT/IS,Fully Meets,10.239561943874058,37.29226557152635,3
+0,3.51,3,Active,Production Technician I,Black or African American,LinkedIn,56147,2014-09-29,2,1988-07-10,F,Married,0,Production       ,Fully Meets,10.507871321013004,36.72826830937714,3
+0,5.0,5,Active,Production Technician I,Asian,Google Search,50923,2013-09-30,14,1975-03-10,F,Single,0,Production       ,Fully Meets,11.50444900752909,50.064339493497606,3
+0,3.31,3,Active,Network Engineer,White,LinkedIn,50750,2014-09-30,7,1981-04-14,F,Married,6,IT/IS,Fully Meets,10.505133470225873,43.96714579055441,3
+0,4.81,4,Active,Production Technician I,White,LinkedIn,52087,2013-08-19,15,1985-08-24,F,Married,0,Production       ,Fully Meets,11.619438740588638,39.605749486652975,3
+0,3.32,3,Active,Data Analyst,White,Employee Referral,87826,2015-01-05,16,1970-02-08,M ,Married,7,IT/IS,Fully Meets,10.239561943874058,55.14579055441479,3
+0,5.0,3,Active,Administrative Assistant,White,Website,51920,2015-05-01,2,1988-05-19,F,Single,5,Admin Offices,Fully Meets,9.921971252566735,36.87063655030801,3
+0,4.68,4,Voluntarily Terminated,Production Technician II,White,CareerBuilder,63878,2009-10-26,20,1987-11-25,F,Single,0,Production       ,Fully Meets,15.433264887063656,37.35249828884326,3
+0,4.3,3,Active,Production Technician II,White,Indeed,60656,2014-09-29,4,1963-10-30,M ,Single,0,Production       ,Exceeds,10.507871321013004,61.42368240930869,4
+2,2.4,4,Active,Sales Manager,Black or African American,Diversity Job Fair,72992,2014-05-18,16,1984-08-16,M ,Divorced,0,Sales,Needs Improvement,10.874743326488707,40.62696783025325,2
+0,3.8,4,Voluntarily Terminated,Administrative Assistant,Black or African American,Diversity Job Fair,55000,2011-09-26,17,1987-06-14,F,Married,4,Admin Offices,Fully Meets,13.516769336071183,37.80150581793292,3
+0,3.73,3,Active,Production Technician I,White,Employee Referral,58939,2013-11-11,16,1965-02-02,F,Single,0,Production       ,Fully Meets,11.38945927446954,60.16153319644079,3
+0,4.3,3,Active,IT Support,Black or African American,LinkedIn,66593,2011-06-10,19,1973-03-12,F,Married,5,IT/IS,Fully Meets,13.81245722108145,52.05749486652977,3
+0,3.27,4,Active,Sr. Network Engineer,Asian,LinkedIn,87565,2016-06-30,13,1983-02-09,M ,Married,5,IT/IS,Fully Meets,8.75564681724846,42.143737166324435,3
+6,2.4,2,Active,Production Technician I,White,Indeed,64021,2012-02-20,20,1968-07-20,F,Married,1,Production       ,PIP,13.114305270362765,56.70088980150582,1
+0,4.83,5,Active,Production Manager,White,LinkedIn,65714,2012-10-02,15,1975-09-30,F,Married,0,Production       ,Fully Meets,12.498288843258042,49.50581793292265,3
+0,4.1,4,Voluntarily Terminated,Production Technician I,White,LinkedIn,62425,2013-05-13,16,1973-03-26,F,Divorced,0,Production       ,Exceeds,11.887748117727584,52.01916495550992,4
+0,4.1,4,Active,Production Technician I,Two or more races,Google Search,47961,2011-01-10,9,1982-08-25,F,Divorced,0,Production       ,Fully Meets,14.225872689938399,42.60369609856263,3
+3,1.81,2,Active,Area Sales Manager,White,Website,58273,2014-05-12,5,1974-05-09,M ,Married,0,Sales,PIP,10.8911704312115,50.899383983572896,1
+0,3.9,5,Active,Accountant I,White,Indeed,63003,2014-09-29,9,1986-09-01,M ,Single,5,Admin Offices,Fully Meets,10.507871321013004,38.5845311430527,3
+0,4.7,3,Active,Production Technician I,Asian,LinkedIn,61355,2014-02-17,4,1985-03-14,M ,Married,0,Production       ,Fully Meets,11.121149897330595,40.05201916495551,3
+0,4.1,4,Active,Area Sales Manager,Black or African American,Indeed,60120,2010-09-27,18,1989-05-12,F,Married,0,Sales,Fully Meets,14.513347022587268,35.89048596851472,3
+0,3.73,4,Active,Production Manager,Black or African American,Indeed,63682,2009-01-08,12,1978-03-28,F,Married,0,Production       ,Fully Meets,16.229979466119097,47.01437371663244,3
+0,4.36,5,Active,Production Technician I,White,Google Search,63025,2015-01-05,10,1982-10-07,M ,Married,0,Production       ,Fully Meets,10.239561943874058,42.48596851471595,3
+0,3.4,5,Active,Production Technician I,Asian,Indeed,59238,2012-05-14,13,1968-08-15,F,Single,0,Production       ,Fully Meets,12.88432580424367,56.629705681040384,3
+0,4.5,5,Active,Software Engineer,White,LinkedIn,92989,2014-07-07,1,1983-05-06,M ,Single,5,Software Engineering,Exceeds,10.737850787132102,41.908281998631075,4
+0,3.4,3,Active,BI Developer,White,Indeed,90100,2017-04-20,14,1987-10-24,M ,Married,6,IT/IS,Fully Meets,7.950718685831622,37.440109514031484,3
+0,4.5,5,Voluntarily Terminated,Production Technician I,Black or African American,Diversity Job Fair,60754,2009-04-27,11,1975-04-03,F,Married,0,Production       ,Fully Meets,15.931553730321697,49.998631074606436,3
+0,3.93,3,Voluntarily Terminated,Production Technician II,White,Google Search,72202,2011-05-16,3,1953-05-24,F,Married,0,Production       ,Fully Meets,13.880903490759753,71.85763175906914,3
+0,3.69,3,Active,Area Sales Manager,Black or African American,Indeed,58370,2014-09-29,18,1965-05-07,F,Single,0,Sales,Fully Meets,10.507871321013004,59.90417522245038,3
+0,3.98,4,Voluntarily Terminated,Production Technician I,White,Indeed,48413,2011-07-05,1,1965-05-09,F,Single,0,Production       ,Fully Meets,13.744010951403148,59.898699520876114,3
+0,4.1,4,Voluntarily Terminated,Production Technician II,White,Other,67176,2007-06-25,15,1975-09-16,M ,Widowed,0,Production       ,Fully Meets,17.77138945927447,49.544147843942504,3
+0,4.21,5,Active,Production Technician I,Black or African American,Indeed,56339,2013-02-18,4,1967-06-05,F,Divorced,0,Production       ,Fully Meets,12.11772758384668,57.82614647501711,3
+0,4.1,3,Active,Area Sales Manager,White,Indeed,64397,2006-01-09,6,1968-01-15,M ,Separated,0,Sales,Exceeds,19.227926078028748,57.21286789869952,4
+4,2.44,5,Active,Production Technician I,White,LinkedIn,63025,2014-02-17,18,1983-05-16,F,Single,0,Production       ,Needs Improvement,11.121149897330595,41.880903490759756,2
+0,5.0,3,Voluntarily Terminated,Network Engineer,White,CareerBuilder,75281,2015-01-05,11,1988-05-05,M ,Married,5,IT/IS,Fully Meets,10.239561943874058,36.90896646132786,3
+0,4.6,3,Voluntarily Terminated,Software Engineer,Black or African American,Diversity Job Fair,100416,2013-02-18,9,1983-06-14,M ,Single,4,Software Engineering,Fully Meets,12.11772758384668,41.80150581793292,3
+0,4.4,3,Voluntarily Terminated,Production Technician II,White,LinkedIn,74813,2011-01-10,5,1985-03-15,F,Single,0,Production       ,Fully Meets,14.225872689938399,40.049281314168375,3
+0,5.0,4,Active,Network Engineer,White,Employee Referral,76029,2015-03-30,8,1969-03-31,M ,Married,7,IT/IS,Fully Meets,10.009582477754963,56.00547570157426,3
+0,2.81,3,Active,Area Sales Manager,Two or more races,Indeed,57859,2011-07-05,16,1991-05-23,F,Married,0,Sales,Fully Meets,13.744010951403148,33.86173853524983,3
+0,4.5,5,Voluntarily Terminated,Production Technician I,White,LinkedIn,58523,2012-08-13,15,1987-01-31,M ,Divorced,0,Production       ,Exceeds,12.635181382614647,38.168377823408626,4
+0,3.93,3,Active,Production Manager,White,Employee Referral,88976,2011-08-01,19,1968-10-10,M ,Divorced,0,Production       ,Fully Meets,13.670088980150581,56.47638603696099,3
+0,4.5,4,Active,Area Sales Manager,Asian,Website,55875,2012-03-05,11,1989-07-11,M ,Single,0,Sales,Fully Meets,13.075975359342916,35.72621492128679,3
+0,4.33,3,Terminated for Cause,Database Administrator,Black or African American,Employee Referral,113999,2015-02-16,9,1986-08-07,M ,Married,7,IT/IS,Fully Meets,10.124572210814511,38.652977412731005,3
+0,4.3,5,Terminated for Cause,Production Technician I,White,Google Search,49773,2011-09-26,18,1986-06-03,F,Married,0,Production       ,Exceeds,13.516769336071183,38.83093771389459,4
+0,3.21,3,Active,Production Technician I,White,LinkedIn,62068,2015-07-05,7,1985-04-06,F,Single,0,Production       ,Fully Meets,9.744010951403148,39.98904859685147,3
+0,3.11,5,Active,Production Technician II,Black or African American,Employee Referral,66541,2014-08-18,4,1976-02-10,M ,Single,0,Production       ,Fully Meets,10.622861054072553,49.14168377823409,3
+0,4.5,3,Voluntarily Terminated,Production Manager,Black or African American,Diversity Job Fair,80512,2011-09-26,5,1955-11-14,F,Married,0,Production       ,Fully Meets,13.516769336071183,69.38261464750171,3
+6,2.5,3,Voluntarily Terminated,Production Technician I,White,CareerBuilder,50274,2012-08-13,13,1980-08-02,F,Single,0,Production       ,Needs Improvement,12.635181382614647,44.6652977412731,2
+0,3.42,4,Active,Senior BI Developer,Asian,Indeed,84903,2017-02-15,17,1981-07-08,M ,Single,7,IT/IS,Fully Meets,8.125941136208077,43.73442847364819,3
+0,4.2,4,Active,Sr. Network Engineer,Asian,Employee Referral,107226,2015-03-30,7,1978-05-02,F,Widowed,8,IT/IS,Fully Meets,10.009582477754963,46.91854893908282,3
+0,5.0,5,Voluntarily Terminated,Production Technician I,White,LinkedIn,58371,2011-01-10,11,1987-05-24,M ,Single,0,Production       ,Fully Meets,14.225872689938399,37.8590006844627,3
+0,5.0,3,Voluntarily Terminated,Production Technician I,White,Website,55140,2011-05-16,7,1965-09-09,M ,Married,0,Production       ,Fully Meets,13.880903490759753,59.56194387405886,3
+0,3.6,5,Voluntarily Terminated,Production Technician I,White,Google Search,58062,2011-01-10,9,1983-07-30,F,Divorced,0,Production       ,Fully Meets,14.225872689938399,41.67556468172484,3
+0,4.3,4,Voluntarily Terminated,Production Technician I,Black or African American,Diversity Job Fair,59728,2012-01-09,16,1969-10-02,F,Single,0,Production       ,Fully Meets,13.229295003422314,55.49897330595483,3
+0,5.0,3,Voluntarily Terminated,Production Technician II,White,LinkedIn,70507,2013-01-07,7,1958-11-07,M ,Single,0,Production       ,Exceeds,12.232717316906228,66.40109514031485,4
+0,3.4,4,Active,Production Technician II,White,LinkedIn,60446,2014-09-29,14,1985-04-20,F,Single,0,Production       ,Fully Meets,10.507871321013004,39.950718685831625,3
+0,4.07,4,Active,Production Technician II,White,LinkedIn,65893,2014-07-07,13,1985-05-11,M ,Single,0,Production       ,Fully Meets,10.737850787132102,39.893223819301845,3
+5,3.2,2,Voluntarily Terminated,Production Technician I,Asian,Google Search,48513,2008-09-02,4,1982-05-04,F,Single,0,Production       ,PIP,16.580424366872005,42.913073237508556,1
+0,4.6,5,Active,CIO,White,Employee Referral,220450,2010-04-10,16,1979-08-30,F,Single,6,IT/IS,Exceeds,14.978781656399725,45.59069130732375,4
+0,5.0,3,Active,Data Analyst,White,Employee Referral,89292,2015-03-30,11,1979-02-24,F,Single,5,IT/IS,Fully Meets,10.009582477754963,46.10266940451746,3
+0,4.5,5,Active,Production Technician I,Asian,LinkedIn,45046,2014-09-29,2,1978-08-17,F,Widowed,0,Production       ,Fully Meets,10.507871321013004,46.625598904859686,3
