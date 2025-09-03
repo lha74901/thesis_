@@ -1,0 +1,48 @@
+{% extends 'employee_predictor/base.html' %}
+
+{% block title %}Delete Employee{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-exclamation-triangle me-2"></i>Confirm Delete
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Are you sure you want to delete the following employee?</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5>{{ employee.name }}</h5>
+                            <p class="mb-1"><strong>Employee ID:</strong> {{ employee.emp_id }}</p>
+                            <p class="mb-1"><strong>Department:</strong> {{ employee.department }}</p>
+                            <p class="mb-0"><strong>Position:</strong> {{ employee.position }}</p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        This action cannot be undone. All associated records (attendance, leaves, payroll) will also be deleted.
+                    </div>
+
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fas fa-trash me-1"></i>Delete Employee
+                            </button>
+                            <a href="{% url 'employee-list' %}" class="btn btn-outline-secondary">
+                                <i class="fas fa-times me-1"></i>Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

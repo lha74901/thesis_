@@ -1,0 +1,234 @@
+{% extends 'employee_predictor/base.html' %}
+{% load hr_filters %}
+
+{% block title %}{{ employee.name }} - Details{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="fas fa-user me-2"></i>{{ employee.name }}</h2>
+        <div>
+            <a href="{% url 'employee-update' employee.pk %}" class="btn btn-primary">
+                <i class="fas fa-edit"></i> Edit
+            </a>
+            <a href="{% url 'employee-delete' employee.pk %}" class="btn btn-danger">
+                <i class="fas fa-trash"></i> Delete
+            </a>
+            <a href="{% url 'employee-list' %}" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left"></i> Back to List
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Basic Information -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Employee Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Employee ID:</strong></div>
+                        <div class="col-8">{{ employee.emp_id }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Department:</strong></div>
+                        <div class="col-8">{{ employee.department }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Position:</strong></div>
+                        <div class="col-8">{{ employee.position }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Hire Date:</strong></div>
+                        <div class="col-8">{{ employee.date_of_hire|date }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Salary:</strong></div>
+                        <div class="col-8">${{ employee.salary|floatformat:2 }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Performance Metrics</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Performance Score:</strong></div>
+                        <div class="col-8">
+                            {% if employee.predicted_score %}
+                            <span class="badge bg-primary">{{ employee.predicted_score }}</span>
+                            {% else %}
+                            <span class="badge bg-secondary">Not Predicted</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Engagement:</strong></div>
+                        <div class="col-8">{{ employee.engagement_survey }}/5</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Satisfaction:</strong></div>
+                        <div class="col-8">{{ employee.emp_satisfaction }}/5</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Projects:</strong></div>
+                        <div class="col-8">{{ employee.special_projects_count }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Late Days:</strong></div>
+                        <div class="col-8">{{ employee.days_late_last_30 }} (last 30 days)</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4"><strong>Absences:</strong></div>
+                        <div class="col-8">{{ employee.absences }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Attendance -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Recent Attendance</h5>
+                    <a href="{% url 'attendance-list' %}?employee={{ employee.pk }}" 
+                       class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+                <div class="card-body">
+                    {% if recent_attendance %}
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Hours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for attendance in recent_attendance %}
+                                <tr>
+                                    <td>{{ attendance.date|date }}</td>
+                                    <td>
+                                        <span class="badge {% if attendance.status == 'PRESENT' %}bg-success
+                                                     {% elif attendance.status == 'ABSENT' %}bg-danger
+                                                     {% elif attendance.status == 'ON_LEAVE' %}bg-info
+                                                     {% else %}bg-warning{% endif %}">
+                                            {{ attendance.status }}
+                                        </span>
+                                    </td>
+                                    <td>{{ attendance.hours_worked|default:"-" }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <p class="text-muted mb-0">No recent attendance records found.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Leaves -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Recent Leaves</h5>
+                    <a href="{% url 'leave-list' %}?employee={{ employee.pk }}"
+                       class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+                <div class="card-body">
+                    {% if leaves %}
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for leave in leaves %}
+                                <tr>
+                                    <td>{{ leave.start_date|date }} - {{ leave.end_date|date }}</td>
+                                    <td>{{ leave.leave_type }}</td>
+                                    <td>
+                                        <span class="badge {% if leave.status == 'APPROVED' %}bg-success
+                                                     {% elif leave.status == 'REJECTED' %}bg-danger
+                                                     {% else %}bg-warning{% endif %}">
+                                            {{ leave.status }}
+                                        </span>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <p class="text-muted mb-0">No leave history found.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Payroll History -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Recent Payroll History</h5>
+                    <a href="{% url 'payroll-list' %}?employee={{ employee.pk }}"
+                       class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+                <div class="card-body">
+                    {% if payrolls %}
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Basic Salary</th>
+                                    <th>Overtime</th>
+                                    <th>Deductions</th>
+                                    <th>Net Salary</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for payroll in payrolls %}
+                                <tr>
+                                    <td>{{ payroll.period_start|date:"M Y" }}</td>
+                                    <td>${{ payroll.basic_salary|floatformat:2 }}</td>
+                                    <td>${{ payroll.overtime_hours|multiply:payroll.overtime_rate|floatformat:2 }}</td>
+                                    <td>${{ payroll.deductions|add:payroll.tax|floatformat:2 }}</td>
+                                    <td>${{ payroll.net_salary|floatformat:2 }}</td>
+                                    <td>
+                                        <span class="badge {% if payroll.status == 'PAID' %}bg-success
+                                                     {% elif payroll.status == 'APPROVED' %}bg-info
+                                                     {% else %}bg-warning{% endif %}">
+                                            {{ payroll.status }}
+                                        </span>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <p class="text-muted mb-0">No payroll history found.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

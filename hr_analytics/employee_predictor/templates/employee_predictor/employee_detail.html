@@ -1,0 +1,44 @@
+{% extends 'employee_predictor/base.html' %}
+
+{% block title %}{{ employee.name }} - Details{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h2>{{ employee.name }}</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Employee Information</h4>
+                <p><strong>Employee ID:</strong> {{ employee.emp_id }}</p>
+                <p><strong>Department:</strong> {{ employee.department }}</p>
+                <p><strong>Position:</strong> {{ employee.position }}</p>
+                <p><strong>Date of Hire:</strong> {{ employee.date_of_hire }}</p>
+                <p><strong>Salary:</strong> ${{ employee.salary }}</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Performance Metrics</h4>
+                <p><strong>Engagement Survey:</strong> {{ employee.engagement_survey }}</p>
+                <p><strong>Employee Satisfaction:</strong> {{ employee.emp_satisfaction }}</p>
+                <p><strong>Special Projects:</strong> {{ employee.special_projects_count }}</p>
+                <p><strong>Days Late (Last 30):</strong> {{ employee.days_late_last_30 }}</p>
+                <p><strong>Absences:</strong> {{ employee.absences }}</p>
+            </div>
+        </div>
+        
+        {% if employee.predicted_score %}
+        <div class="mt-4">
+            <h4>Prediction Results</h4>
+            <p><strong>Predicted Performance Score:</strong> {{ employee.predicted_score }}</p>
+            <p><strong>Prediction Date:</strong> {{ employee.prediction_date }}</p>
+        </div>
+        {% endif %}
+        
+        <div class="mt-4">
+            <a href="{% url 'employee-predict' employee.pk %}" class="btn btn-primary">Make New Prediction</a>
+            <a href="{% url 'employee-list' %}" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

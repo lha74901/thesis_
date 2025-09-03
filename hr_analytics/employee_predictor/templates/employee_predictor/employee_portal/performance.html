@@ -1,0 +1,154 @@
+{% extends 'employee_predictor/employee_portal/base.html' %}
+{% load static %}
+{% load hr_filters %}
+
+{% block title %}My Performance{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <!-- Performance Overview -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title mb-0">Performance Overview</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="performanceChart"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Current Performance Score</h4>
+                            <div class="display-4 mb-3">
+                                {% if employee.predicted_score %}
+                                    {{ employee.predicted_score }}/5
+                                {% else %}
+                                    Not Available
+                                {% endif %}
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5>Last Updated</h5>
+                                <p>{{ employee.prediction_date|default:"Not yet predicted" }}</p>
+                            </div>
+
+                            <div class="alert alert-info">
+                                <h5>Understanding Your Score</h5>
+                                <p>Your performance score is calculated based on multiple factors including engagement, project completion, attendance, and overall contributions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Metrics -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h4 class="card-title mb-0">Engagement & Satisfaction</h4>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <label class="form-label">Engagement Level</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" 
+                                 role="progressbar" 
+                                 style="width: {{ employee.engagement_survey|multiply:20 }}%"
+                                 aria-valuenow="{{ employee.engagement_survey }}" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="5">
+                                {{ employee.engagement_survey }}/5
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">Satisfaction Level</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" 
+                                 role="progressbar" 
+                                 style="width: {{ employee.emp_satisfaction|multiply:20 }}%"
+                                 aria-valuenow="{{ employee.emp_satisfaction }}" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="5">
+                                {{ employee.emp_satisfaction }}/5
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-light">
+                        <h6>What These Mean</h6>
+                        <p class="mb-0">Engagement measures your active participation and involvement in work activities, while satisfaction reflects your overall contentment with your role and workplace.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project & Attendance -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h4 class="card-title mb-0">Projects & Attendance</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <h3 class="display-4 mb-2">{{ employee.special_projects_count }}</h3>
+                                    <p class="text-muted mb-0">Special Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <h3 class="display-4 mb-2">{{ employee.absences }}</h3>
+                                    <p class="text-muted mb-0">Total Absences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Recent Punctuality</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" 
+                                 role="progressbar" 
+                                 style="width: {{ employee.days_late_last_30|subtract_from:30|multiply:3.33 }}%"
+                                 aria-valuenow="{{ employee.days_late_last_30 }}" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="30">
+                                {{ employee.days_late_last_30 }} late days (last 30 days)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-light">
+                        <h6>Impact on Performance</h6>
+                        <p class="mb-0">Your project involvement and attendance record directly influence your overall performance score. Regular attendance and active project participation demonstrate reliability and commitment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Initialize Performance Chart -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const metrics = {
+        engagement_survey: {{ employee.engagement_survey }},
+        emp_satisfaction: {{ employee.emp_satisfaction }},
+        days_late_last_30: {{ employee.days_late_last_30 }},
+        special_projects_count: {{ employee.special_projects_count }},
+        predicted_score: {{ employee.predicted_score|default:0 }}
+    };
+
+    const performanceChart = React.createElement(PerformanceChart, { metrics: metrics });
+    ReactDOM.render(performanceChart, document.getElementById('performanceChart'));
+});
+</script>
+{% endblock %}

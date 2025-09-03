@@ -1,0 +1,77 @@
+{% extends 'employee_predictor/base.html' %}
+
+{% block title %}Bulk Attendance Upload{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title mb-0">Bulk Attendance Upload</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        {% if messages %}
+                        <div class="messages mb-3">
+                            {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <div class="mb-3">
+                            <label for="{{ form.date.id_for_label }}" class="form-label">Date</label>
+                            {{ form.date }}
+                            {% if form.date.errors %}
+                                <div class="text-danger">{{ form.date.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.csv_file.id_for_label }}" class="form-label">CSV File</label>
+                            {{ form.csv_file }}
+                            {% if form.csv_file.errors %}
+                                <div class="text-danger">{{ form.csv_file.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-4">
+                            <h5>Expected CSV Format:</h5>
+                            <p>The CSV file should contain the following columns:</p>
+                            <ul>
+                                <li><code>employee_id</code> - Employee ID (e.g., EMP001)</li>
+                                <li><code>check_in</code> - Check-in time (e.g., 09:00)</li>
+                                <li><code>check_out</code> - Check-out time (e.g., 17:00)</li>
+                                <li><code>status</code> - Status (PRESENT, ABSENT, LATE, HALF_DAY, ON_LEAVE)</li>
+                                <li><code>notes</code> - Optional notes</li>
+                            </ul>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="mb-0">Sample CSV Content:</h6>
+                                </div>
+                                <div class="card-body">
+                                    <pre class="mb-0"><code>employee_id,check_in,check_out,status,notes
+EMP001,09:00,17:00,PRESENT,On time
+EMP002,09:30,17:30,LATE,Late arrival</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                            <a href="{% url 'attendance-list' %}" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

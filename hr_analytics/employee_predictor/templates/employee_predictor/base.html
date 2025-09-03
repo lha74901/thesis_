@@ -1,0 +1,377 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HR Analytics{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'employee_predictor/css/enhanced-style.css' %}" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --dark-bg: #212529;
+            --darker-bg: #1a1e21;
+            --light-text: #ffffff;
+            --muted-text: #6c757d;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand i {
+            margin-right: 0.5rem;
+        }
+
+        .nav-link i {
+            margin-right: 0.5rem;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1 0 auto;
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        /* Alert Styles */
+        .alert {
+            border-radius: 0.5rem;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Footer Styles */
+        .footer {
+            flex-shrink: 0;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            padding: 4rem 0 0;
+            margin-top: 4rem;
+        }
+
+        .footer h5 {
+            color: var(--light-text);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .footer-links i {
+            width: 20px;
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .social-icons {
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            color: var(--light-text);
+            margin-right: 1.5rem;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            background-color: var(--darker-bg);
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+
+        /* Modal Styles */
+        .modal-content {
+            border-radius: 0.5rem;
+            border: none;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+        }
+
+        .modal-header {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            background-color: #f8f9fa;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .modal-footer {
+            border-top: 1px solid rgba(0,0,0,0.1);
+            background-color: #f8f9fa;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .footer {
+                padding-top: 2rem;
+            }
+
+            .social-icons {
+                margin-bottom: 2rem;
+            }
+
+            .footer-bottom {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            {% if user.is_authenticated and user.is_staff %}
+            <a class="navbar-brand" href="{% url 'dashboard' %}">
+                <i class="fas fa-chart-line"></i> HRMS Company
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+        <a class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}"
+           href="{% url 'dashboard' %}">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if 'employee' in request.resolver_match.url_name %}active{% endif %}"
+           href="{% url 'employee-list' %}">
+            <i class="fas fa-users"></i> Employees
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if 'attendance' in request.resolver_match.url_name %}active{% endif %}"
+           href="{% url 'attendance-list' %}">
+            <i class="fas fa-clock"></i> Attendance
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if 'leave' in request.resolver_match.url_name %}active{% endif %}"
+           href="{% url 'leave-list' %}">
+            <i class="fas fa-calendar"></i> Leaves
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if 'payroll' in request.resolver_match.url_name %}active{% endif %}"
+           href="{% url 'payroll-list' %}">
+            <i class="fas fa-money-bill"></i> Payroll
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if 'performance' in request.resolver_match.url_name %}active{% endif %}"
+           href="{% url 'admin_performance_list' %}">
+            <i class="fas fa-chart-line"></i> Performance
+        </a>
+    </li>
+</ul>
+
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i> {{ user.get_username }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li>
+                                <a class="dropdown-item" href="{% url 'admin:index' %}">
+                                    <i class="fas fa-cog"></i> Admin Panel
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {% else %}
+            <a class="navbar-brand" href="{% url 'login' %}">
+                <i class="fas fa-building"></i> HR Analytics
+            </a>
+            {% endif %}
+        </div>
+    </nav>
+    {% endblock %}
+
+    <div class="main-content">
+        <div class="container">
+            {% if messages %}
+            <div class="messages mb-4">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>About HRMS Company</h5>
+                    <p>Leading the way in human resource management solutions, providing innovative tools and analytics for modern workforce management and employee engagement.</p>
+                    <div class="social-icons">
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="{% url 'dashboard' %}">
+                                <i class="fas fa-chevron-right"></i> Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'employee-list' %}">
+                                <i class="fas fa-chevron-right"></i> Employees
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'attendance-list' %}">
+                                <i class="fas fa-chevron-right"></i> Attendance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'leave-list' %}">
+                                <i class="fas fa-chevron-right"></i> Leaves
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'payroll-list' %}">
+                                <i class="fas fa-chevron-right"></i> Payroll
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contact Info</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 Business Avenue, Suite 100<br>
+                            New York, NY 10001
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            info@hrmscompany.com
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            Mon - Fri: 9:00 AM - 5:00 PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; {% now "Y" %} HRMS Company. All rights reserved. | Designed with <i class="fas fa-heart text-danger"></i> for better HR management</p>
+            </div>
+        </div>
+    </footer>
+
+    {% block modals %}
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">
+                        <i class="fas fa-sign-out-alt me-2"></i>Confirm Logout
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to logout from your account?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Cancel
+                    </button>
+                    <form method="post" action="{% url 'logout' %}" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-sign-out-alt me-2"></i>Logout
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

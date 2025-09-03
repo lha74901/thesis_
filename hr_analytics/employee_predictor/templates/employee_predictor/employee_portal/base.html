@@ -1,0 +1,93 @@
+{% extends 'employee_predictor/base.html' %}
+{% load static %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'employee-portal' %}">
+            <i class="fas fa-user-circle"></i> Employee Portal
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Primary Navigation -->
+            <!-- Primary Navigation -->
+<ul class="navbar-nav me-auto">
+    <li class="nav-item">
+        <a class="nav-link {% if request.resolver_match.url_name == 'employee-portal' %}active{% endif %}"
+           href="{% url 'employee-portal' %}">
+            <i class="fas fa-home"></i> Dashboard
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if 'performance' in request.resolver_match.url_name %}active{% endif %}"
+           href="{% url 'employee-performance' %}">
+            <i class="fas fa-chart-line"></i> My Performance
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if 'attendance' in request.resolver_match.url_name %}active{% endif %}"
+           href="{% url 'employee-attendance' %}">
+            <i class="fas fa-clock"></i> My Attendance
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if 'leave' in request.resolver_match.url_name %}active{% endif %}"
+           href="{% url 'employee-leaves' %}">
+            <i class="fas fa-calendar"></i> My Leaves
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if 'payslip' in request.resolver_match.url_name %}active{% endif %}"
+           href="{% url 'employee-payslips' %}">
+            <i class="fas fa-file-invoice-dollar"></i> My Payslips
+        </a>
+    </li>
+</ul>
+
+            <!-- User Menu -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i> {{ user.get_username }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li>
+                            <a class="dropdown-item {% if request.resolver_match.url_name == 'employee-profile' %}active{% endif %}"
+                               href="{% url 'employee-profile' %}">
+                                <i class="fas fa-id-card"></i> My Profile
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    {% if messages %}
+    <div class="messages mb-4">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% block employee_content %}
+    {% endblock %}
+</div>
+{% endblock %}

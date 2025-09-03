@@ -1,0 +1,59 @@
+{% extends 'employee_predictor/base.html' %}
+{% load hr_filters %}
+
+{% block title %}Payroll Records{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Payroll Records</h2>
+        <a href="{% url 'payroll-create' %}" class="btn btn-primary">Create Payroll</a>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Period</th>
+                            <th>Basic Salary</th>
+                            <th>Overtime</th>
+                            <th>Deductions</th>
+                            <th>Net Salary</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for payroll in payrolls %}
+                        <tr>
+                            <td>{{ payroll.employee.name }}</td>
+                            <td>{{ payroll.period_start|date:"M d" }} - {{ payroll.period_end|date:"M d, Y" }}</td>
+                            <td>${{ payroll.basic_salary|floatformat:2 }}</td>
+                            <td>${{ payroll.overtime_hours|multiply:payroll.overtime_rate|floatformat:2 }}</td>
+                            <td>${{ payroll.deductions|add:payroll.tax|floatformat:2 }}</td>
+                            <td>${{ payroll.net_salary|floatformat:2 }}</td>
+                            <td>
+                                <span class="badge {% if payroll.status == 'PAID' %}bg-success{% elif payroll.status == 'DRAFT' %}bg-warning{% else %}bg-info{% endif %}">
+                                    {{ payroll.status }}
+                                </span>
+                            </td>
+                            <td>
+                                <a href="{% url 'payroll-detail' payroll.pk %}" class="btn btn-sm btn-info">View</a>
+                                {% if payroll.status == 'DRAFT' %}
+                                <a href="{% url 'payroll-update' payroll.pk %}" class="btn btn-sm btn-primary">Edit</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% include "employee_predictor/includes/pagination.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

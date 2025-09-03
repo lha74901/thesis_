@@ -1,0 +1,83 @@
+# employee_predictor/static/employee_predictor/css/style.css
+.card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.stats-card {
+    transition: transform .2s;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-stats {
+    padding: 1.5rem;
+}
+
+.navbar {
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.badge {
+    padding: 0.5em 0.75em;
+}
+
+.pagination {
+    margin-bottom: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+    background-color: #343a40;
+    color: #fff;
+    padding: 3rem 0;
+    margin-top: auto;
+}
+
+.footer a:hover {
+    color: #17a2b8 !important;
+    text-decoration: none;
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #17a2b8 !important;
+}
+
+.footer hr {
+    opacity: 0.2;
+}

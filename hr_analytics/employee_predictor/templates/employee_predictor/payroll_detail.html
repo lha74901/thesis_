@@ -1,0 +1,126 @@
+{% extends 'employee_predictor/base.html' %}
+{% load hr_filters %}
+
+{% block title %}Payroll Details{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card mb-4">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="mb-0">Payroll Details</h3>
+                <div>
+                    {% if payroll.status == 'DRAFT' %}
+                        <a href="{% url 'payroll-update' payroll.pk %}" class="btn btn-primary">Edit</a>
+                        <a href="{% url 'payroll-process' payroll.pk %}" class="btn btn-success">Process Payroll</a>
+                    {% endif %}
+                    <a href="{% url 'payroll-list' %}" class="btn btn-secondary">Back to List</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Employee Information</h4>
+                    <p><strong>Name:</strong> {{ payroll.employee.name }}</p>
+                    <p><strong>Department:</strong> {{ payroll.employee.department }}</p>
+                    <p><strong>Position:</strong> {{ payroll.employee.position }}</p>
+                    <p><strong>Period:</strong> {{ payroll.period_start|date }} to {{ payroll.period_end|date }}</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Payroll Status</h4>
+                    <p><strong>Status:</strong>
+                        <span class="badge {% if payroll.status == 'PAID' %}bg-success{% elif payroll.status == 'DRAFT' %}bg-warning{% else %}bg-info{% endif %}">
+                            {{ payroll.status }}
+                        </span>
+                    </p>
+                    {% if payroll.payment_date %}
+                        <p><strong>Payment Date:</strong> {{ payroll.payment_date|date }}</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h4>Earnings</h4>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Basic Salary</td>
+                                <td class="text-end">${{ payroll.basic_salary|floatformat:2 }}</td>
+                            </tr>
+                            <tr>
+                                <td>Overtime ({{ payroll.overtime_hours }} hours @ ${{ payroll.overtime_rate }}/hr)</td>
+                                <td class="text-end">${{ payroll.overtime_hours|multiply:payroll.overtime_rate|floatformat:2 }}</td>
+                            </tr>
+                            <tr>
+                                <td>Bonuses</td>
+                                <td class="text-end">${{ payroll.bonuses|floatformat:2 }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h4>Deductions</h4>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Tax</td>
+                                <td class="text-end">${{ payroll.tax|floatformat:2 }}</td>
+                            </tr>
+                            <tr>
+                                <td>Other Deductions</td>
+                                <td class="text-end">${{ payroll.deductions|floatformat:2 }}</td>
+                            </tr>
+                            <tr class="table-active">
+                                <td><strong>Net Salary</strong></td>
+                                <td class="text-end"><strong>${{ payroll.net_salary|floatformat:2 }}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h4>Attendance Summary</h4>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card bg-success text-white">
+                                <div class="card-body text-center">
+                                    <h5>Present Days</h5>
+                                    <h2>{{ attendance_stats.present_days }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-danger text-white">
+                                <div class="card-body text-center">
+                                    <h5>Absent Days</h5>
+                                    <h2>{{ attendance_stats.absent_days }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-warning">
+                                <div class="card-body text-center">
+                                    <h5>Late Days</h5>
+                                    <h2>{{ attendance_stats.late_days }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-info text-white">
+                                <div class="card-body text-center">
+                                    <h5>Leave Days</h5>
+                                    <h2>{{ attendance_stats.leave_days }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

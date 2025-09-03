@@ -1,0 +1,76 @@
+{% extends 'employee_predictor/base.html' %}
+
+{% block title %}Leave Management{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Leave Management</h2>
+        <a href="{% url 'leave-create' %}" class="btn btn-primary">Request Leave</a>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <ul class="nav nav-tabs mb-3">
+                <li class="nav-item">
+                    <a class="nav-link {% if not status %}active{% endif %}" href="{% url 'leave-list' %}">All</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if status == 'pending' %}active{% endif %}" href="?status=pending">Pending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if status == 'approved' %}active{% endif %}" href="?status=approved">Approved</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if status == 'rejected' %}active{% endif %}" href="?status=rejected">Rejected</a>
+                </li>
+            </ul>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Leave Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Duration</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for leave in leaves %}
+                        <tr>
+                            <td>{{ leave.employee.name }}</td>
+                            <td>{{ leave.leave_type }}</td>
+                            <td>{{ leave.start_date }}</td>
+                            <td>{{ leave.end_date }}</td>
+                            <td>{{ leave.duration_days }} days</td>
+                            <td>
+                                <span class="badge {% if leave.status == 'APPROVED' %}bg-success{% elif leave.status == 'REJECTED' %}bg-danger{% else %}bg-warning{% endif %}">
+                                    {{ leave.status }}
+                                </span>
+                            </td>
+                            <td>
+                                {% if leave.status == 'PENDING' and user.is_staff %}
+                                <a href="{% url 'leave-approve' leave.pk %}?action=approve" class="btn btn-sm btn-success">
+                                    Approve
+                                </a>
+                                <a href="{% url 'leave-approve' leave.pk %}?action=reject" class="btn btn-sm btn-danger">
+                                    Reject
+                                </a>
+                                {% endif %}
+                                <a href="{% url 'leave-update' leave.pk %}" class="btn btn-sm btn-info">View</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% include "employee_predictor/includes/pagination.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

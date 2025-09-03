@@ -1,0 +1,144 @@
+{% extends 'employee_predictor/employee_portal/base.html' %}
+
+{% block title %}Employee Dashboard{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h2>Welcome, {{ employee.name }}!</h2>
+            <p class="text-muted">{{ employee.position }} - {{ employee.department }}</p>
+        </div>
+    </div>
+
+    <!-- Attendance Statistics -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h4>{{ month_name }} Attendance</h4>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Present Days</h5>
+                    <h2 class="mb-0">{{ attendance_stats.present_days }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Late Days</h5>
+                    <h2 class="mb-0">{{ attendance_stats.late_days }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Leave Days</h5>
+                    <h2 class="mb-0">{{ attendance_stats.leave_days }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Absent Days</h5>
+                    <h2 class="mb-0">{{ attendance_stats.absent_days }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Leave Requests -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Leave Requests</h5>
+                    <a href="{% url 'employee-leave-create' %}" class="btn btn-primary btn-sm">
+                        New Request
+                    </a>
+                </div>
+                <div class="card-body">
+                    {% if pending_leaves %}
+                        <h6>Pending Requests</h6>
+                        <ul class="list-unstyled">
+                            {% for leave in pending_leaves %}
+                            <li class="mb-2">
+                                <span class="badge bg-warning">Pending</span>
+                                {{ leave.leave_type }} ({{ leave.start_date|date }} - {{ leave.end_date|date }})
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if upcoming_leaves %}
+                        <h6>Upcoming Approved Leaves</h6>
+                        <ul class="list-unstyled">
+                            {% for leave in upcoming_leaves %}
+                            <li class="mb-2">
+                                <span class="badge bg-success">Approved</span>
+                                {{ leave.leave_type }} ({{ leave.start_date|date }} - {{ leave.end_date|date }})
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if not pending_leaves and not upcoming_leaves %}
+                        <p class="text-muted mb-0">No pending or upcoming leaves</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Payslips -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Recent Payslips</h5>
+                    <a href="{% url 'employee-payslips' %}" class="btn btn-primary btn-sm">
+                        View All
+                    </a>
+                </div>
+                <div class="card-body">
+                    {% if recent_payslips %}
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Period</th>
+                                        <th>Net Salary</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for payslip in recent_payslips %}
+                                    <tr>
+                                        <td>{{ payslip.period_start|date:"M Y" }}</td>
+                                        <td>${{ payslip.net_salary|floatformat:2 }}</td>
+                                        <td>
+                                            <span class="badge {% if payslip.status == 'PAID' %}bg-success{% else %}bg-info{% endif %}">
+                                                {{ payslip.status }}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <a href="{% url 'employee-payslip-detail' payslip.pk %}" class="btn btn-sm btn-outline-primary">
+                                                View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <p class="text-muted mb-0">No recent payslips</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

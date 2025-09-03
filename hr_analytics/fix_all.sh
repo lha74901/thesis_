@@ -1,0 +1,347 @@
+#!/bin/bash
+
+# This script applies all the fixes to your Django project
+# Run it from your project root directory (hr_analytics)
+
+echo "===== Fixing Django Tests with Axes Authentication ====="
+
+# 1. Create test_helper.py file
+echo "Creating test_helper.py..."
+mkdir -p employee_predictor/tests__/
+cat > employee_predictor/tests__/test_helper.py << 'EOL'
+# employee_predictor/tests/test_helper.py
+from django.test import RequestFactory
+from django.contrib.auth import authenticate, login
+
+def axes_login(client, username, password):
+    """Login method that works with django-axes by providing a request object."""
+    request_factory = RequestFactory()
+    request = request_factory.get('/')
+    request.session = client.session
+    user = authenticate(request=request, username=username, password=password)
+    if user:
+        # Manually set session auth without going through login flow
+        # which would try to call authenticate again
+        client.force_login(user)
+        return True
+    return False
+EOL
+echo "✓ test_helper.py created"
+
+# 2. Fix feature_engineering.py
+echo "Fixing feature_engineering.py..."
+cp employee_predictor/ml/feature_engineering.py employee_predictor/ml/feature_engineering.py.bak
+
+# Create updated feature_engineering.py with the fixes
+cat > employee_predictor/ml/feature_engineering.py << 'EOL'
+# employee_predictor/ml/feature_engineering.py
+import pandas as pd
+import numpy as np
+from datetime import datetime
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+import os
+import joblib
+from django.conf import settings
+
+# Define feature categories for preprocessing
+MINMAX_FEATURES = ['DaysLateLast30', 'Absences', 'SpecialProjectsCount']
+ZSCORE_FEATURES = ['EngagementSurvey', 'EmpSatisfaction', 'Salary', 'Tenure_Years', 'Age']
+LABEL_FEATURES = ['Sex', 'EmploymentStatus']
+ONEHOT_FEATURES = ['Position', 'RaceDesc', 'RecruitmentSource', 'MaritalDesc', 'Department']
+
+# Store encoders for reuse
+LABEL_ENCODERS = {}
+
+
+def get_preprocessor():
+    """Returns the column transformer for preprocessing features"""
+    return ColumnTransformer(
+        transformers=[
+            ('minmax', MinMaxScaler(), MINMAX_FEATURES),
+            ('zscore', StandardScaler(), ZSCORE_FEATURES),
+            ('onehot', OneHotEncoder(drop='first', sparse_output=False, handle_unknown='ignore'), ONEHOT_FEATURES)
+        ],
+        remainder='passthrough'
+    )
+
+
+def load_preprocessor():
+    """Load the preprocessor from disk"""
+    preprocessor_path = os.path.join(settings.MEDIA_ROOT, 'models', 'preprocessor.pkl')
+    if os.path.exists(preprocessor_path):
+        return joblib.load(preprocessor_path)
+    return None
+
+
+def save_preprocessor(preprocessor):
+    """Save the preprocessor to disk"""
+    models_dir = os.path.join(settings.MEDIA_ROOT, 'models')
+    os.makedirs(models_dir, exist_ok=True)
+    preprocessor_path = os.path.join(models_dir, 'preprocessor.pkl')
+    joblib.dump(preprocessor, preprocessor_path)
+
+
+def load_label_encoders():
+    """Load label encoders from disk"""
+    encoders_path = os.path.join(settings.MEDIA_ROOT, 'models', 'label_encoders.pkl')
+    if os.path.exists(encoders_path):
+        return joblib.load(encoders_path)
+    return {}
+
+
+def save_label_encoders(encoders):
+    """Save label encoders to disk"""
+    models_dir = os.path.join(settings.MEDIA_ROOT, 'models')
+    os.makedirs(models_dir, exist_ok=True)
+    encoders_path = os.path.join(models_dir, 'label_encoders.pkl')
+    joblib.dump(encoders, encoders_path)
+
+
+def prepare_data_for_prediction(employee_data):
+    """
+    Prepare employee data for prediction using the same preprocessing as training
+    """
+    global LABEL_ENCODERS
+
+    # Convert to DataFrame if not already
+    if not isinstance(employee_data, pd.DataFrame):
+        df = pd.DataFrame(employee_data)
+    else:
+        df = employee_data.copy()
+
+    # Print employee data for debugging
+    print(f"Input employee data: {df.head(1).to_dict()}")
+
+    # Rename columns to match expected feature names
+    column_mapping = {
+        'engagement_survey': 'EngagementSurvey',
+        'emp_satisfaction': 'EmpSatisfaction',
+        'days_late_last_30': 'DaysLateLast30',
+        'special_projects_count': 'SpecialProjectsCount',
+        'absences': 'Absences',
+        'salary': 'Salary',
+        'position': 'Position',
+        'department': 'Department',
+        'gender': 'Sex',
+        'marital_status': 'MaritalDesc',
+        'race': 'RaceDesc',
+        'recruitment_source': 'RecruitmentSource',
+        'employment_status': 'EmploymentStatus'
+    }
+
+    # Rename columns that exist in the DataFrame
+    for old_name, new_name in column_mapping.items():
+        if old_name in df.columns:
+            df[new_name] = df[old_name]
+
+    # Calculate tenure in years
+    if 'date_of_hire' in df.columns:
+        df['DateofHire'] = pd.to_datetime(df['date_of_hire'])
+        df['Tenure_Years'] = (pd.Timestamp.now() - df['DateofHire']).dt.days / 365.25
+
+    # Add calculated Age column if needed
+    if 'age' in df.columns:
+        df['Age'] = df['age']
+    elif 'birth_date' in df.columns:
+        df['Age'] = (pd.Timestamp.now() - pd.to_datetime(df['birth_date'])).dt.days / 365.25
+    else:
+        # Default age if not available
+        df['Age'] = 35
+
+    # Ensure salary is float
+    if 'Salary' in df.columns:
+        df['Salary'] = df['Salary'].astype(float)
+
+    # Apply default values for missing columns
+    for feature in MINMAX_FEATURES:
+        if feature not in df.columns:
+            if feature == 'DaysLateLast30':
+                df[feature] = 0
+            elif feature == 'Absences':
+                df[feature] = 0
+            elif feature == 'SpecialProjectsCount':
+                df[feature] = 0
+
+    for feature in ZSCORE_FEATURES:
+        if feature not in df.columns:
+            if feature == 'EngagementSurvey':
+                df[feature] = 3.0
+            elif feature == 'EmpSatisfaction':
+                df[feature] = 3
+            elif feature == 'Salary':
+                df[feature] = 60000
+            elif feature == 'Tenure_Years':
+                df[feature] = 5
+            elif feature == 'Age':
+                df[feature] = 35
+
+    # Prepare label features
+    LABEL_ENCODERS = load_label_encoders()
+    for feature in LABEL_FEATURES:
+        if feature not in df.columns:
+            if feature == 'Sex':
+                df[feature] = 'M'
+            elif feature == 'EmploymentStatus':
+                df[feature] = 'Active'
+
+        # Apply label encoding
+        if feature in LABEL_ENCODERS:
+            le = LABEL_ENCODERS[feature]
+            # Handle conversion correctly for label features
+            if feature == 'Sex':
+                df[feature] = df[feature].map({'M': 0, 'F': 1}).fillna(0).astype(int)
+            elif feature == 'EmploymentStatus':
+                status_map = {'Active': 0, 'Voluntarily Terminated': 1, 'Terminated for Cause': 2}
+                df[feature] = df[feature].map(status_map).fillna(0).astype(int)
+            else:
+                # For any other label features
+                try:
+                    df[feature] = df[feature].astype(int)
+                except (ValueError, TypeError):
+                    # If conversion fails, create a mapping
+                    unique_values = df[feature].dropna().unique()
+                    value_map = {val: idx for idx, val in enumerate(unique_values)}
+                    df[feature] = df[feature].map(value_map).fillna(0).astype(int)
+
+    # Prepare categorical features
+    for feature in ONEHOT_FEATURES:
+        if feature not in df.columns:
+            if feature == 'Position':
+                df[feature] = 'Other'
+            elif feature == 'RaceDesc':
+                df[feature] = 'White'
+            elif feature == 'RecruitmentSource':
+                df[feature] = 'Other'
+            elif feature == 'MaritalDesc':
+                df[feature] = 'Single'
+            elif feature == 'Department':
+                df[feature] = 'Other'
+
+    # Load the preprocessor
+    preprocessor = load_preprocessor()
+    if preprocessor is None:
+        raise ValueError("Preprocessor not found. Please train the model first.")
+
+    # Extract the required features for prediction
+    # First ensure all required features exist and are of correct type
+    for feature in MINMAX_FEATURES + ZSCORE_FEATURES:
+        if feature in df.columns:
+            df[feature] = pd.to_numeric(df[feature], errors='coerce').fillna(0)
+
+    # Print feature dataframe before preprocessing
+    print(
+        f"Features before preprocessing: {df[MINMAX_FEATURES[:1] + ZSCORE_FEATURES[:1] + LABEL_FEATURES + ONEHOT_FEATURES[:1]].head(1).to_dict()}")
+
+    # Extract only required columns
+    X = df[MINMAX_FEATURES + ZSCORE_FEATURES + LABEL_FEATURES + ONEHOT_FEATURES].copy()
+
+    # Convert all columns to appropriate types
+    for col in X.columns:
+        if col in LABEL_FEATURES:
+            if col == 'Sex':
+                X[col] = X[col].map({'M': 0, 'F': 1}).fillna(0).astype(int)
+            elif col == 'EmploymentStatus':
+                status_map = {'Active': 0, 'Voluntarily Terminated': 1, 'Terminated for Cause': 2}
+                X[col] = X[col].map(status_map).fillna(0).astype(int)
+            else:
+                # For any other label features
+                try:
+                    X[col] = X[col].astype(int)
+                except (ValueError, TypeError):
+                    # If conversion fails, create a mapping
+                    unique_values = X[col].dropna().unique()
+                    value_map = {val: idx for idx, val in enumerate(unique_values)}
+                    X[col] = X[col].map(value_map).fillna(0).astype(int)
+        elif col in MINMAX_FEATURES + ZSCORE_FEATURES:
+            X[col] = X[col].astype(float)
+        else:
+            X[col] = X[col].astype(str)
+
+    # Apply preprocessing
+    try:
+        X_preprocessed = preprocessor.transform(X)
+        print(f"Preprocessing successful. Shape: {X_preprocessed.shape}")
+        return X_preprocessed
+    except Exception as e:
+        print(f"Error during preprocessing: {str(e)}")
+        print(f"Features dataframe: {X.dtypes}")
+        raise ValueError(f"Failed to preprocess features: {str(e)}")
+
+
+def engineer_features(employee_data):
+    """
+    Legacy function to maintain compatibility with existing code
+    Now uses the new preprocessing pipeline
+    """
+    return prepare_data_for_prediction(employee_data)
+EOL
+echo "✓ feature_engineering.py fixed"
+
+# 3. Process all test files
+echo "Updating test files..."
+test_files=$(find employee_predictor/tests__ -name "*.py" -not -path "*/test_helper.py" | xargs grep -l "client\.login" 2>/dev/null || echo "")
+
+for file in $test_files; do
+    echo "Processing $file..."
+
+    # Create backup
+    cp "$file" "${file}.bak"
+
+    # Add import if not already there
+    if ! grep -q "from employee_predictor.tests.test_helper import axes_login" "$file"; then
+        # Find a good place to insert the import
+        last_import=$(grep -n "^import\|^from" "$file" | tail -1 | cut -d: -f1)
+        if [ -z "$last_import" ]; then
+            # If no imports found, insert at line 1
+            sed -i '1i from employee_predictor.tests__.test_helper import axes_login\n' "$file"
+        else
+            # Insert after the last import line
+            sed -i "${last_import}a from employee_predictor.tests.test_helper import axes_login" "$file"
+        fi
+    fi
+
+    # Replace self.client.login() with axes_login(self.client, ...)
+    sed -i 's/self\.client\.login(/axes_login(self.client, /g' "$file"
+    echo "✓ Updated $file"
+done
+
+# 4. Handle key files specifically
+key_files=(
+    "employee_predictor/tests/test_views.py"
+    "employee_predictor/tests/test_middleware.py"
+    "employee_predictor/tests/test_integration.py"
+    "employee_predictor/tests/test_ui.py"
+    "employee_predictor/tests/test_performance.py"
+    "employee_predictor/tests/test_end_to_end.py"
+    "employee_predictor/tests/test_security_final.py"
+)
+
+for file in "${key_files[@]}"; do
+    if [ -f "$file" ] && ! grep -q "from employee_predictor.tests.test_helper import axes_login" "$file"; then
+        echo "Ensuring $file has the import..."
+
+        # Create backup if not already done
+        if [ ! -f "${file}.bak" ]; then
+            cp "$file" "${file}.bak"
+        fi
+
+        # Add import at appropriate location
+        last_import=$(grep -n "^import\|^from" "$file" | tail -1 | cut -d: -f1)
+        if [ -z "$last_import" ]; then
+            # If no imports found, insert at line 1
+            sed -i '1i from employee_predictor.tests__.test_helper import axes_login\n' "$file"
+        else
+            # Insert after the last import line
+            sed -i "${last_import}a from employee_predictor.tests.test_helper import axes_login" "$file"
+        fi
+
+        # Replace login calls
+        sed -i 's/self\.client\.login(/axes_login(self.client, /g' "$file"
+        echo "✓ Updated $file"
+    fi
+done
+
+echo ""
+echo "All fixes applied!"
+echo

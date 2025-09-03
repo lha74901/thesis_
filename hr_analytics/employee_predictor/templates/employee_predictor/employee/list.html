@@ -1,0 +1,118 @@
+{% extends 'employee_predictor/base.html' %}
+
+{% block title %}Employees{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Header Section -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="fas fa-users me-2"></i>Employees</h2>
+        <a href="{% url 'employee-create' %}" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Add New Employee
+        </a>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" name="search" class="form-control" 
+                           placeholder="Search by name, ID, or position..."
+                           value="{{ request.GET.search }}">
+                </div>
+                <div class="col-md-3">
+                    <select name="department" class="form-control">
+                        <option value="">All Departments</option>
+                        {% for dept in departments %}
+                        <option value="{{ dept }}" {% if request.GET.department == dept %}selected{% endif %}>
+                            {{ dept }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-auto">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                    <a href="{% url 'employee-list' %}" class="btn btn-outline-secondary">
+                        <i class="fas fa-times"></i> Clear
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Employee List -->
+    <div class="card">
+        <div class="card-body">
+            {% if employees %}
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Position</th>
+                            <th>Hire Date</th>
+                            <th>Salary</th>
+                            <th>Perf. Score</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for employee in employees %}
+                        <tr>
+                            <td>{{ employee.emp_id }}</td>
+                            <td>{{ employee.name }}</td>
+                            <td>{{ employee.department }}</td>
+                            <td>{{ employee.position }}</td>
+                            <td>{{ employee.date_of_hire|date }}</td>
+                            <td>${{ employee.salary|floatformat:2 }}</td>
+                            <td>
+                                {% if employee.predicted_score %}
+                                <span class="badge bg-primary">{{ employee.predicted_score }}</span>
+                                {% else %}
+                                <span class="badge bg-secondary">Not Predicted</span>
+                                {% endif %}
+                            <td>
+    <div class="btn-group">
+        <a href="{% url 'employee-detail' employee.pk %}"
+           class="btn btn-sm btn-info" title="View Details">
+            <i class="fas fa-eye"></i>
+        </a>
+        <a href="{% url 'employee-update' employee.pk %}"
+           class="btn btn-sm btn-primary" title="Edit">
+            <i class="fas fa-edit"></i>
+        </a>
+        <a href="{% url 'employee-predict' employee.pk %}"
+           class="btn btn-sm btn-success" title="Predict Performance">
+            <i class="fas fa-chart-line"></i>
+        </a>
+        <a href="{% url 'employee-delete' employee.pk %}"
+           class="btn btn-sm btn-danger" title="Delete">
+            <i class="fas fa-trash"></i>
+        </a>
+    </div>
+</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% if is_paginated %}
+            <div class="mt-4">
+                {% include "employee_predictor/includes/pagination.html" %}
+            </div>
+            {% endif %}
+            {% else %}
+            <div class="text-center py-4">
+                <i class="fas fa-users fa-3x mb-3 text-muted"></i>
+                <p class="lead text-muted">No employees found matching your search criteria.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

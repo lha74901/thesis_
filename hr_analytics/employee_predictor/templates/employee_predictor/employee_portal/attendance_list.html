@@ -1,0 +1,59 @@
+{% extends 'employee_predictor/employee_portal/base.html' %}
+
+{% block title %}My Attendance{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <h2>My Attendance</h2>
+    <div class="card">
+        <div class="card-body">
+            <form method="get" class="mb-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="month" name="month" class="form-control" value="{{ request.GET.month }}">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </div>
+                </div>
+            </form>
+
+            {% if attendances %}
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>Hours</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for attendance in attendances %}
+                        <tr>
+                            <td>{{ attendance.date|date }}</td>
+                            <td>
+                                <span class="badge {% if attendance.status == 'PRESENT' %}bg-success{% elif attendance.status == 'ABSENT' %}bg-danger{% elif attendance.status == 'ON_LEAVE' %}bg-info{% else %}bg-warning{% endif %}">
+                                    {{ attendance.status }}
+                                </span>
+                            </td>
+                            <td>{{ attendance.check_in|default:"-" }}</td>
+                            <td>{{ attendance.check_out|default:"-" }}</td>
+                            <td>{{ attendance.hours_worked|default:"0.00" }}</td>
+                            <td>{{ attendance.notes }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% include "employee_predictor/includes/pagination.html" %}
+            {% else %}
+            <p class="text-muted">No attendance records found for the selected period.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

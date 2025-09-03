@@ -1,0 +1,173 @@
+{% extends 'employee_predictor/employee_portal/base.html' %}
+{% load static %}
+{% load hr_filters %}
+{% block title %}My Performance{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Header Section -->
+    <div class="row mb-4">
+        <div class="col">
+            <h2 class="mb-3">
+                <i class="fas fa-chart-line text-primary me-2"></i>My Performance Overview
+            </h2>
+        </div>
+    </div>
+
+    <!-- Performance Score Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card bg-white shadow-sm">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center border-end">
+                            <h5 class="text-muted mb-1">Overall Performance Score</h5>
+                            {% if employee.predicted_score %}
+                                <div class="display-4 fw-bold text-primary mb-0">{{ employee.predicted_score }}</div>
+                                <small class="text-muted">Last updated: {{ employee.prediction_date|date }}</small>
+                            {% else %}
+                                <div class="text-muted">Not Yet Evaluated</div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <h6 class="text-muted mb-1">Engagement Score</h6>
+                                    <div class="h3 mb-0">{{ employee.engagement_survey }}/5</div>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <h6 class="text-muted mb-1">Satisfaction Level</h6>
+                                    <div class="h3 mb-0">{{ employee.emp_satisfaction }}/5</div>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <h6 class="text-muted mb-1">Special Projects</h6>
+                                    <div class="h3 mb-0">{{ employee.special_projects_count }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monthly Attendance Stats -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h4 class="mb-3">This Month's Attendance</h4>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Present Days</h5>
+                    <h2 class="display-4 mb-0">{{ attendance_stats.present_days|default:0 }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Late Arrivals</h5>
+                    <h2 class="display-4 mb-0">{{ attendance_stats.late_days|default:0 }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-danger text-white">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Absences</h5>
+                    <h2 class="display-4 mb-0">{{ attendance_stats.absent_days|default:0 }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Leave Days</h5>
+                    <h2 class="display-4 mb-0">{{ attendance_stats.on_leave_days|default:0 }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Metrics -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-business-time me-2"></i>Productivity Metrics
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <label class="form-label">Average Working Hours</label>
+                        <div class="progress" style="height: 20px;">
+                            {% with avg_hours=attendance_stats.avg_hours|default:0 %}
+                            <div class="progress-bar bg-primary" role="progressbar" 
+                                 style="width: {{ avg_hours|multiply:12.5 }}%"
+                                 aria-valuenow="{{ avg_hours }}" aria-valuemin="0" aria-valuemax="8">
+                                {{ avg_hours|floatformat:1 }} hrs
+                            </div>
+                            {% endwith %}
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Special Projects Completed</label>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-success" role="progressbar" 
+                                 style="width: {{ employee.special_projects_count|multiply:10 }}%"
+                                 aria-valuenow="{{ employee.special_projects_count }}" 
+                                 aria-valuemin="0" aria-valuemax="10">
+                                {{ employee.special_projects_count }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>Engagement & Satisfaction
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <label class="form-label">Engagement Level</label>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-info" role="progressbar" 
+                                 style="width: {{ employee.engagement_survey|multiply:20 }}%"
+                                 aria-valuenow="{{ employee.engagement_survey }}" 
+                                 aria-valuemin="0" aria-valuemax="5">
+                                {{ employee.engagement_survey }}/5
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Satisfaction Score</label>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-warning" role="progressbar" 
+                                 style="width: {{ employee.emp_satisfaction|multiply:20 }}%"
+                                 aria-valuenow="{{ employee.emp_satisfaction }}" 
+                                 aria-valuemin="0" aria-valuemax="5">
+                                {{ employee.emp_satisfaction }}/5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add any JavaScript for interactivity here
+    // For example, tooltips or charts
+});
+</script>
+{% endblock %}

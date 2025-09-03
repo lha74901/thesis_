@@ -1,0 +1,342 @@
+{% extends 'employee_predictor/base.html' %}
+{% load static %}
+{% load hr_filters %}
+
+{% block title %}Performance Details - {{ employee.name }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>
+            <i class="fas fa-chart-line me-2"></i>
+            Performance Details - {{ employee.name }}
+        </h2>
+        <div>
+            <a href="{% url 'employee-predict' employee.pk %}" class="btn btn-success">
+                <i class="fas fa-sync me-2"></i>Update Prediction
+            </a>
+            <a href="{% url 'employee-list' %}" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Back to List
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Performance Score Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="text-muted mb-3">Current Performance Score</h4>
+                    {% if employee.predicted_score %}
+                        <div class="display-1 mb-3">
+                            {{ employee.predicted_score }}<span class="fs-3">/4</span>
+                        </div>
+                        <p class="text-muted">Last updated: {{ employee.prediction_date|date:"F j, Y" }}</p>
+                    {% else %}
+                        <div class="display-4 mb-3 text-muted">Not Available</div>
+                        <p class="text-muted">No prediction has been made yet</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics Overview -->
+        <div class="col-md-8 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title mb-0">Performance Metrics Overview</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="table-responsive">
+                                <table class="table table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Engagement:</strong></td>
+                                            <td>{{ employee.engagement_survey }}/5</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Satisfaction:</strong></td>
+                                            <td>{{ employee.emp_satisfaction }}/5</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Projects:</strong></td>
+                                            <td>{{ employee.special_projects_count }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Punctuality:</strong></td>
+                                            <td>{{ employee.days_late_last_30 }} late days</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title mb-0">Key Performance Indicators</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h6 class="text-muted">Engagement Score</h6>
+                                    <div class="display-6 mb-2">{{ employee.engagement_survey }}/5</div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary"
+                                             role="progressbar"
+                                             style="width: {{ employee.engagement_survey|multiply:20 }}%">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h6 class="text-muted">Satisfaction Level</h6>
+                                    <div class="display-6 mb-2">{{ employee.emp_satisfaction }}/5</div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success"
+                                             role="progressbar"
+                                             style="width: {{ employee.emp_satisfaction|multiply:20 }}%">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h6 class="text-muted">Special Projects</h6>
+                                    <div class="display-6 mb-0">{{ employee.special_projects_count }}</div>
+                                    <p class="text-muted mb-0">Completed Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h6 class="text-muted">Total Absences</h6>
+                                    <div class="display-6 mb-0">{{ employee.absences }}</div>
+                                    <p class="text-muted mb-0">Days Absent</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attendance Analysis -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title mb-0">Attendance Analysis</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert {% if employee.days_late_last_30 < 3 %}alert-success
+                                     {% elif employee.days_late_last_30 < 5 %}alert-warning
+                                     {% else %}alert-danger{% endif %}">
+                        <h6 class="alert-heading">Recent Punctuality</h6>
+                        <p class="mb-0">{{ employee.days_late_last_30 }} late days in the last 30 days</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h6>Attendance Trend</h6>
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar bg-success"
+                                 role="progressbar"
+                                 style="width: {{ attendance_stats.present_days|percentage:30 }}%">
+                                Present ({{ attendance_stats.present_days }})
+                            </div>
+                            <div class="progress-bar bg-warning"
+                                 role="progressbar"
+                                 style="width: {{ attendance_stats.late_days|percentage:30 }}%">
+                                Late ({{ attendance_stats.late_days }})
+                            </div>
+                            <div class="progress-bar bg-info"
+                                 role="progressbar"
+                                 style="width: {{ attendance_stats.on_leave_days|percentage:30 }}%">
+                                Leave ({{ attendance_stats.on_leave_days }})
+                            </div>
+                            <div class="progress-bar bg-danger"
+                                 role="progressbar"
+                                 style="width: {{ attendance_stats.absent_days|percentage:30 }}%">
+                                Absent ({{ attendance_stats.absent_days }})
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Current Month</th>
+                                    <th>Previous Month</th>
+                                    <th>Trend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Attendance Rate</td>
+                                    <td>{{ current_month_stats.attendance_rate|floatformat:1 }}%</td>
+                                    <td>{{ prev_month_stats.attendance_rate|floatformat:1 }}%</td>
+                                    <td>
+                                        {% if current_month_stats.attendance_rate > prev_month_stats.attendance_rate %}
+                                            <i class="fas fa-arrow-up text-success"></i>
+                                        {% else %}
+                                            <i class="fas fa-arrow-down text-danger"></i>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Average Hours/Day</td>
+                                    <td>{{ current_month_stats.avg_hours|floatformat:1 }}</td>
+                                    <td>{{ prev_month_stats.avg_hours|floatformat:1 }}</td>
+                                    <td>
+                                        {% if current_month_stats.avg_hours > prev_month_stats.avg_hours %}
+                                            <i class="fas fa-arrow-up text-success"></i>
+                                        {% else %}
+                                            <i class="fas fa-arrow-down text-danger"></i>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title mb-0">Performance Analysis & Recommendations</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Strengths</h5>
+                            <ul class="list-group mb-4">
+                                {% if employee.engagement_survey >= 4 %}
+                                <li class="list-group-item list-group-item-success">
+                                    <i class="fas fa-star me-2"></i>High engagement level
+                                </li>
+                                {% endif %}
+                                {% if employee.special_projects_count >= 3 %}
+                                <li class="list-group-item list-group-item-success">
+                                    <i class="fas fa-project-diagram me-2"></i>Strong project involvement
+                                </li>
+                                {% endif %}
+                                {% if employee.days_late_last_30 <= 2 %}
+                                <li class="list-group-item list-group-item-success">
+                                    <i class="fas fa-clock me-2"></i>Excellent punctuality
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Areas for Improvement</h5>
+                            <ul class="list-group mb-4">
+                                {% if employee.engagement_survey < 4 %}
+                                <li class="list-group-item list-group-item-warning">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>Consider ways to increase engagement
+                                </li>
+                                {% endif %}
+                                {% if employee.days_late_last_30 > 5 %}
+                                <li class="list-group-item list-group-item-warning">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>Address punctuality concerns
+                                </li>
+                                {% endif %}
+                                {% if employee.special_projects_count < 2 %}
+                                <li class="list-group-item list-group-item-warning">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>Encourage more project participation
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <h5><i class="fas fa-lightbulb me-2"></i>Action Items</h5>
+                        <ul class="mb-0">
+                            {% if employee.engagement_survey < 4 %}
+                            <li>Schedule a one-on-one meeting to discuss engagement opportunities</li>
+                            {% endif %}
+                            {% if employee.special_projects_count < 2 %}
+                            <li>Identify potential projects that match the employee's skills and interests</li>
+                            {% endif %}
+                            {% if employee.days_late_last_30 > 5 %}
+                            <li>Review attendance policy and discuss any barriers to punctuality</li>
+                            {% endif %}
+                            {% if employee.emp_satisfaction < 4 %}
+                            <li>Conduct satisfaction survey to identify areas of improvement</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize performance radar chart using Chart.js
+    const ctx = document.getElementById('performanceChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Engagement', 'Satisfaction', 'Punctuality', 'Projects', 'Overall Score'],
+            datasets: [{
+                label: 'Performance Metrics',
+                data: [
+                    {{ employee.engagement_survey }}/5 * 100,
+                    {{ employee.emp_satisfaction }}/5 * 100,
+                    (30 - {{ employee.days_late_last_30 }})/30 * 100,
+                    {{ employee.special_projects_count }}/5 * 100,
+                    {{ employee.predicted_score|default:0 }}/4 * 100
+                ],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        callback: (value) => value + '%'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+});
+</script>
+{% endblock %}
+
+{% endblock content %}

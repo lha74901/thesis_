@@ -1,0 +1,71 @@
+{% extends 'employee_predictor/base.html' %}
+
+{% block title %}Attendance Records{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Attendance Records</h2>
+        <div>
+            <a href="{% url 'attendance-create' %}" class="btn btn-primary">Add Attendance</a>
+            <a href="{% url 'bulk-attendance' %}" class="btn btn-secondary">Bulk Upload</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <form method="get" class="mb-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="date" name="date" class="form-control" value="{{ request.GET.date }}">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>Hours Worked</th>
+                            <th>Notes</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for attendance in attendances %}
+                        <tr>
+                            <td>{{ attendance.employee.name }}</td>
+                            <td>{{ attendance.date }}</td>
+                            <td>
+                                <span class="badge {% if attendance.status == 'PRESENT' %}bg-success{% elif attendance.status == 'ABSENT' %}bg-danger{% elif attendance.status == 'ON_LEAVE' %}bg-info{% else %}bg-warning{% endif %}">
+                                    {{ attendance.status }}
+                                </span>
+                            </td>
+                            <td>{{ attendance.check_in|default:"-" }}</td>
+                            <td>{{ attendance.check_out|default:"-" }}</td>
+                            <td>{{ attendance.hours_worked|default:"0.00" }}</td>
+                            <td>{{ attendance.notes }}</td>
+                            <td>
+                                {% if attendance.status != 'ON_LEAVE' %}
+                                <a href="{% url 'attendance-update' attendance.pk %}" class="btn btn-sm btn-info">Edit</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% include "employee_predictor/includes/pagination.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

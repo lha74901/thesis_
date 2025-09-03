@@ -1,0 +1,174 @@
+INFO 2025-05-24 08:31:15,396 autoreload 62711 140161503551744 Watching for file changes with StatReloader
+INFO 2025-05-24 08:32:58,537 autoreload 62711 140161503551744 /home/lha/Desktop/HR-main/hr_analytics/employee_predictor/views.py changed, reloading.
+INFO 2025-05-24 08:32:58,922 autoreload 63747 139981724856576 Watching for file changes with StatReloader
+INFO 2025-05-24 08:34:10,473 autoreload 64450 140079949279488 Watching for file changes with StatReloader
+INFO 2025-05-24 08:34:12,345 basehttp 64450 140079415101120 "GET / HTTP/1.1" 302 0
+INFO 2025-05-24 08:34:12,369 basehttp 64450 140079415101120 "GET /login/ HTTP/1.1" 200 11044
+INFO 2025-05-24 08:34:12,459 basehttp 64450 140079415101120 "GET /static/employee_predictor/css/enhanced-style.css HTTP/1.1" 304 0
+WARNING 2025-05-24 08:34:13,746 log 64450 140079415101120 Not Found: /favicon.ico
+WARNING 2025-05-24 08:34:13,746 basehttp 64450 140079415101120 "GET /favicon.ico HTTP/1.1" 404 8819
+INFO 2025-05-24 08:34:16,128 basehttp 64450 140079415101120 "POST /login/ HTTP/1.1" 200 11256
+INFO 2025-05-24 12:18:13,888 autoreload 7884 7328 Watching for file changes with StatReloader
+INFO 2025-05-24 12:18:16,363 basehttp 7884 9968 "GET / HTTP/1.1" 302 0
+INFO 2025-05-24 12:18:16,481 basehttp 7884 9968 "GET /login/ HTTP/1.1" 200 11044
+INFO 2025-05-24 12:18:16,545 basehttp 7884 9968 "GET /static/employee_predictor/css/enhanced-style.css HTTP/1.1" 200 6799
+WARNING 2025-05-24 12:18:17,684 log 7884 9968 Not Found: /favicon.ico
+WARNING 2025-05-24 12:18:17,684 basehttp 7884 9968 "GET /favicon.ico HTTP/1.1" 404 8819
+INFO 2025-05-24 12:18:39,690 basehttp 7884 9968 "POST /login/ HTTP/1.1" 200 11256
+INFO 2025-05-24 12:57:15,555 autoreload 7884 7328 C:\Users\mrlyn\Desktop\Thesis\hr_analytics\employee_predictor\models.py changed, reloading.
+INFO 2025-05-24 12:57:16,855 autoreload 17424 17432 Watching for file changes with StatReloader
+INFO 2025-05-24 13:30:13,387 autoreload 1944 12748 Watching for file changes with StatReloader
+INFO 2025-05-24 13:30:16,092 basehttp 1944 2328 "GET /register/ HTTP/1.1" 200 11885
+INFO 2025-05-24 13:30:16,134 basehttp 1944 2328 "GET /static/employee_predictor/css/enhanced-style.css HTTP/1.1" 304 0
+INFO 2025-05-24 13:30:26,337 basehttp 1944 2328 "POST /register/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:30:26,353 basehttp 1944 2328 "GET /login/ HTTP/1.1" 200 11662
+INFO 2025-05-24 13:30:29,873 basehttp 1944 2328 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:30:29,881 basehttp 1944 2328 "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:30:29,927 basehttp 1944 2328 "GET /portal/ HTTP/1.1" 200 14768
+WARNING 2025-05-24 13:30:30,050 log 1944 2328 Not Found: /favicon.ico
+WARNING 2025-05-24 13:30:30,050 basehttp 1944 2328 "GET /favicon.ico HTTP/1.1" 404 8819
+INFO 2025-05-24 13:30:37,273 basehttp 1944 2328 "GET /portal/ HTTP/1.1" 200 14768
+INFO 2025-05-24 13:30:39,500 basehttp 1944 2328 "GET /portal/performance/ HTTP/1.1" 200 18541
+INFO 2025-05-24 13:30:41,555 basehttp 1944 2328 "GET /portal/attendance/ HTTP/1.1" 200 12597
+INFO 2025-05-24 13:30:42,303 basehttp 1944 2328 "GET /portal/leaves/ HTTP/1.1" 200 12366
+INFO 2025-05-24 13:30:43,415 basehttp 1944 2328 "GET /payroll/employee/ HTTP/1.1" 200 14362
+INFO 2025-05-24 13:30:44,433 basehttp 1944 2328 "GET /portal/leaves/ HTTP/1.1" 200 12366
+INFO 2025-05-24 13:30:45,067 basehttp 1944 2328 "GET /portal/attendance/ HTTP/1.1" 200 12597
+INFO 2025-05-24 13:30:45,573 basehttp 1944 2328 "GET /portal/performance/ HTTP/1.1" 200 18541
+INFO 2025-05-24 13:30:50,058 basehttp 1944 2328 "POST /logout/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:30:50,074 basehttp 1944 2328 "GET /login/ HTTP/1.1" 200 11044
+WARNING 2025-05-24 13:30:50,168 log 1944 2328 Not Found: /favicon.ico
+WARNING 2025-05-24 13:30:50,168 basehttp 1944 2328 "GET /favicon.ico HTTP/1.1" 404 8819
+INFO 2025-05-24 13:33:47,567 autoreload 1944 18332 Watching for file changes with StatReloader
+INFO 2025-05-24 13:33:51,875 basehttp 1944 16224 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:33:51,917 basehttp 1944 16224 "GET /dashboard/ HTTP/1.1" 200 27030
+WARNING 2025-05-24 13:33:52,028 log 1944 16224 Not Found: /favicon.ico
+WARNING 2025-05-24 13:33:52,028 basehttp 1944 16224 "GET /favicon.ico HTTP/1.1" 404 8819
+INFO 2025-05-24 13:33:53,801 basehttp 1944 16224 "GET /performance/ HTTP/1.1" 200 36107
+INFO 2025-05-24 13:34:03,898 enhanced_predictor 1944 16224 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 13:34:03,914 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 13:34:03,993 basehttp 1944 16784 "GET /employee/1/predict/ HTTP/1.1" 200 19795
+INFO 2025-05-24 13:34:03,993 basehttp 1944 16224 - Broken pipe from ('127.0.0.1', 51591)
+INFO 2025-05-24 13:34:05,843 views 1944 16784 Preparing prediction for employee 10026
+INFO 2025-05-24 13:34:05,843 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+WARNING 2025-05-24 13:34:05,858 enhanced_predictor 1944 16784 Model prediction with probability failed: X has 11 features, but SVC is expecting 62 features as input.
+INFO 2025-05-24 13:34:05,878 views 1944 16784 Prediction saved for employee 10026: Score=4, Performance=Exceeds
+INFO 2025-05-24 13:34:05,878 basehttp 1944 16784 "POST /employee/1/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:34:05,906 basehttp 1944 16784 "GET /employee/1/ HTTP/1.1" 200 18976
+INFO 2025-05-24 13:34:27,335 basehttp 1944 16784 "GET /performance/ HTTP/1.1" 200 36960
+INFO 2025-05-24 13:34:30,062 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 13:34:30,078 basehttp 1944 16784 "GET /employee/2/predict/ HTTP/1.1" 200 19783
+INFO 2025-05-24 13:34:36,139 views 1944 16784 Preparing prediction for employee 10084
+INFO 2025-05-24 13:34:36,139 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 13:34:36,159 views 1944 16784 Prediction saved for employee 10084: Score=1, Performance=PIP
+INFO 2025-05-24 13:34:36,159 basehttp 1944 16784 "POST /employee/2/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:34:36,174 basehttp 1944 16784 "GET /employee/2/ HTTP/1.1" 200 18829
+INFO 2025-05-24 13:34:45,996 basehttp 1944 16784 "GET /performance/ HTTP/1.1" 200 37700
+INFO 2025-05-24 13:34:49,260 basehttp 1944 16784 "GET /performance/2/ HTTP/1.1" 200 26298
+INFO 2025-05-24 13:35:02,165 basehttp 1944 16784 "GET /employees/ HTTP/1.1" 200 74709
+INFO 2025-05-24 13:35:04,836 basehttp 1944 16784 "GET /performance/ HTTP/1.1" 200 37700
+INFO 2025-05-24 13:35:06,887 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 13:35:06,896 basehttp 1944 16784 "GET /employee/3/predict/ HTTP/1.1" 200 19791
+INFO 2025-05-24 13:35:11,524 views 1944 16784 Preparing prediction for employee 10196
+INFO 2025-05-24 13:35:11,524 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+WARNING 2025-05-24 13:35:11,524 enhanced_predictor 1944 16784 Model prediction with probability failed: X has 11 features, but SVC is expecting 62 features as input.
+INFO 2025-05-24 13:35:11,539 views 1944 16784 Prediction saved for employee 10196: Score=3, Performance=Fully Meets
+INFO 2025-05-24 13:35:11,539 basehttp 1944 16784 "POST /employee/3/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:35:11,556 basehttp 1944 16784 "GET /employee/3/ HTTP/1.1" 200 18917
+INFO 2025-05-24 13:35:17,739 basehttp 1944 16784 "GET /performance/ HTTP/1.1" 200 38555
+INFO 2025-05-24 13:35:19,485 basehttp 1944 16784 "GET /performance/2/ HTTP/1.1" 200 26298
+INFO 2025-05-24 13:35:21,215 basehttp 1944 16784 "GET /performance/ HTTP/1.1" 200 38555
+INFO 2025-05-24 13:35:22,418 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 13:35:22,418 basehttp 1944 16784 "GET /employee/2/predict/ HTTP/1.1" 200 19782
+INFO 2025-05-24 13:35:23,833 views 1944 16784 Preparing prediction for employee 10084
+INFO 2025-05-24 13:35:23,833 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 13:35:23,851 views 1944 16784 Prediction saved for employee 10084: Score=1, Performance=PIP
+INFO 2025-05-24 13:35:23,851 basehttp 1944 16784 "POST /employee/2/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:35:23,865 basehttp 1944 16784 "GET /employee/2/ HTTP/1.1" 200 18829
+INFO 2025-05-24 13:35:39,856 basehttp 1944 16784 "GET /performance/ HTTP/1.1" 200 38555
+INFO 2025-05-24 13:35:42,226 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 13:35:42,232 basehttp 1944 16784 "GET /employee/4/predict/ HTTP/1.1" 200 19776
+INFO 2025-05-24 13:35:46,218 views 1944 16784 Preparing prediction for employee 10088
+INFO 2025-05-24 13:35:46,223 enhanced_predictor 1944 16784 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 13:35:46,223 views 1944 16784 Prediction saved for employee 10088: Score=1, Performance=PIP
+INFO 2025-05-24 13:35:46,223 basehttp 1944 16784 "POST /employee/4/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 13:35:46,238 basehttp 1944 16784 "GET /employee/4/ HTTP/1.1" 200 18907
+INFO 2025-05-24 13:35:52,933 basehttp 1944 16784 "GET /performance/ HTTP/1.1" 200 39292
+INFO 2025-05-24 13:35:55,709 basehttp 1944 16784 "GET /performance/4/ HTTP/1.1" 200 26309
+INFO 2025-05-24 14:36:18,438 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 39292
+INFO 2025-05-24 14:36:18,498 basehttp 1944 17008 "GET /static/employee_predictor/css/enhanced-style.css HTTP/1.1" 304 0
+INFO 2025-05-24 14:36:21,270 basehttp 1944 17008 "GET /performance/5/ HTTP/1.1" 200 26260
+INFO 2025-05-24 14:36:22,513 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:36:22,529 basehttp 1944 17008 "GET /employee/5/predict/ HTTP/1.1" 200 19783
+INFO 2025-05-24 14:36:24,925 views 1944 17008 Preparing prediction for employee 10069
+INFO 2025-05-24 14:36:24,927 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+WARNING 2025-05-24 14:36:24,933 enhanced_predictor 1944 17008 Model prediction with probability failed: X has 11 features, but SVC is expecting 62 features as input.
+INFO 2025-05-24 14:36:24,942 views 1944 17008 Prediction saved for employee 10069: Score=4, Performance=Exceeds
+INFO 2025-05-24 14:36:24,944 basehttp 1944 17008 "POST /employee/5/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 14:36:24,961 basehttp 1944 17008 "GET /employee/5/ HTTP/1.1" 200 18900
+INFO 2025-05-24 14:36:26,504 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 40144
+INFO 2025-05-24 14:36:28,897 basehttp 1944 17008 "GET /performance/5/ HTTP/1.1" 200 26314
+INFO 2025-05-24 14:36:33,461 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 40144
+INFO 2025-05-24 14:36:36,056 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:36:36,056 basehttp 1944 17008 "GET /employee/6/predict/ HTTP/1.1" 200 19784
+INFO 2025-05-24 14:36:37,597 views 1944 17008 Preparing prediction for employee 10002
+INFO 2025-05-24 14:36:37,597 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:36:37,609 views 1944 17008 Prediction saved for employee 10002: Score=1, Performance=PIP
+INFO 2025-05-24 14:36:37,609 basehttp 1944 17008 "POST /employee/6/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 14:36:37,633 basehttp 1944 17008 "GET /employee/6/ HTTP/1.1" 200 18913
+INFO 2025-05-24 14:36:39,227 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 40887
+INFO 2025-05-24 14:36:41,283 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:36:41,293 basehttp 1944 17008 "GET /employee/7/predict/ HTTP/1.1" 200 19789
+INFO 2025-05-24 14:36:44,888 views 1944 17008 Preparing prediction for employee 10194
+INFO 2025-05-24 14:36:44,891 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:36:44,903 views 1944 17008 Prediction saved for employee 10194: Score=1, Performance=PIP
+INFO 2025-05-24 14:36:44,905 basehttp 1944 17008 "POST /employee/7/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 14:36:44,923 basehttp 1944 17008 "GET /employee/7/ HTTP/1.1" 200 18841
+INFO 2025-05-24 14:36:46,742 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 41626
+INFO 2025-05-24 14:36:48,670 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:36:48,683 basehttp 1944 17008 "GET /employee/8/predict/ HTTP/1.1" 200 19772
+INFO 2025-05-24 14:36:50,329 views 1944 17008 Preparing prediction for employee 10062
+INFO 2025-05-24 14:36:50,329 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:36:50,343 views 1944 17008 Prediction saved for employee 10062: Score=1, Performance=PIP
+INFO 2025-05-24 14:36:50,343 basehttp 1944 17008 "POST /employee/8/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 14:36:50,359 basehttp 1944 17008 "GET /employee/8/ HTTP/1.1" 200 18905
+INFO 2025-05-24 14:36:52,411 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 42363
+INFO 2025-05-24 14:36:54,831 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:36:54,844 basehttp 1944 17008 "GET /employee/9/predict/ HTTP/1.1" 200 19787
+INFO 2025-05-24 14:36:59,172 views 1944 17008 Preparing prediction for employee 10114
+INFO 2025-05-24 14:36:59,182 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+WARNING 2025-05-24 14:36:59,182 enhanced_predictor 1944 17008 Model prediction with probability failed: X has 11 features, but SVC is expecting 62 features as input.
+INFO 2025-05-24 14:36:59,182 views 1944 17008 Prediction saved for employee 10114: Score=3, Performance=Fully Meets
+INFO 2025-05-24 14:36:59,182 basehttp 1944 17008 "POST /employee/9/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 14:36:59,219 basehttp 1944 17008 "GET /employee/9/ HTTP/1.1" 200 18866
+INFO 2025-05-24 14:37:00,742 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 43218
+INFO 2025-05-24 14:37:06,235 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:37:06,251 basehttp 1944 17008 "GET /employee/10/predict/ HTTP/1.1" 200 19773
+INFO 2025-05-24 14:37:07,757 views 1944 17008 Preparing prediction for employee 10250
+INFO 2025-05-24 14:37:07,757 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:37:07,757 views 1944 17008 Prediction saved for employee 10250: Score=1, Performance=PIP
+INFO 2025-05-24 14:37:07,757 basehttp 1944 17008 "POST /employee/10/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 14:37:07,788 basehttp 1944 17008 "GET /employee/10/ HTTP/1.1" 200 18828
+INFO 2025-05-24 14:37:09,170 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 43955
+INFO 2025-05-24 14:37:11,285 basehttp 1944 17008 "GET /performance/?page=2 HTTP/1.1" 200 36480
+INFO 2025-05-24 14:37:13,119 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:37:13,134 basehttp 1944 17008 "GET /employee/11/predict/ HTTP/1.1" 200 19794
+INFO 2025-05-24 14:37:14,879 views 1944 17008 Preparing prediction for employee 10252
+INFO 2025-05-24 14:37:14,892 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:37:14,899 views 1944 17008 Prediction saved for employee 10252: Score=2, Performance=Needs Improvement
+INFO 2025-05-24 14:37:14,899 basehttp 1944 17008 "POST /employee/11/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 14:37:14,913 basehttp 1944 17008 "GET /employee/11/ HTTP/1.1" 200 18966
+INFO 2025-05-24 14:37:23,277 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 43955
+INFO 2025-05-24 14:37:29,832 basehttp 1944 17008 "GET /performance/?search=&department=&score_range=needs_improvement HTTP/1.1" 200 19408
+INFO 2025-05-24 14:37:31,494 basehttp 1944 17008 "GET /performance/11/ HTTP/1.1" 200 26321
+INFO 2025-05-24 14:37:53,156 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 43955
+INFO 2025-05-24 14:37:56,148 basehttp 1944 17008 "GET /performance/?page=3 HTTP/1.1" 200 36599
+INFO 2025-05-24 14:37:57,855 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:37:57,862 basehttp 1944 17008 "GET /employee/21/predict/ HTTP/1.1" 200 19785
+INFO 2025-05-24 14:37:59,278 views 1944 17008 Preparing prediction for employee 10046
+INFO 2025-05-24 14:37:59,278 enhanced_predictor 1944 17008 Model loaded successfully from C:\Users\mrlyn\Desktop\Thesis\hr_analytics\media\models\hr_svm_model.pkl
+INFO 2025-05-24 14:37:59,278 views 1944 17008 Prediction saved for employee 10046: Score=1, Performance=PIP
+INFO 2025-05-24 14:37:59,278 basehttp 1944 17008 "POST /employee/21/predict/ HTTP/1.1" 302 0
+INFO 2025-05-24 14:37:59,294 basehttp 1944 17008 "GET /employee/21/ HTTP/1.1" 200 18918
+INFO 2025-05-24 14:38:01,936 basehttp 1944 17008 "GET /performance/ HTTP/1.1" 200 43958
+INFO 2025-05-24 14:38:03,694 basehttp 1944 17008 "GET /performance/2/ HTTP/1.1" 200 26298

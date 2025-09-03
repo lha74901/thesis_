@@ -1,0 +1,140 @@
+{% extends 'employee_predictor/employee_portal/base.html' %}
+{% load hr_filters %}
+
+{% block title %}My Payslips{% endblock %}
+
+{% block employee_content %}
+<div class="container">
+    <!-- Header Section -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="fas fa-file-invoice-dollar me-2"></i>My Payslips</h2>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Select Month</label>
+                    <input type="month" name="month_year" class="form-control"
+                           value="{{ request.GET.month_year }}"
+                           max="{{ current_date|date:'Y-m' }}">
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                    <a href="{% url 'employee-payslips' %}" class="btn btn-outline-secondary">
+                        <i class="fas fa-times"></i> Clear
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {% if payslips %}
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Period</th>
+                            <th>Basic Salary</th>
+                            <th>Overtime</th>
+                            <th>Deductions</th>
+                            <th>Net Salary</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for payslip in payslips %}
+                        <tr>
+                            <td>
+                                {{ payslip.period_start|date:"M d" }} - {{ payslip.period_end|date:"M d, Y" }}
+                                {% if payslip.payment_date %}
+                                <small class="text-muted d-block">
+                                    Paid: {{ payslip.payment_date|date }}
+                                </small>
+                                {% endif %}
+                            </td>
+                            <td>${{ payslip.basic_salary|floatformat:2 }}</td>
+                            <td>
+                                {% if payslip.overtime_hours > 0 %}
+                                ${{ payslip.overtime_hours|multiply:payslip.overtime_rate|floatformat:2 }}
+                                <small class="text-muted d-block">
+                                    ({{ payslip.overtime_hours }} hrs @ ${{ payslip.overtime_rate }}/hr)
+                                </small>
+                                {% else %}
+                                -
+                                {% endif %}
+                            </td>
+                            <td>
+                                ${{ payslip.deductions|add:payslip.tax|floatformat:2 }}
+                                {% if payslip.tax > 0 or payslip.deductions > 0 %}
+                                <small class="text-muted d-block">
+                                    {% if payslip.tax > 0 %}Tax: ${{ payslip.tax|floatformat:2 }}{% endif %}
+                                    {% if payslip.deductions > 0 %}
+                                    {% if payslip.tax > 0 %} | {% endif %}
+                                    Other: ${{ payslip.deductions|floatformat:2 }}
+                                    {% endif %}
+                                </small>
+                                {% endif %}
+                            </td>
+                            <td class="fw-bold">${{ payslip.net_salary|floatformat:2 }}</td>
+                            <td>
+                                <span class="badge {% if payslip.status == 'PAID' %}bg-success
+                                             {% elif payslip.status == 'APPROVED' %}bg-info
+                                             {% else %}bg-warning{% endif %}">
+                                    {{ payslip.status }}
+                                </span>
+                            </td>
+                            <td>
+                                <a href="{% url 'employee-payslip-detail' payslip.pk %}"
+                                   class="btn btn-sm btn-primary">
+                                    <i class="fas fa-eye"></i> View Details
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% if is_paginated %}
+            <div class="mt-4">
+                {% include "employee_predictor/includes/pagination.html" %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info">
+        <div class="text-center py-4">
+            <i class="fas fa-file-invoice-dollar fa-3x mb-3"></i>
+            <p class="lead mb-0">No payslips available for the selected period.</p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Format currency in tables
+    document.querySelectorAll('td').forEach(cell => {
+        if (cell.textContent.trim().startsWith('$')) {
+            const value = parseFloat(cell.textContent.replace('$', '').replace(',', ''));
+            if (!isNaN(value)) {
+                cell.textContent = value.toLocaleString('en-US', {
+                    style: 'currency',
+                    currency: 'USD'
+                });
+            }
+        }
+    });
+});
+</script>
+{% endblock %}
+{% endblock %}

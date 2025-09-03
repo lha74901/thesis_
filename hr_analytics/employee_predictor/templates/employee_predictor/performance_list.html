@@ -1,0 +1,224 @@
+{% extends 'employee_predictor/base.html' %}
+{% load static %}
+{% load hr_filters %}
+
+{% block title %}Employee Performance Overview{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Header Section -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="fas fa-chart-line me-2"></i>Employee Performance Overview</h2>
+        <button class="btn btn-primary" onclick="generateReport()">
+            <i class="fas fa-file-export me-2"></i>Export Report
+        </button>
+    </div>
+
+    <!-- Summary Cards -->
+<div class="row g-4 mb-4">
+    <div class="col-md-3">
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                <h6 class="card-title">Average Performance</h6>
+                <h2 class="mb-0">{{ avg_performance|default:"N/A" }}</h2>
+                <small>Company-wide average</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <h6 class="card-title">Exceeds</h6>
+                <h2 class="mb-0">{{ top_performers_count }}</h2>
+                <small>Score = 4.0</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-secondary text-white">
+            <div class="card-body">
+                <h6 class="card-title">Fully Meets</h6>
+                <h2 class="mb-0">{{ meets_expectations_count }}</h2>
+                <small>Score = 3.0</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-warning text-dark">
+            <div class="card-body">
+                <h6 class="card-title">Needs Improvement</h6>
+                <h2 class="mb-0">{{ needs_improvement_count }}</h2>
+                <small>Score = 2.0</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-danger text-white">
+            <div class="card-body">
+                <h6 class="card-title">Performance Improvement Plan</h6>
+                <h2 class="mb-0">{{ pip_count }}</h2>
+                <small>Score = 1.0</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-info text-white">
+            <div class="card-body">
+                <h6 class="card-title">Pending Reviews</h6>
+                <h2 class="mb-0">{{ pending_reviews_count }}</h2>
+                <small>Not yet evaluated</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Filters -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" name="search" class="form-control"
+                           placeholder="Search by name or ID..."
+                           value="{{ request.GET.search }}">
+                </div>
+                <div class="col-md-3">
+                    <select name="department" class="form-control">
+                        <option value="">All Departments</option>
+                        {% for dept in departments %}
+                        <option value="{{ dept }}" {% if request.GET.department == dept %}selected{% endif %}>
+                            {{ dept }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-3">
+
+                    <select name="score_range" class="form-select">
+        <option value="">All Scores</option>
+        <option value="exceeds" {% if request.GET.score_range == 'exceeds' %}selected{% endif %}>
+            Exceeds (4.0)
+        </option>
+        <option value="fully_meets" {% if request.GET.score_range == 'fully_meets' %}selected{% endif %}>
+            Fully Meets (3.0)
+        </option>
+        <option value="needs_improvement" {% if request.GET.score_range == 'needs_improvement' %}selected{% endif %}>
+            Needs Improvement (2.0)
+        </option>
+        <option value="improvement_plan" {% if request.GET.score_range == 'improvement_plan' %}selected{% endif %}>
+            Performance Improvement Plan (1.0)
+        </option>
+        <option value="pending" {% if request.GET.score_range == 'pending' %}selected{% endif %}>
+            Pending Review
+        </option>
+    </select>
+</div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-filter me-2"></i>Filter
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Employee Performance Table -->
+    <div class="card">
+        <div class="card-body">
+            {% if employees %}
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Performance Score</th>
+                            <th>Engagement</th>
+                            <th>Projects</th>
+                            <th>Last Updated</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for employee in employees %}
+                        <tr>
+                            <td>{{ employee.emp_id }}</td>
+                            <td>{{ employee.name }}</td>
+                            <td>{{ employee.department }}</td>
+                            <td>
+                                {% if employee.predicted_score %}
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <span class="badge {% if employee.predicted_score >= 4 %}bg-success
+                                                      {% elif employee.predicted_score >= 3 %}bg-primary
+                                                      {% else %}bg-warning{% endif %}">
+                                                {{ employee.predicted_score }}/4
+                                            </span>
+                                        </div>
+                                        <div class="progress flex-grow-1" style="height: 5px;">
+                                            <div class="progress-bar {% if employee.predicted_score >= 4 %}bg-success
+                                                         {% elif employee.predicted_score >= 3 %}bg-primary
+                                                         {% else %}bg-warning{% endif %}"
+                                                 role="progressbar"
+                                                 style="width: {{ employee.predicted_score|multiply:20 }}%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <span class="badge bg-secondary">Not Available</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar bg-info"
+                                         role="progressbar"
+                                         style="width: {{ employee.engagement_survey|multiply:20 }}%">
+                                    </div>
+                                </div>
+                                <small class="text-muted">{{ employee.engagement_survey }}/5</small>
+                            </td>
+                            <td>{{ employee.special_projects_count }}</td>
+                            <td>
+                                {% if employee.prediction_date %}
+                                    {{ employee.prediction_date|date:"F j, Y" }}
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="{% url 'admin_performance_detail' employee.pk %}" class="btn btn-sm btn-info">
+                                        <i class="fas fa-eye"></i> Details
+                                    </a>
+                                    <a href="{% url 'employee-predict' employee.pk %}"
+                                       class="btn btn-sm btn-success">
+                                        <i class="fas fa-sync"></i> Update
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% include "employee_predictor/includes/pagination.html" %}
+            {% else %}
+            <div class="text-center py-4">
+                <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                <p class="lead text-muted">No employees found matching your search criteria.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function generateReport() {
+    // Add report generation logic here
+    alert('Generating performance report...');
+}
+</script>
+{% endblock %}

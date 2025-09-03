@@ -1,0 +1,228 @@
+{% extends 'employee_predictor/base.html' %}
+{% load hr_filters %}
+
+{% block title %}
+    {% if form.instance.pk %}
+        Update Payroll Record
+    {% else %}
+        Create Payroll Record
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title mb-0">
+                        {% if form.instance.pk %}
+                            Update Payroll Record
+                        {% else %}
+                            Create Payroll Record
+                        {% endif %}
+                    </h3>
+                </div>
+                <div class="card-body">
+                    {% if messages %}
+                    <div class="messages mb-3">
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <form method="post" id="payrollForm">
+                        {% csrf_token %}
+                        
+                        {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {% for error in form.non_field_errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.employee.id_for_label }}" class="form-label">Employee</label>
+                                {{ form.employee }}
+                                {% if form.employee.errors %}
+                                    <div class="text-danger">{{ form.employee.errors }}</div>
+                                {% endif %}
+                                {% if form.employee.help_text %}
+                                    <div class="form-text">{{ form.employee.help_text }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.period_start.id_for_label }}" class="form-label">Period Start</label>
+                                {{ form.period_start }}
+                                {% if form.period_start.errors %}
+                                    <div class="text-danger">{{ form.period_start.errors }}</div>
+                                {% endif %}
+                                {% if form.period_start.help_text %}
+                                    <div class="form-text">{{ form.period_start.help_text }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.period_end.id_for_label }}" class="form-label">Period End</label>
+                                {{ form.period_end }}
+                                {% if form.period_end.errors %}
+                                    <div class="text-danger">{{ form.period_end.errors }}</div>
+                                {% endif %}
+                                {% if form.period_end.help_text %}
+                                    <div class="form-text">{{ form.period_end.help_text }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.basic_salary.id_for_label }}" class="form-label">Basic Salary</label>
+                                {{ form.basic_salary }}
+                                {% if form.basic_salary.errors %}
+                                    <div class="text-danger">{{ form.basic_salary.errors }}</div>
+                                {% endif %}
+                                {% if form.basic_salary.help_text %}
+                                    <div class="form-text">{{ form.basic_salary.help_text }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.overtime_rate.id_for_label }}" class="form-label">Overtime Rate (per hour)</label>
+                                {{ form.overtime_rate }}
+                                {% if form.overtime_rate.errors %}
+                                    <div class="text-danger">{{ form.overtime_rate.errors }}</div>
+                                {% endif %}
+                                {% if form.overtime_rate.help_text %}
+                                    <div class="form-text">{{ form.overtime_rate.help_text }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.overtime_hours.id_for_label }}" class="form-label">Overtime Hours</label>
+                                {{ form.overtime_hours }}
+                                {% if form.overtime_hours.errors %}
+                                    <div class="text-danger">{{ form.overtime_hours.errors }}</div>
+                                {% endif %}
+                                {% if form.overtime_hours.help_text %}
+                                    <div class="form-text">{{ form.overtime_hours.help_text }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.bonuses.id_for_label }}" class="form-label">Bonuses</label>
+                                {{ form.bonuses }}
+                                {% if form.bonuses.errors %}
+                                    <div class="text-danger">{{ form.bonuses.errors }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.deductions.id_for_label }}" class="form-label">Deductions</label>
+                                {{ form.deductions }}
+                                {% if form.deductions.errors %}
+                                    <div class="text-danger">{{ form.deductions.errors }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.tax.id_for_label }}" class="form-label">Tax</label>
+                                {{ form.tax }}
+                                {% if form.tax.errors %}
+                                    <div class="text-danger">{{ form.tax.errors }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                {% if form.instance.pk %}
+                                    Update Payroll
+                                {% else %}
+                                    Create Payroll
+                                {% endif %}
+                            </button>
+                            <a href="{% url 'payroll-list' %}" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('payrollForm');
+    const employeeSelect = document.getElementById('{{ form.employee.id_for_label }}');
+    const periodStartInput = document.getElementById('{{ form.period_start.id_for_label }}');
+    const periodEndInput = document.getElementById('{{ form.period_end.id_for_label }}');
+    const basicSalaryInput = document.getElementById('{{ form.basic_salary.id_for_label }}');
+    const overtimeRateInput = document.getElementById('{{ form.overtime_rate.id_for_label }}');
+    const overtimeHoursInput = document.getElementById('{{ form.overtime_hours.id_for_label }}');
+    const taxInput = document.getElementById('{{ form.tax.id_for_label }}');
+
+    function updateEmployeeInfo() {
+        if (employeeSelect.value) {
+            const startDate = periodStartInput.value;
+            const endDate = periodEndInput.value;
+
+            fetch(`/api/employee/${employeeSelect.value}/salary/?start_date=${startDate}&end_date=${endDate}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Update form fields with retrieved data
+                    basicSalaryInput.value = data.salary.toFixed(2);
+                    overtimeRateInput.value = data.overtime_rate.toFixed(2);
+                    overtimeHoursInput.value = data.overtime_hours.toFixed(2);
+                    taxInput.value = data.estimated_tax.toFixed(2);
+
+                    // Show attendance stats if available
+                    if (data.attendance_stats) {
+                        const statsHtml = `
+                            <div class="alert alert-info mt-3">
+                                <h6>Attendance Summary:</h6>
+                                <p class="mb-1">Present Days: ${data.attendance_stats.present_days}</p>
+                                <p class="mb-1">Absent Days: ${data.attendance_stats.absent_days}</p>
+                                <p class="mb-1">Late Days: ${data.attendance_stats.late_days}</p>
+                                <p class="mb-0">Total Hours: ${data.attendance_stats.total_hours || 0}</p>
+                            </div>
+                        `;
+
+                        // Insert stats after the form fields
+                        const statsContainer = document.getElementById('attendanceStats') ||
+                            document.createElement('div');
+                        statsContainer.id = 'attendanceStats';
+                        statsContainer.innerHTML = statsHtml;
+                        form.insertBefore(statsContainer, form.querySelector('.d-grid'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching employee data:', error);
+                });
+        }
+    }
+
+    // Update when employee is selected
+    employeeSelect.addEventListener('change', updateEmployeeInfo);
+
+    // Update when period dates change
+    periodStartInput.addEventListener('change', updateEmployeeInfo);
+    periodEndInput.addEventListener('change', updateEmployeeInfo);
+
+    // Initial update if employee is already selected
+    if (employeeSelect.value) {
+        updateEmployeeInfo();
+    }
+});
+</script>
+{% endblock %}

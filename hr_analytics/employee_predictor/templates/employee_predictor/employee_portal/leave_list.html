@@ -1,0 +1,54 @@
+{% extends 'employee_predictor/employee_portal/base.html' %}
+
+{% block title %}My Leave Requests{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>My Leave Requests</h2>
+        <a href="{% url 'employee-leave-create' %}" class="btn btn-primary">
+            <i class="fas fa-plus"></i> New Leave Request
+        </a>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            {% if leaves %}
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Duration</th>
+                            <th>Status</th>
+                            <th>Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for leave in leaves %}
+                        <tr>
+                            <td>{{ leave.leave_type }}</td>
+                            <td>{{ leave.start_date|date }}</td>
+                            <td>{{ leave.end_date|date }}</td>
+                            <td>{{ leave.duration_days }} days</td>
+                            <td>
+                                <span class="badge {% if leave.status == 'APPROVED' %}bg-success{% elif leave.status == 'REJECTED' %}bg-danger{% else %}bg-warning{% endif %}">
+                                    {{ leave.status }}
+                                </span>
+                            </td>
+                            <td>{{ leave.reason }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% include "employee_predictor/includes/pagination.html" %}
+            {% else %}
+            <p class="text-muted">No leave requests found.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
